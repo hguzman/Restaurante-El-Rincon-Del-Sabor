@@ -33,6 +33,11 @@ Este proyecto consistirá en desarrollar un aplicativo web basados en el punto d
   4. [Hector Bilbao](https://github.com/bilbao-6)
   5. [Andres Rodriguez](https://github.com/AndresR-04)
 
+### Documentacion
+1. [Diagrama de relacion DB](Diagramas)
+2. [Diagrama de Clases](Diagramas)
+3. [TDR](Documentacion)
+
 ### Misión:
 Nuestra misión principal en el rincón del sabor es brindar  un buen servicio a todos los clientes y satisfacer sus necesidades
 
