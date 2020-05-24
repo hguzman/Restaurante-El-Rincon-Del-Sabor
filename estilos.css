@@ -1,0 +1,237 @@
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.banner_img{
+  display: block;
+  width: 100%;
+}
+/* ---------------------estilos del header--------------------- */
+.header{
+  height: 60px;
+}
+.header .contenedor{
+  display: flex;
+  justify-content: space-between;
+}
+.titulo, .icon-menu{
+  margin: 5px;
+  margin-top: 30px;
+  color: white;
+  font-size: 50px;
+  margin-left: 20px;
+}
+.icon-menu{
+  margin-right: 10px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 40px;
+  margin-left: auto;
+  cursor: pointer;
+}
+/* -------------------Estilos de menu------------------- */
+
+.nav{
+  position: absolute;
+  top: 110px;
+  left: -100%;
+  width: 100%;
+  transition: all 0.4s;
+}
+.menu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu_link{
+  display: block;
+  padding: 15px;
+  text-decoration: none !important;
+  color: white;
+  transition: 1.1s;
+}
+.menu_items{
+  font-size: 20px;
+  /* border: 1px solid black; */
+  display: inline-block;
+}
+.menu_items:hover{
+  font-size: 25px;
+  background: rgba(16, 16, 17, 0.14);
+  border-radius: 3px;
+}
+.mostrar{
+  left: 0;
+}
+/* ----------------------estilos del banner---------------------- */
+.banner{
+  margin-top: -60px;
+  position: relative;
+  z-index: -1000;
+  margin-bottom: 20px;
+}
+.banner .contenedor{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+.banner_txt{
+  display: none;
+}
+.banner_titulo{
+  font-size: 50px;
+
+}
+
+.section_titulo{
+  text-align: center;
+  font-size: 40px;
+
+}
+/* -------------------------estilos-info------------------------- */
+.info_columna{
+  width: 100%;
+  margin: auto;
+  padding: 40px;
+  margin-bottom: 30px;
+  background:rgb(249, 247, 247);
+  border-radius: 8px;
+  position: relative;
+}
+.info_columna::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(155,44,164,1) 35%, rgba(0,212,255,1) 100%);
+  filter: blur(8px);
+  content: " ";
+  z-index: -1;
+
+}
+/* -----------------------estilos de cursos----------------------- */
+.cursos_columna{
+  position: relative;
+  margin-bottom: 30px;
+}
+.cursos_descripcion{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  width: 60%;
+  height: 99%;
+  padding: 5px;
+}
+.cursos_titulo{
+  font-size: 25px;
+  margin: 5px 0;
+}
+
+/* -------------------footer------------------- */
+.footer{
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.footer .social [class^="fab"]{
+  color: #333;
+  text-decoration: none !important;
+  /* font-size: 30px;
+  padding: 11px;
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 30px; */
+}
+/* ---------------estilos responsive ---------------*/
+@media(min-width:628px) {
+  .banner_titulo{
+    margin: 5px 0;
+    margin-bottom: 30px;
+  }
+  .banner_txt{
+    display: block;
+    font-size: 40px;
+  }
+  .content{
+    display: flex;
+    width: 450px;
+    height: 40px;
+    font-size: 40px;
+    line-height: 40px;
+    margin:auto;
+    margin-left: 660px;
+    overflow: hidden;
+  }
+  .cambiar{
+    list-style: none;
+    padding-left: 10px;
+    animation: cambiar 10s infinite;
+  }
+  ul, p{
+    margin: 0;
+  }
+
+  .info, .cursos{
+    display: flex;
+    margin-top: -135px;
+  }
+  .info_columna{
+    width: 17%;
+    justify-content: space-between;
+  }
+  .info_titulo{
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  .info_txt{
+    font-size: 20px;
+  }
+  .cursos{
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-left: 90px;
+  }
+  .section_titulo{
+    width: 100%;
+  }
+  .cursos_columna{
+    width: 30%;
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .flecha{
+    font-size: 90px;
+    margin-top: 80px;
+    animation-name: flecha;
+    animation-duration: 5s infinite;
+  }
+  @keyframes cambiar {
+    0%{ margin-top: 0;}
+    20%{margin-top: 0;}
+
+    25%{margin-top: -40px}
+    50%{margin-top: -40px}
+
+    55%{margin-top: -80px}
+    80%{margin-top: -80px}
+
+    85%{margin-top: -40px}
+    95%{margin-top: -40px}
+
+    100%{margin-top: 0px}
+  }
