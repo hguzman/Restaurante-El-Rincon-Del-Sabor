@@ -10,7 +10,7 @@ Restaurante El Rincón Del Sabor
 |11-05-2020     | 0       |Definición de modulos de trabajo |Esteban Gomez, Andres Rodriguez, Wilman Orellano, Hector Bilbao.|   
 
 ### NOMBRE DE LA EMPRESA :
-    WaspSoft
+  WaspSoft
 ### LOGO :
 <img src="Documentacion/wasp.jpg" alt="drawing" width="200"/>
 
@@ -27,11 +27,16 @@ Este proyecto consistirá en desarrollar un aplicativo web basados en el punto d
 
 
 ### Miembros del proyecto :
-    Dilan Barrios // https://github.com/DilanDavid1011
-    Esteban Gomez // https://github.com/ETBGM03
-    Wilman Orellano // https://github.com/wjorellano
-    Hector Bilbao // https://github.com/bilbao-6
-    Andres Rodriguez // https://github.com/AndresR-04
+  1. [Dilan Barrios](https://github.com/DilanDavid1011)
+  2. [Esteban Gomez](https://github.com/ETBGM03)
+  3. [Wilman Orellano](https://github.com/wjorellano)
+  4. [Hector Bilbao](https://github.com/bilbao-6)
+  5. [Andres Rodriguez](https://github.com/AndresR-04)
+
+### Documentacion
+1. [Diagrama de relacion DB](Diagramas)
+2. [Diagrama de Clases](Diagramas)
+3. [TDR](Documentacion)
 
 ### Misión:
 Nuestra misión principal en el rincón del sabor es brindar  un buen servicio a todos los clientes y satisfacer sus necesidades
@@ -43,4 +48,3 @@ Nuetra vison es que el restaurante el rincón del sabor en un futuro sea reconoc
 El restaurante cuenta con una mala organización administrativa, dado que no contamos con algún sistema o software que nos mejore y cubra esas problemáticas.
 
 Este software esta dirigido al personal como el mesero, la encargada y el gerente.
-
