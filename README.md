@@ -10,7 +10,8 @@
 |-------|---------|-------------|---------|
 |14-09-2019| 0       |Levantamiento de requerimientos|Esteban Gómez, Andres Rodríguez, Dilan Barrios, Wilman Orellano, Héctor Bilbao.|
 |13-10-2019| 0       |Levantamiento de requerimientos|Esteban Gómez, Andres Rodríguez, Dilan Barrios, Wilman Orellano, Héctor Bilbao.|  
-|11-05-2020     | 0       |Definición de modulos de trabajo |Esteban Gómez, Andres Rodríguez, Wilman Orellano, Héctor Bilbao.|   
+|11-04-2020     | 0       |Definición de modulos de trabajo |Esteban Gómez, Andres Rodríguez, Wilman Orellano, Héctor Bilbao.|  
+|25-05-2020| 0            |necesidades informáticas y el plan de contratación dispuesto para la implementación de la solución al cliente.| Esteban Gomez, Wilman orellano, Dilan Barrios.|
 
 ### NOMBRE DE LA EMPRESA:
   WaspSoft
@@ -78,7 +79,8 @@ El software contará con diferentes privilegios o roles de usuarios que dependie
 ### Documentación
 1. [Diagrama de relacion DB](Diagramas)
 2. [Diagrama de Clases](Diagramas)
-3. [TDR](Documentacion/tyc)
+3. [TDR](tyc.md)
+4. [Necesidades informaticas](NecesidadesInfomaticas.md)
 
 ### Misión:
 Nuestra misión principal en el rincón del sabor es brindar  un buen servicio a todos los clientes y satisfacer sus necesidades
@@ -130,7 +132,7 @@ No
 Una mala organización administrativa, dado que no contamos con algún
 sistema o software que nos mejore y cubra esas problemáticas.
 
-### Plantear una solución desde el punto de vista de sistemas de información: 
+### Plantear una solución desde el punto de vista de sistemas de información:
   Se implementa un aplicativo informático para la
   administración de venta del rincón del sabor, el cual este permitirá llevar
   acabo muchas funciones como lo son, el registro de ventas e inventario,
