@@ -79,8 +79,8 @@ El software contará con diferentes privilegios o roles de usuarios que dependie
 ### Documentación
 1. [Diagrama de relacion DB](Diagramas)
 2. [Diagrama de Clases](Diagramas)
-3. [TDR](tyc.md)
-4. [Necesidades informaticas](NecesidadesInfomaticas.md)
+3. [TDR](Documentacion)
+4. [Necesidades informaticas](Documentacion)
 
 ### Misión:
 Nuestra misión principal en el rincón del sabor es brindar  un buen servicio a todos los clientes y satisfacer sus necesidades
