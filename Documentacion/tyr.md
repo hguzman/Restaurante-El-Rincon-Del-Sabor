@@ -1,4 +1,4 @@
-# TÉRMINOS Y REFERENCIAS
+# TÉRMINOS DE REFERENCIAS
 
 ## Desarrollo de software para la caja del restaurante (Rincón Del Sabor)
 
