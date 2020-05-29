@@ -53,7 +53,19 @@ empresa.
 * Hacer prueba del software.
 * Implementación del software.
 
-#### 1.5 Definiciones, acrónimos y abreviatras:
+#### 1.5 Definiciones, acrónimos y abreviaturas:
+* Aplicativo Web: Es una herramienta que los usuarios pueden acceder a un servidor web a través de una conexión a internet.
+
+* Base de datos: Una base de datos es un conjunto de datos pertenecientes a un mismo contexto y almacenados sistemáticamente para su posterior uso.
+
+* Software: Es el conjunto de instrucciones que una computadora debe seguir, es decir, todas aquellas indicaciones sobre lo que tiene que hacer y cómo.
+
+* Roles: Función que una persona desempeña en un lugar o en una situación.
+
+* Requerimientos funcionales: Los requisitos funcionales son declaraciones de los servicios que prestará el sistema, en la forma en que reaccionará a determinados insumos.
+
+* Requeremientos NO funcionales: Se trata de requisitos que no se refieren directamente a las funciones específicas suministradas por el sistema (características de usuario), sino a las propiedades del sistema: rendimiento, seguridad, disponibilidad.
+
 
 ### 2. Descripción general
 
