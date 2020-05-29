@@ -1,4 +1,4 @@
-# TÉRMINOS Y CONDICONES
+# TÉRMINOS Y REFERENCIAS
 
 ## Desarrollo de software para la caja del restaurante (Rincón Del Sabor)
 
