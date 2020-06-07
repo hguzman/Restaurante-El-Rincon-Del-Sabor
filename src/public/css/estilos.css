@@ -1,0 +1,34 @@
+
+.btn{
+ 
+    margin-top: 24px;
+}
+.card{
+    margin: auto;
+    width: 80% !important;
+}
+.mx-auto{
+    margin-top: 110px !important;
+}
+body{
+    background: rgba(237, 250, 247);
+}
+.agr{
+    margin-top: 18px;
+}
+.ajustar-btn{
+    width: 90%;
+    margin: auto;
+}
+.btn-radios{
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid black; */
+    
+}
+.ajustar{
+    margin-left: 20px;
+}
+.mover{
+    float: left;
+}
