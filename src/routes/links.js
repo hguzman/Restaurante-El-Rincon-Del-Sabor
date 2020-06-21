@@ -10,9 +10,21 @@ router.post('/signup', (req, res) =>{
   res.render('links/signup');
 });
 
-// router.get('/login', (req, res)=>{
-//   res.render('links/login');
-// });
+router.get('/add', (req, res)=>{
+  res.render('links/add');
+});
+
+router.post('/add', async(req, res) => {
+  // console.log(req.body);
+  const {plato, precio, descripcion} = req.body;
+  const newPlato = {
+    plato,
+    precio,
+    descripcion
+  };
+  await pool.query('INSERT INTO menu set ?', [newPlato]);
+  res.send('Guardado');
+});
 
 router.post('/login', (req, res)=>{
   console.log(req.body);
