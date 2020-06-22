@@ -10,11 +10,16 @@ router.post('/signup', (req, res) =>{
   res.render('links/signup');
 });
 
-router.get('/add', (req, res)=>{
-  res.render('links/add');
+router.post('/login', (req, res)=>{
+  console.log(req.body);
+  res.send('recivido');
 });
 
-router.post('/add', async(req, res) => {
+router.get('/new', (req, res)=>{
+  res.render('links/new');
+});
+
+router.post('/new', async(req, res) => {
   // console.log(req.body);
   const {plato, precio, descripcion} = req.body;
   const newPlato = {
@@ -23,12 +28,38 @@ router.post('/add', async(req, res) => {
     descripcion
   };
   await pool.query('INSERT INTO menu set ?', [newPlato]);
-  res.send('Guardado');
+  res.redirect('/list');
 });
 
-router.post('/login', (req, res)=>{
-  console.log(req.body);
-  res.send('recivido');
+router.get('/list', async(req, res) =>{
+  const lista = await pool.query('SELECT * FROM menu');
+  // console.log(lista)
+  res.render('links/list', {lista});
 });
+
+router.get('/delete/:id', async(req, res) =>{
+  const { id } = req.params;
+  await pool.query('DELETE FROM menu WHERE Id = ?', [id]);
+  res.redirect('/list');
+});
+
+router.get('/edit/:id', async(req, res) =>{
+  const { id } = req.params;
+  const plato = await pool.query('SELECT * FROM menu WHERE Id = ?', [id]);
+  res.render('links/edit', { plato: plato[0]});
+});
+
+router.post('/edit/:id', async(req, res) =>{
+  const { id } = req.params;
+  const { plato, precio, descripcion} = req.body;
+  const newPlato = {
+    plato,
+    precio,
+    descripcion
+  };
+  await pool.query('UPDATE menu set ? WHERE Id = ?', [newPlato, id]);
+  res.redirect('/list');
+});
+
 
 module.exports = router;

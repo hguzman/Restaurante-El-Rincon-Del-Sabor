@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-11">
+      <table class="table table-striped table-bordered mx-auto text-center">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each lista}}
+          <tr>
+            <th scope="row">{{this.id}}</th>
+            <td>{{this.plato}}</td>
+            <td>{{this.precio}}</td>
+            <td>{{this.descripcion}}</td>
+            <td><a class="btn btn-success" href="/edit/{{id}}">Editar</a></td>
+            <td><a class="btn btn-danger" href="/delete/{{id}}">Borrar</a></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      <a class="btn btn-primary" href="/new">Nuevo Plato</a>
+    </div>
+  </div>
+</div>

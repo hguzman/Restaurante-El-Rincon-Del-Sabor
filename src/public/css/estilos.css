@@ -50,6 +50,12 @@ body{
 .login{
   margin-top: -65px !important;
 }
+/* ------------formulario de guardar view add ------------*/
 .form-guardar{
   margin-left: 80% !important;
+}
+
+/* --------------------tabla de platos-------------------- */
+.mover{
+
 }
