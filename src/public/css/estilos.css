@@ -3,12 +3,12 @@
 
     margin-top: 24px;
 }
-.card{
+/* .card{
     margin: auto;
     width: 80% !important;
-}
-.mx-auto{
-    margin-top: 110px !important;
+} */
+.position{
+    margin-top: 50px !important;
 }
 body{
     background: rgba(237, 250, 247);
@@ -40,8 +40,11 @@ body{
 .icon{
   font-size: 25px;
   position: relative;
-  left: 63px;
   top: -13px;
+}
+.icons{
+  margin: auto;
+  width: 50%;
 }
 .logo{
   margin-left: 45% !important;
@@ -50,12 +53,15 @@ body{
 .login{
   margin-top: -65px !important;
 }
-/* ------------formulario de guardar view add ------------*/
-.form-guardar{
-  margin-left: 80% !important;
+.top{
+  margin-top: 80px;
 }
+.left{
+    margin-left: 30% !important;
+}
+/* ------------formulario de guardar view add ------------*/
 
-/* --------------------tabla de platos-------------------- */
-.mover{
-
+/*------------------------- tabla -------------------------*/
+.table{
+  margin-top: 80px;
 }
