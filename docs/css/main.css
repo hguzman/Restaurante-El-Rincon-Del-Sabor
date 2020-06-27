@@ -1,0 +1,17 @@
+.tarjet{
+  margin-top: 70px;
+  /* height: 700px;
+  background: rgb(0,212,255);
+  background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(202,56,204,1) 76%); */
+}
+.title{
+
+}
+.img-fondo{
+  margin-top: 20px;
+}
+@media (max-width: 1024px) {
+  .ml-auto {
+    margin-right: 100% !important;
+  }
+}
