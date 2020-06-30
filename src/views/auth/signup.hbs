@@ -6,24 +6,24 @@
                     <form action="/signup" method="POST">
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Primer nombre" name="name" autofocus>
+                                <input type="text" class="form-control" placeholder="Primer nombre" name="name" required pattern="[A-Za-z]+" autofocus>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Primer apellido" name="fullname">
+                                <input type="text" class="form-control" placeholder="Primer apellido" name="fullname" required pattern="[A-Za-z]+">
                             </div>
                         </div>
                         <div class="agr">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="formGroupExampleInput"
-                                 placeholder="Nombre de usuario" name="username">
+                                 placeholder="Nombre de usuario" required name="username">
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="formGroupExampleInput"
-                                 placeholder="Correo electronico" name="email">
+                                 placeholder="Correo electronico" name="email" required>
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Contraseña" name="password">
+                                placeholder="Contraseña" name="password" required minlength="8">
                                 <small id="emailHelp" class="form-text text-muted">su contraseña debe tener como minimo 8 caracteres.</small>
                             </div>
                             <div class="row">
@@ -47,7 +47,7 @@
                                     </div>
                                 </div>
                                 <div class="custom-control custom-checkbox ajustar">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1" required="" name="tyc" value="Acepto">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1" required name="tyc" value="Acepto">
                                     <label class="custom-control-label" for="customCheck1" >Acepta los terminos y condiciones.</label>
                                 </div>
                                 <div class="ajustar-btn">

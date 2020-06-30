@@ -27,7 +27,7 @@ router.post('/signup', passport.authenticate('local',{
   failureFlash: true
 }))
 
-  
+
 router.get('/profile', (req, res) =>{
   res.render('profile');
 });
