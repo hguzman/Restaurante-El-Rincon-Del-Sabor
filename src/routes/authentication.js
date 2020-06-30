@@ -29,11 +29,7 @@ router.post('/signup', isNotLoggedIn, passport.authenticate('local',{
 }))
 
 
-<<<<<<< HEAD
-router.get('/profile', (req, res) =>{
-=======
 router.get('/profile', isLoggedIn, (req, res) =>{
->>>>>>> test
   res.render('profile');
 
 });
