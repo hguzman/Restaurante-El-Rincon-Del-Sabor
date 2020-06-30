@@ -1,7 +1,7 @@
 {{#if success}}
-  <div class="container p-2">
+  <div class="container-fluid p-2">
     <div class="row">
-      <div class="col-md-4 ml-auto">
+      <div class="col-md-3 col-lg-4 ml-auto">
         <div class="alert alert-success alert-dismissible fade show" role="alert">
           <i class="fas fa-check-circle"></i>{{success}}
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -13,9 +13,9 @@
   </div>
 {{/if}}
 {{#if danger}}
-  <div class="container p-2">
+  <div class="container-fluid p-2">
     <div class="row">
-      <div class="col-md-4 ml-auto">
+      <div class="col-md-3 col-lg-5 ml-auto">
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
           <i class="fas fa-times-circle"></i>{{danger}}
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
