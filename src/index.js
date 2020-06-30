@@ -13,7 +13,7 @@ const {database} = require('./keys');
 const app = express();
 require('./lib/passport');
 //setting
-app.set('port', process.env.PORT || 4000);
+app.set('port', 4000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs({
     defaultLayout: 'main',
@@ -55,5 +55,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //servidor
 app.listen(app.get('port'), () =>{
-  console.log('Servidor iniciado en el puerto', app.get('port'))
+  console.log('Servidor iniciado en el puerto', app.get('port'));
 });
