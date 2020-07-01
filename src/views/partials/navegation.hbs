@@ -1,6 +1,6 @@
 {{#if user}}
   <div class="w-100">
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -17,7 +17,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Mi perfil</a>
-              <a class="dropdown-item" href="#"><i class="fas fa-bell"></i> Datos</a>
+              <a class="dropdown-item" href="/list"><i class="fas fa-bell"></i> Datos</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/logout"><i class="fas fa-sign-in-alt"></i> cerrar sesion</a>
             </div>
@@ -28,10 +28,13 @@
   </div>
 </div>
 {{else}}
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-dark bg-dark">
     <h4 class="text-white"> Pied Piper</h4>
     <div class="form-inline my-2 my-lg-0">
       <a href="/signup" class="btn no-underline border-white text-white my-1 my-sm-0">Registrate</a>
     </div>
   </nav>
+{{/if}}
+{{#if signup}}
+<button type="button" name="button">iniciar sesion</button>
 {{/if}}
