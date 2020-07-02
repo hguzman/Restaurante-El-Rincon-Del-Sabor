@@ -1,14 +1,14 @@
 
 .btn{
- 
+
     margin-top: 24px;
 }
-.card{
+/* .card{
     margin: auto;
     width: 80% !important;
-}
-.mx-auto{
-    margin-top: 110px !important;
+} */
+.position{
+    margin-top: 50px !important;
 }
 body{
     background: rgba(237, 250, 247);
@@ -24,11 +24,53 @@ body{
     width: 95%;
     margin: auto;
     /* border: 1px solid black; */
-    
+
 }
 .ajustar{
     margin-left: 20px;
 }
 .mover{
     float: left;
+}
+.redes{
+  margin-top: 20px;
+  height: 50px;
+  overflow: hidden;
+}
+.icon{
+  font-size: 25px;
+  position: relative;
+  top: -13px;
+}
+.icons{
+  margin: auto;
+  width: 50%;
+}
+.logo{
+  margin-left: 45% !important;
+  margin-top: 55px;
+}
+.login{
+  margin-top: -65px !important;
+}
+.top{
+  margin-top: 80px;
+}
+.left{
+    margin-left: 30% !important;
+}
+/* ------------formulario de guardar view add ------------*/
+
+/*------------------------- tabla -------------------------*/
+.table{
+  margin-top: 80px;
+}
+/*--------------------- message ---------------------*/
+.position{
+  margin-top: 2px;
+}
+
+.btn-modal{
+  position: absolute;
+  top: 0px;
 }
