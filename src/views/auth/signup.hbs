@@ -1,86 +1,61 @@
 <div class="container  position">
-    <div class="row">
-        <div class="col-md-4 col-sm-9 mx-auto">
-            <div class="card text-center position">
-                <div class="card-body">
-                    <form action="/signup" method="POST">
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Primer nombre" name="name" required pattern="[A-Za-z]+" autofocus>
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Primer apellido" name="fullname" required pattern="[A-Za-z]+">
-                            </div>
-                        </div>
-                        <div class="agr">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="formGroupExampleInput"
-                                 placeholder="Nombre de usuario" required name="username">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="formGroupExampleInput"
-                                 placeholder="Correo electronico" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Contraseña" name="password" required minlength="8">
-                                <small id="emailHelp" class="form-text text-muted">su contraseña debe tener como minimo 8 caracteres.</small>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Celular" required=""
-                                     pattern="[0-9]+" minlength="10" maxlength="10" name="mobile">
-                                </div>
-                              </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Cedula" required="" pattern="[0-9]+" maxlength="10" name="cedula">
-                                </div>
-                                <div class="btn-radios p-2">
-                                    <div class="custom-control custom-radio custom-control-inline mover">
-                                        <input type="radio" id="customRadioInline1"
-                                        class="custom-control-input" name="sexo" value="Hombre" checked required="">
-                                        <label class="custom-control-label" for="customRadioInline1">Hombre</label>
-                                    </div>
-                                    <div class="custom-control custom-radio custom-control-inline mover" >
-                                        <input type="radio" id="customRadioInline2"
-                                        class="custom-control-input" name="sexo" value="Mujer">
-                                        <label class="custom-control-label" for="customRadioInline2">Mujer</label>
-                                    </div>
-                                </div>
-                                <div class="custom-control custom-checkbox ajustar">
-                                    <input type="checkbox" class="custom-control-input"  required name="tyc" value="Acepto">
-                                    <label class="custom-control-label" for="customCheck1" >Acepta los terminos y condiciones.</label>
-                                </div>
-                                <div class="ajustar-btn">
-                                  <button class="btn btn-success btn-lg btn-block">Iniciar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-9 mx-auto">
+      <div class="card text-center position">
+        <div class="card-body">
+          <form action="/signup" method="POST">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Primer nombre" name="name" required pattern="[A-Za-z]+" autofocus>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Primer apellido" name="fullname" required pattern="[A-Za-z]+">
+              </div>
             </div>
+            <div class="agr">
+              <div class="form-group">
+                  <input type="text" class="form-control" id="formGroupExampleInput"
+                   placeholder="Nombre de usuario" required name="username">
+              </div>
+              <div class="form-group">
+                  <input type="email" class="form-control" id="formGroupExampleInput"
+                   placeholder="Correo electronico" name="email" required>
+              </div>
+              <div class="form-group">
+                  <input type="password" class="form-control" id="formGroupExampleInput2"
+                  placeholder="Contraseña" name="password" required minlength="8">
+                  <small id="emailHelp" class="form-text text-muted">su contraseña debe tener como minimo 8 caracteres.</small>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Celular" required=""
+                   pattern="[0-9]+" minlength="10" maxlength="10" name="mobile">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Cedula" required="" pattern="[0-9]+" maxlength="10" name="cedula">
+                </div>
+              </div>
+              <div class="btn-radios p-2">
+                  <div class="custom-control custom-radio custom-control-inline mover">
+                      <input type="radio" id="customRadioInline1"
+                      class="custom-control-input" name="sexo" value="Hombre" checked required="">
+                      <label class="custom-control-label" for="customRadioInline1">Hombre</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline mover" >
+                      <input type="radio" id="customRadioInline2"
+                      class="custom-control-input" name="sexo" value="Mujer">
+                      <label class="custom-control-label" for="customRadioInline2">Mujer</label>
+                  </div>
+              </div>
+              <div class="custom-control custom-checkbox ajustar">
+                  <input type="checkbox" class="custom-control-input"  required name="tyc" value="Acepto">
+                  <label class="custom-control-label" for="customCheck1" >Acepta los terminos y condiciones.</label>
+              </div>
+              <div class="ajustar-btn">
+                <button class="btn btn-success btn-lg btn-block">Iniciar</button>
+            </div>
+          </form>
         </div>
-    </div>
-</div>
-
-<!-- Button trigger modal -->
-<button type="button" id="customCheck1" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#staticBackdrop">
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Terminos y condiciones
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
