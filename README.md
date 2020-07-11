@@ -89,43 +89,51 @@ Una vez terminada la instalación, los módulos NodeJS y npm deben estar instala
 ``npm --version
 ``
 
-:+1: ¡ ya estas Listo para comenzar a colaborar !  :+1:
+
 
 ##### inicia servidor con el comando
 
-Dentro del Proyecto ejecuta en la terminal  el siguiente comando para iniciar el servidor en el puerto: 4000
+Dentro del Proyecto ejecuta en la terminal  los siguientes comandos para descargar los modulos o dependecias del proyecto.
+
+1. Descargar las diferentes dependencias que requiere el proyecto.
+
+``npm install``
+
+2. Con el siguiente comando ejecutas el servidor de la aplicacion en el localhost con el puerto `4000`
 
 ``npm run dev
 ``
 
 <br>http://localhost:4000
 
-## La aplicación generada tiene la siguiente estructura de directorios:
 
-```text
-.src
-├── lib
-│   └── handlebars.hbs
-├── package.json
-├── public
-│   ├── css
-|   |   └─ estilos.css
-│   ├── javascripts
-│   └── stylesheets     
-├── routes
-│   ├── authentication.js
-|   ├── index.js
-│   └── link.js
-├── views
-|   ├── layouts
-|   |   └─ main.hbs
-|   ├── links
-|   |   └─ signup.hbs
-|   └── partial
-|       ├── navegation.hbs
-|       └── footer.hbs
-|
-├── database.js
-├── index.js
-└── keys.js
-```
+<p class="text" align="center">:+1: ¡ ya estas Listo para comenzar a colaborar ! :+1:</p>
+
+<h3 align="center" >Integrates del proyecto</h3>
+
+<p align="center">
+<a href="https://github.com/wjorellano">
+  <img class="avatar"src="https://avatars3.githubusercontent.com/u/57116131?s=400&u=daf6b0f42414ffc273dfd5f3ec9271a188c25de8&v=4" alt="logo" width="40" height="40" title="Wilman Orellano">
+</a>
+<a href="#">
+  <img class="avatar"src="https://avatars2.githubusercontent.com/u/56968883?s=64&v=4" alt="logo" width="40" height="40" title="Esteban Gomez">
+</a>
+<a href="#">
+  <img class="avatar"src="https://avatars1.githubusercontent.com/u/1308210?s=64&v=4" alt="logo" width="40" height="40" title="Henry Guzman">
+</a>
+<a href="#">
+  <img class="avatar"src="https://avatars1.githubusercontent.com/u/56977351?s=64&v=4" alt="logo" width="40" height="40" title="Hector bilbao">
+</a>
+<a href="#">
+  <img class="avatar"src="https://avatars0.githubusercontent.com/u/61292564?s=64&v=4" alt="logo" width="40" height="40" title="Andres Rodriguez">
+</a>
+<a href="#">
+  <img class="avatar"src="https://avatars0.githubusercontent.com/u/56977455?s=64&v=4" alt="logo" width="40" height="40" title="Dilan barrios">
+</a>
+</p>
+
+<style>
+.avatar{
+  border-radius: 50px;
+}
+</style>

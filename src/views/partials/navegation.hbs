@@ -4,12 +4,13 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <form class="form-inline position-relative my-2 my-lg-0">
+      <form class="form-inline position-relative my-2 my-lg-0" action="">
         <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-        <button class="btn btn-search my-2 my-lg-0 position-absolute" type="submit"><i class="fas fa-search"></i></button>
+        <button class="btn btn-search my-2 my-lg-0 position-absolute"><i class="fas fa-search"></i></button>
       </form>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               <img src="/img/Lil Baby.jpg" class="img-fluid rounded-circle mr-2 avatar">
@@ -19,22 +20,18 @@
               <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Mi perfil</a>
               <a class="dropdown-item" href="/list"><i class="fas fa-bell"></i> Datos</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/logout"><i class="fas fa-sign-in-alt"></i> cerrar sesion</a>
+              <a class="dropdown-item text-danger" href="/logout"><i class="fas fa-sign-in-alt"></i> cerrar sesion</a>
             </div>
           </li>
         </ul>
       </div>
     </nav>
   </div>
-</div>
 {{else}}
-  <nav class="navbar fixed-top navbar-dark bg-dark">
+  <nav class="navbar  navbar-dark bg-dark">
     <h4 class="text-white"> Pied Piper</h4>
     <div class="form-inline my-2 my-lg-0">
       <a href="/signup" class="btn no-underline border-white text-white my-1 my-sm-0">Registrate</a>
     </div>
   </nav>
-{{/if}}
-{{#if signup}}
-<button type="button" name="button">iniciar sesion</button>
 {{/if}}
