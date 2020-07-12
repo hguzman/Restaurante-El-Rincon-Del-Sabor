@@ -113,21 +113,21 @@ Dentro del Proyecto ejecuta en la terminal  los siguientes comandos para descarg
 
 <p align="center">
 <a href="https://github.com/wjorellano">
-  <img class="avatar" style="border-radius: 50px;" src="https://avatars3.githubusercontent.com/u/57116131?s=400&u=daf6b0f42414ffc273dfd5f3ec9271a188c25de8&v=4" alt="logo" width="40" height="40" title="Wilman Orellano">
+  <img class="avatar" style="border-radius: 50px" src="https://avatars3.githubusercontent.com/u/57116131?s=400&u=daf6b0f42414ffc273dfd5f3ec9271a188c25de8&v=4" alt="logo" width="40" height="40" title="Wilman Orellano">
 </a>
 <a href="#">
-  <img class="avatar" style="border-radius: 50px;" src="https://avatars2.githubusercontent.com/u/56968883?s=64&v=4" alt="logo" width="40" height="40" title="Esteban Gomez">
+  <img class="avatar" style="border-radius: 50px" src="https://avatars2.githubusercontent.com/u/56968883?s=64&v=4" alt="logo" width="40" height="40" title="Esteban Gomez">
 </a>
 <a href="#">
-  <img class="avatar" style="border-radius: 50px;" src="https://avatars1.githubusercontent.com/u/1308210?s=64&v=4" alt="logo" width="40" height="40" title="Henry Guzman">
+  <img class="avatar" style="border-radius: 50px" src="https://avatars1.githubusercontent.com/u/1308210?s=64&v=4" alt="logo" width="40" height="40" title="Henry Guzman">
 </a>
 <a href="#">
-  <img class="avatar" style="border-radius: 50px;" src="https://avatars1.githubusercontent.com/u/56977351?s=64&v=4" alt="logo" width="40" height="40" title="Hector bilbao">
+  <img class="avatar" style="border-radius: 50px" src="https://avatars1.githubusercontent.com/u/56977351?s=64&v=4" alt="logo" width="40" height="40" title="Hector bilbao">
 </a>
 <a href="#">
-  <img class="avatar" style="border-radius: 50px;" src="https://avatars0.githubusercontent.com/u/61292564?s=64&v=4" alt="logo" width="40" height="40" title="Andres Rodriguez">
+  <img class="avatar" style="border-radius: 50px" src="https://avatars0.githubusercontent.com/u/61292564?s=64&v=4" alt="logo" width="40" height="40" title="Andres Rodriguez">
 </a>
 <a href="#">
-  <img class="avatar" style="border-radius: 50px;" src="https://avatars0.githubusercontent.com/u/56977455?s=64&v=4" alt="logo" width="40" height="40" title="Dilan barrios">
+  <img class="avatar" style="border-radius: 50px" src="https://avatars0.githubusercontent.com/u/56977455?s=64&v=4" alt="logo" width="40" height="40" title="Dilan barrios">
 </a>
 </p>
