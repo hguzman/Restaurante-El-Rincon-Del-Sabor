@@ -1,3 +1,12 @@
+@supports (display: grid){
+  body{
+    display: grid;
+  }
+}
+:root{
+  /*----variables----*/
+
+}
 
 .btn{
 
@@ -23,12 +32,10 @@ body{
 .btn-radios{
     width: 95%;
     margin: auto;
-    /* border: 1px solid black; */
-
 }
-.ajustar{
-    margin-left: 20px;
-}
+/* .ajustar{
+    margin-left: 10px;
+} */
 .mover{
     float: left;
 }
@@ -47,7 +54,7 @@ body{
   width: 50%;
 }
 .logo{
-  margin-left: 45% !important;
+  margin-left: 46% !important;
   margin-top: 55px;
 }
 .login{
@@ -70,7 +77,23 @@ body{
   margin-top: 2px;
 }
 
-.btn-modal{
+/*------------------footer------------------*/
+.footer{
+  margin-top: 55px;
+}
+/*------------------------ scroll------------------------ */
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(1, 17, 36);
+  border-radius: 4px;
+}
+::-webkit-scrollbar:active{
+  width: 12px;
+}
+/*-------------------------alerts-------------------------*/
+.mensajes{
   position: absolute;
-  top: 0px;
+  top:10px;
 }
