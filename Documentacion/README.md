@@ -31,7 +31,7 @@ El objetivo principial de este proyecto es desarrollar el aplicativo web según 
 ### 1.2 Alcance:
 Este proyecto consistirá en desarrollar un aplicativo web basados en el punto de venta y modulo post del restaurante, que permitirá llevar una mejor organización sobre el registro de ventas que se hacen, así el admnistrador y empleado en especifico podrán tener registros de la venta diaria con sus respectivas fechas y pedidos hechos por los clientes.
 También incluirá:
-* El software será implementado en la empresa El incón Del Sabor
+* El software será implementado en la empresa El Rincón Del Sabor
 * El software utilizado por la secretaria y el gerente
 * El software implementa una interfaz grafica el cual este contendrá el login para poder
 acceder de manera correcta al software, también incluirá dentro del software botones, estos

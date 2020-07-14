@@ -4,9 +4,25 @@
   background: rgb(0,212,255);
   background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(202,56,204,1) 76%); */
 }
+
+.top{
+  margin-top: 100px;
+  margin-left: 100px;
+
+}
+
+body{
+  background: url(../img/f.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
 .title{
 
 }
+
 .img-fondo{
   margin-top: 20px;
 }
