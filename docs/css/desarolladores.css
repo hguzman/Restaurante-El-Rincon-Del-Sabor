@@ -1,0 +1,14 @@
+body{
+  background: url(../img/f.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.top{
+  margin-top: 100px;
+}
+
+.position-img{
+  margin-top: 40px;
+  margin-left: 5px;
+}
