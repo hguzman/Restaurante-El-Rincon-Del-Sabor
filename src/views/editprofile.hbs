@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row mx-auto">
+    <div class="col-md-4 col-sm-8">
+      <div class="card top">
+        <div class="card-body">
+          <form action="/editprofile/{{user.id}}" method="post">
+            <h4 class="text-center">Actualizar Datos</h4>
+            <div class="form-group">
+              <input type="text" value="{{user.name}}" class="form-control" id="exampleInputPassword1" name="name"
+              placeholder="name" required="" pattern="[A-Za-z ]+" tabindex="1" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{user.fullname}} "class="form-control" id="exampleInputPassword1" name="fullname"
+              placeholder="fullname" required=""pattern="[A-Za-z ]+">
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{user.email}}" class="form-control" id="exampleInputPassword1" name="email"
+                placeholder="email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </div>
+            <button class="btn btn-success btn-lg btn-block">Actualizar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
