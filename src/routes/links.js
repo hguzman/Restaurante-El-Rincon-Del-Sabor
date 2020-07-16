@@ -50,5 +50,13 @@ router.post('/edit/:id', isLoggedIn, async(req, res) =>{
   res.redirect('/list');
 });
 
+router.get('/editprofile/:id', isLoggedIn, async(req, res) =>{
+  const { id } = req.params;
+  const user = await pool.query('SELECT * FROM user WHERE Id = ?', [id]);
+  res.render('/editprofile', { user: user[0]});
+});
+
+
+
 
 module.exports = router;
