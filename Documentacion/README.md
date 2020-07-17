@@ -29,7 +29,7 @@ Este proyecto se llevará con la finalidad de desarrollar un aplicativo web al r
 El objetivo principial de este proyecto es desarrollar el aplicativo web según los requerimientos del cliente y que así tenga una mejor organización con las ventas y darle una facilidad de algunos aspectos administrativos como lo es el poder de acceder a la información de los clientes que llegan a su restaurante, facilidad en el registro diario de ventas, y evitar contra tiempos en cuanto al dinero.
 
 ### 1.2 Alcance:
-Este proyecto consistirá en desarrollar un aplicativo web basados en el punto de venta y modulo post del restaurante, que permitirá llevar una mejor organización sobre el registro de ventas que se hacen, así el admnistrador y empleado en especifico podrán tener registros de la venta diaria con sus respectivas fechas y pedidos hechos por los clientes.
+Este proyecto consistirá en desarrollar un aplicativo web basados en el punto de venta y modulo post del restaurante, que permitirá llevar una mejor organización sobre el registro de ventas que se hacen, así el administrador y empleado en especifico podrán tener registros de la venta diaria con sus respectivas fechas y pedidos hechos por los clientes.
 También incluirá:
 * El software será implementado en la empresa El Rincón Del Sabor
 * El software utilizado por la secretaria y el gerente
@@ -64,7 +64,7 @@ empresa.
 
 * Requerimientos funcionales: Los requisitos funcionales son declaraciones de los servicios que prestará el sistema, en la forma en que reaccionará a determinados insumos.
 
-* Requeremientos NO funcionales: Se trata de requisitos que no se refieren directamente a las funciones específicas suministradas por el sistema (características de usuario), sino a las propiedades del sistema: rendimiento, seguridad, disponibilidad.
+* Requerimientos NO funcionales: Se trata de requisitos que no se refieren directamente a las funciones específicas suministradas por el sistema (características de usuario), sino a las propiedades del sistema: rendimiento, seguridad, disponibilidad.
 
 
 ### 2. Descripción general
@@ -98,7 +98,7 @@ El software contará con diferentes privilegios o roles de usuarios que dependie
 Nuestra misión principal en el rincón del sabor es brindar  un buen servicio a todos los clientes y satisfacer sus necesidades
 
 ### Visión:
-Nuetra visión es que el restaurante el rincón del sabor en un futuro sea reconocido como un restaurante de excelencia por brindar sus productos a toda la comunidad en general.
+Nuestra visión es que el restaurante el rincón del sabor en un futuro sea reconocido como un restaurante de excelencia por brindar sus productos a toda la comunidad en general.
 
 ### Especificación de requerimientos:
 El restaurante cuenta con una mala organización administrativa, dado que no cuenta con algúnos sistemas o software que los ayude a mejorar y cubrir esas deficiencias o problemáticas al punto de no poder  brindar un buen servicios a sus clientes.
@@ -123,7 +123,7 @@ Como una aplicación web, donde yo pueda ver el registro de mis ventas, llevar u
 4º ¿Cómo desea usted que la base de datos gestione con el software?
 
 Yo quiero que en la base de datos me guarde el registro de lo que se vende
-diario, un registtro de clientes privilegiados por el mismo restaurante (brindandole una serie de beneficios como lo es: fios, descuentos y demás).
+diario, un registro de clientes privilegiados por el mismo restaurante (brindandole una serie de beneficios como lo es: fios, descuentos y demás).
 
 5º ¿A qué tipo de personal es dirigido el software?
 
