@@ -58,8 +58,9 @@ router.get('/editprofile/:id', isLoggedIn, async(req, res) =>{
 
 router.post('/editprofile/:id', isLoggedIn, async(req, res) =>{
   const { id } = req.params;
-  const { name, fullname, email, mobile} = req.body;
+  const { username, name, fullname, email, mobile} = req.body;
   const newDato = {
+    username,
     name,
     fullname,
     email,
