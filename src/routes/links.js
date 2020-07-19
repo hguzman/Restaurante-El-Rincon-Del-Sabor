@@ -52,9 +52,25 @@ router.post('/edit/:id', isLoggedIn, async(req, res) =>{
 
 router.get('/editprofile/:id', isLoggedIn, async(req, res) =>{
   const { id } = req.params;
-  const user = await pool.query('SELECT * FROM user WHERE Id = ?', [id]);
-  res.render('/editprofile', { user: user[0]});
+  const name = await pool.query('SELECT * FROM user WHERE Id = ?', [id]);
+  res.render('editprofile', { name: name[0]});
 });
+
+router.post('/editprofile/:id', isLoggedIn, async(req, res) =>{
+  const { id } = req.params;
+  const { username, name, fullname, email, mobile} = req.body;
+  const newDato = {
+    username,
+    name,
+    fullname,
+    email,
+    mobile
+  };
+  await pool.query('UPDATE user set ? WHERE Id = ?', [newDato, id]);
+  req.flash('success', '  Datos Acualizado.');
+  res.redirect('/profile');
+});
+
 
 
 

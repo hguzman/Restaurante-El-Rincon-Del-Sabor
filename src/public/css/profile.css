@@ -1,20 +1,33 @@
 
 
 .top-xd{
-  margin-top: 40px;
+  margin-top: 10px;
 }
 .emp-profile{
     padding: 3%;
-    margin-top: 3%;
+    margin-top: 2%;
     margin-bottom: 3%;
     border-radius: 0.5rem;
-    background: #fff;
+    background:white;
+    position: relative;
+}
+
+.emp-profile::after{
+    background: grey;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    content: '';
+    filter: blur(15px);
+    z-index: -1;
 }
 .profile-img{
-
     text-align: center;
 }
 .profile-img img{
+    border-radius: 2px;
     width: 70%;
     height: 100%;
 }
