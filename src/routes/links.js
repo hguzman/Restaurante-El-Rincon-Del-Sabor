@@ -71,7 +71,7 @@ router.post('/editprofile/:id', isLoggedIn, async(req, res) =>{
   res.redirect('/profile');
 });
 
-router.get('/Addclient',  async (req, res) => {
+router.get('/Addclient', isLoggedIn,  async (req, res) => {
   res.render('links/Addclient');
 });
 router.post('/Addclient', async (req, res) =>{
@@ -89,46 +89,42 @@ router.post('/Addclient', async (req, res) =>{
 });
 
 //listar los clientes guardados
-router.get('/ListClient',  async (req, res) =>{
+router.get('/ListClient', isLoggedIn,   async (req, res) =>{
   const listClient = await pool.query('select * from cliente');
   res.render('links/ListClient', {listClient});
 });
 
 //eliminar un cliente
 
-router.get('/ListClient/delete/:id', async(req, res) =>{
+router.get('/ListClient/delete/:id', isLoggedIn, async(req, res) =>{
   const { id } = req.params;
   await pool.query('DELETE FROM cliente WHERE Id = ?', [id]);
+  req.flash('danger', 'Cliente eliminado');
   res.redirect('/ListClient');
 });
 
 //editar un clientes
-
-router.get('/EditClient/:id' ,async (req, res) =>{
+router.get('/EditClient/:id', isLoggedIn, async(req, res) =>{
   const { id } = req.params;
-  const link = await pool.query('select * from cliente where id = ?' , [id]);
-  res.render('links/EditClient', {link: link [0]});
+  const link = await pool.query('SELECT * FROM cliente WHERE Id = ?', [id]);
+  res.render('links/EditClient', { link: link[0]});
 });
-router.post('/EditClient/:id', async (req, res) =>{
-  const { id  } = req.params;
+
+router.post('/EditClient/:id', isLoggedIn, async(req, res) =>{
+  const { id } = req.params;
   const { nombre, apellido, cedula, telefono, direccion, correo} = req.body;
-  const newlink = {
-      nombre,
-      apellido,
-      cedula,
-      telefono,
-      direccion,
-      correo
+  const newPlato = {
+    nombre,
+    apellido,
+    cedula,
+    telefono,
+    direccion,
+    correo
   };
-  await pool.query('update cliente set ? where id = ?', [newlink, id]);
-  console.log(newlink)
-  res.redirect('/ListClient');
-
+  await pool.query('UPDATE cliente set ? WHERE Id = ?', [newPlato, id]);
+  console.log(newPlato);
+  req.flash('success', '  Datos cliente actualizados.');
+  res.redirect('/Listclient');
 });
-//router.get('/ListClient',  async (req, res) =>{
-  //const listClient = await pool.query('select * from cliente');
-  //res.render('/ListClient' , {listClient: listClient[0]});
-//});
-
 
 module.exports = router;
