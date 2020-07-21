@@ -71,8 +71,64 @@ router.post('/editprofile/:id', isLoggedIn, async(req, res) =>{
   res.redirect('/profile');
 });
 
+router.get('/Addclient',  async (req, res) => {
+  res.render('links/Addclient');
+});
+router.post('/Addclient', async (req, res) =>{
+  const {nombre,apellido,cedula,telefono, direccion, correo} =req.body;
+  const newclient = {
+    nombre,
+    apellido,
+    cedula,
+    telefono,
+    direccion,
+    correo
+  };
+  await pool.query('insert into cliente set ?', [newclient]);
+  res.redirect('/ListClient');
+});
 
+//listar los clientes guardados
+router.get('/ListClient',  async (req, res) =>{
+  const listClient = await pool.query('select * from cliente');
+  res.render('links/ListClient', {listClient});
+});
 
+//eliminar un cliente
+
+router.get('/ListClient/delete/:id', async(req, res) =>{
+  const { id } = req.params;
+  await pool.query('DELETE FROM cliente WHERE Id = ?', [id]);
+  res.redirect('/ListClient');
+});
+
+//editar un clientes
+
+router.get('/EditClient/:id' ,async (req, res) =>{
+  const { id } = req.params;
+  const link = await pool.query('select * from cliente where id = ?' , [id]);
+  res.render('links/EditClient', {link: link [0]});
+});
+router.post('/EditClient/:id', async (req, res) =>{
+  const { id  } = req.params;
+  const { nombre, apellido, cedula, telefono, direccion, correo} = req.body;
+  const newlink = {
+      nombre,
+      apellido,
+      cedula,
+      telefono,
+      direccion,
+      correo
+  };
+  await pool.query('update cliente set ? where id = ?', [newlink, id]);
+  console.log(newlink)
+  res.redirect('/ListClient');
+
+});
+//router.get('/ListClient',  async (req, res) =>{
+  //const listClient = await pool.query('select * from cliente');
+  //res.render('/ListClient' , {listClient: listClient[0]});
+//});
 
 
 module.exports = router;
