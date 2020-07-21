@@ -7,15 +7,16 @@
             <h4 class="text-center">Actualizar plato</h4>
             <div class="form-group">
               <input type="text" value="{{plato.plato}}" class="form-control" id="exampleInputPassword1" name="plato"
-              placeholder="Nombre del plato" required="" pattern="[A-Za-z ]+" tabindex="1" autofocus>
+                placeholder="Nombre del plato" required="" pattern="[A-Za-z ]+" tabindex="1" autofocus>
             </div>
             <div class="form-group">
-              <input type="text" value="{{plato.precio}} "class="form-control" id="exampleInputPassword1" name="precio"
-              placeholder="Precio" required=""pattern="[0-9.]+">
+              <input type="text" value="{{plato.precio}} " class="form-control" id="exampleInputPassword1" name="precio"
+                placeholder="Precio" required="" pattern="[0-9.]+">
             </div>
             <div class="form-group">
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-               placeholder="Descripcion del plato" required="" pattern="[A-Za-z ]+" name="descripcion">{{plato.descripcion}}</textarea>
+                placeholder="Descripcion del plato" required="" pattern="[A-Za-z ]+"
+                name="descripcion">{{plato.descripcion}}</textarea>
             </div>
             <button class="btn btn-success btn-lg btn-block">Actualizar</button>
           </form>

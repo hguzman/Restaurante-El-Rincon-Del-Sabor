@@ -129,6 +129,9 @@ ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
+create table cliente (id int not null primary key AUTO_INCREMENT, nombre varchar(45) not null, apellido varchar(45) not null, cedula varchar(10) not null, telefono varchar(10) not null, direccion varchar(45) not null, correo varchar(45) not null);
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
