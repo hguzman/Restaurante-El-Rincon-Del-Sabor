@@ -6,50 +6,36 @@
   </a>
 </p>
 
-<<<<<<< HEAD
-<h3 align="center">Gartsoft</h3>
-<p align="center">version: v1.7.4-beta<p>
-=======
 <h3 align="center">Garvsoft</h3>
-<p align="center">version: v0.2.1-beta<p>
->>>>>>> ad5720a3cd979203747269888b315427b0e94a44
+<p align="center">version: v1.7.4-beta<p>
 
 <p align="center">
   <a href="#">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png" alt="logo" width="30" height="30">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png" alt="logo" width="30" height="30" title="GitHub">
   </a>
   <a href="https://atom.io/">
-    <img src="https://cdn.worldvectorlogo.com/logos/atom-5.svg" alt="logo" width="30" height="30">
+    <img src="https://cdn.worldvectorlogo.com/logos/atom-5.svg" alt="logo" width="30" height="30" title="Atom">
   </a>
   <a href="https://git-scm.com/">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1200px-Git_icon.svg.png" alt="logo" width="30" height="30">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1200px-Git_icon.svg.png" alt="logo" width="30" height="30" title="Git">
   </a>
   <a href="https://www.npmjs.com/">
-    <img src="https://cdn.worldvectorlogo.com/logos/npm-2.svg" alt="logo" width="30" height="35">
+    <img src="https://cdn.worldvectorlogo.com/logos/npm-2.svg" alt="logo" width="30" height="35" title="npmjs">
   </a>
   <a href="https://nodejs.org/es/">
-    <img src="https://cdn0.iconfinder.com/data/icons/designer-skills/128/node-js-512.png" alt="logo" width="33" height="35">
+    <img src="https://cdn0.iconfinder.com/data/icons/designer-skills/128/node-js-512.png" alt="logo" width="33" height="35" title="NodeJS">
   </a>
   <a href="https://handlebarsjs.com/">
-    <img src="https://cdn.iconscout.com/icon/free/png-256/handlebars-2-1175024.png" alt="logo" width="33" height="35">
+    <img src="https://cdn.iconscout.com/icon/free/png-256/handlebars-2-1175024.png" alt="logo" width="33" height="35" title="Handlebars">
   </a>
   <a href="https://getbootstrap.com/">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" alt="logo" width="33" height="35">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" alt="logo" width="33" height="35" title="bootstrap">
   </a>
 </p>
 
 Proyecto OpenSource
 
-<<<<<<< HEAD
-Golpes [lodash](https://github.com/lodash/lodash) de 4.17.15 a 4.17.19.
-
-- [Notas de la versión](https://github.com/lodash/lodash/releases)
-- [ Confirma ]( lodash / lodash @ 4.17.15 ... 4.17.19 )
-
-### Documentacion
-=======
 ### Documentación
->>>>>>> ad5720a3cd979203747269888b315427b0e94a44
 
 La documentación del proyecto está almacenada en la [Landig pages](https://hguzman.github.io/Restaurante-El-Rincon-Del-Sabor) de este repocitorio donde se podrá encontrar todo lo referente al proyecto como las gráficas del la base de datos hasta los tipos de documentos como:
 
@@ -60,11 +46,7 @@ La documentación del proyecto está almacenada en la [Landig pages](https://hgu
 
 #### Requisitos para colaborar en el proyecto.
 
-<<<<<<< HEAD
-Para tener participacion de este proyecto debes tener instalado en tu equipo nodejs y npm.
-=======
- Para tener participación de este proyecto debes tener instalado en tu equipo nodejs y npm.
->>>>>>> ad5720a3cd979203747269888b315427b0e94a44
+Para tener participación de este proyecto debes tener instalado en tu equipo nodejs y npm.
 
 - #### Instación de Nodejs y npm
 
@@ -134,5 +116,8 @@ Dentro del Proyecto ejecuta en la terminal los siguientes comandos para descarga
 </a>
 <a href="#">
   <img class="avatar" style="border-radius: 50px" src="https://avatars0.githubusercontent.com/u/56977455?s=64&v=4" alt="logo" width="40" height="40" title="Dilan barrios">
+</a>
+<a href="#">
+  <img class="avatar" style="border-radius: 50px" src="https://avatars1.githubusercontent.com/u/61755483?s=32&v=4" alt="logo" width="40" height="40" title="Rodrigo muñoz">
 </a>
 </p>
