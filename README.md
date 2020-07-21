@@ -7,7 +7,7 @@
 </p>
 
 <h3 align="center">Gartsoft</h3>
-<p align="center">version: v0.2.1-beta<p>
+<p align="center">version: v1.7.4-beta<p>
 
 <p align="center">
   <a href="#">
@@ -33,8 +33,12 @@
   </a>
 </p>
 
-
 Proyecto OpenSource
+
+Golpes [lodash](https://github.com/lodash/lodash) de 4.17.15 a 4.17.19.
+
+- [Notas de la versión](https://github.com/lodash/lodash/releases)
+- [ Confirma ]( lodash / lodash @ 4.17.15 ... 4.17.19 )
 
 ### Documentacion
 
@@ -45,67 +49,55 @@ La documentacion del proyecto esta almacenada en la [Landig pages](https://hguzm
 - Especificaciones de Requerimientos.
 - Otros
 
-
 #### Requisitos para colaborar en el proyecto.
 
- Para tener participacion de este proyecto debes tener instalado en tu equipo nodejs y npm.
+Para tener participacion de este proyecto debes tener instalado en tu equipo nodejs y npm.
 
 - #### Instacion de Nodejs y npm
 
 ###### Para windows
 
- <br> Link [Nodejs](https://nodejs.org/es/download/)
+<br> Link [Nodejs](https://nodejs.org/es/download/)
 
 instalacion normal Descargar aplicacion e instalarla normal como cualquier oto programa, Despues de haber instalado node.js entrar a la teminal y ejecutar los siguientes comandos:
 
-``node --version
-``
+`node --version`
 
-``npm --version
-``
+`npm --version`
 
 ###### Para ubuntu y Mac
 
 Para instalar NodeJS desde NodeSource, simplemente habrá que ejecutar alguno de los siguientes comandos para agregar la versión específica que nos interese. Para hacerlo tendremos que disponer de curl instalado. Si no cuentas con esta herramienta todavía, puedes instalarla con el comando:
 
-``sudo apt install curl
-``
+`sudo apt install curl`
 
 Para instalar la versión 12 de node, no habrá más que ejecutar el comando:
 
-``curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-``
+`curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
 
 Después de añadir alguno de estos PPA, ya podremos instalar la última versión de NodeJS desde el repositorio que elijamos. Si añadimos varios repositorios, se instalará la última versión de NodeJS y no la LTS.
 
-``sudo apt install nodejs
-``
+`sudo apt install nodejs`
 
 Una vez terminada la instalación, los módulos NodeJS y npm deben estar instalados y listos para usar. Podremos usar los siguientes comandos para ver el número de versión instalado.
 
-``node --version
-``
+`node --version`
 
-``npm --version
-``
-
-
+`npm --version`
 
 ##### inicia servidor con el comando
 
-Dentro del Proyecto ejecuta en la terminal  los siguientes comandos para descargar los modulos o dependecias del proyecto.
+Dentro del Proyecto ejecuta en la terminal los siguientes comandos para descargar los modulos o dependecias del proyecto.
 
 1. Descargar las diferentes dependencias que requiere el proyecto.
 
-``npm install``
+`npm install`
 
 2. Con el siguiente comando ejecutas el servidor de la aplicacion en el localhost con el puerto `4000`
 
-``npm run dev
-``
+`npm run dev`
 
 <br>http://localhost:4000
-
 
 <p class="text" align="center">:+1: ¡ ya estas Listo para comenzar a colaborar ! :+1:</p>
 
