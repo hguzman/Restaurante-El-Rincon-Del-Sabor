@@ -66,10 +66,72 @@ router.post("/editprofile/:id", isLoggedIn, async (req, res) => {
     email,
     mobile
   };
+<<<<<<< HEAD
   await pool.query("UPDATE user set ? WHERE Id = ?", [newDato, id]);
   req.flash("success", "  Datos Acualizado.");
 
   res.redirect("/profile");
+=======
+  await pool.query('UPDATE user set ? WHERE Id = ?', [newDato, id]);
+  req.flash('success', '  Datos Acualizado.');
+  res.redirect('/profile');
+});
+
+router.get('/Addclient', isLoggedIn,  async (req, res) => {
+  res.render('links/Addclient');
+});
+router.post('/Addclient', async (req, res) =>{
+  const {nombre,apellido,cedula,telefono, direccion, correo} =req.body;
+  const newclient = {
+    nombre,
+    apellido,
+    cedula,
+    telefono,
+    direccion,
+    correo
+  };
+  await pool.query('insert into cliente set ?', [newclient]);
+  res.redirect('/ListClient');
+});
+
+//listar los clientes guardados
+router.get('/ListClient', isLoggedIn,   async (req, res) =>{
+  const listClient = await pool.query('select * from cliente');
+  res.render('links/ListClient', {listClient});
+});
+
+//eliminar un cliente
+
+router.get('/ListClient/delete/:id', isLoggedIn, async(req, res) =>{
+  const { id } = req.params;
+  await pool.query('DELETE FROM cliente WHERE Id = ?', [id]);
+  req.flash('danger', 'Cliente eliminado');
+  res.redirect('/ListClient');
+});
+
+//editar un clientes
+router.get('/EditClient/:id', isLoggedIn, async(req, res) =>{
+  const { id } = req.params;
+  const link = await pool.query('SELECT * FROM cliente WHERE Id = ?', [id]);
+  res.render('links/EditClient', { link: link[0]});
+});
+
+router.post('/EditClient/:id', isLoggedIn, async(req, res) =>{
+  const { id } = req.params;
+  const { nombre, apellido, cedula, telefono, direccion, correo} = req.body;
+  const newPlato = {
+    nombre,
+    apellido,
+    cedula,
+    telefono,
+    direccion,
+    correo
+  };
+  await pool.query('UPDATE cliente set ? WHERE Id = ?', [newPlato, id]);
+  console.log(newPlato);
+  req.flash('success', '  Datos cliente actualizados.');
+  res.redirect('/Listclient');
+>>>>>>> ad5720a3cd979203747269888b315427b0e94a44
 });
 
 module.exports = router;

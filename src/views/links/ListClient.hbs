@@ -1,0 +1,38 @@
+<div class=" container-fluid p-5">
+    <div class="row">
+        <div class="col-md-12 col-sm-8 col-lg-11">
+            <table class="table table-striped  text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Cédula</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each listClient}}
+                    <tr>
+                        <th>{{this.id}}</th>
+                        <td>{{this.nombre}}</td>
+                        <td>{{this.apellido}}</td>
+                        <td>{{this.cedula}}</td>
+                        <td>{{this.telefono}}</td>
+                        <td>{{this.direccion}}</td>
+                        <td>{{this.correo}}</td>
+                        <td><a class="btn btn-success" href="/EditClient/{{id}}">Editar</a></td>
+                        <td><a class="btn btn-danger" href="/ListClient/delete/{{id}}">Borrar</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <a class="btn btn-primary" href="/AddClient">Nuevo Cliente</a>
+        </div>
+    </div>
+</div>
