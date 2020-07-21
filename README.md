@@ -6,7 +6,7 @@
   </a>
 </p>
 
-<h3 align="center">Gartsoft</h3>
+<h3 align="center">Garvsoft</h3>
 <p align="center">version: v0.2.1-beta<p>
 
 <p align="center">
@@ -36,9 +36,9 @@
 
 Proyecto OpenSource
 
-### Documentacion
+### Documentación
 
-La documentacion del proyecto esta almacenada en la [Landig pages](https://hguzman.github.io/Restaurante-El-Rincon-Del-Sabor) de este repocitorio donde se podra encontrar todo lo referente al proyecto como las graficas del la base de datos hasta los tipos de documentos como:
+La documentación del proyecto está almacenada en la [Landig pages](https://hguzman.github.io/Restaurante-El-Rincon-Del-Sabor) de este repocitorio donde se podrá encontrar todo lo referente al proyecto como las gráficas del la base de datos hasta los tipos de documentos como:
 
 - TDR.
 - terminos de referencia.
@@ -48,15 +48,15 @@ La documentacion del proyecto esta almacenada en la [Landig pages](https://hguzm
 
 #### Requisitos para colaborar en el proyecto.
 
- Para tener participacion de este proyecto debes tener instalado en tu equipo nodejs y npm.
+ Para tener participación de este proyecto debes tener instalado en tu equipo nodejs y npm.
 
-- #### Instacion de Nodejs y npm
+- #### Instación de Nodejs y npm
 
 ###### Para windows
 
  <br> Link [Nodejs](https://nodejs.org/es/download/)
 
-instalacion normal Descargar aplicacion e instalarla normal como cualquier oto programa, Despues de haber instalado node.js entrar a la teminal y ejecutar los siguientes comandos:
+instalación normal Descargar aplicación e instalarla normal como cualquier otro programa, Despues de haber instalado node.js entrar a la teminal y ejecutar los siguientes comandos:
 
 ``node --version
 ``
@@ -91,7 +91,7 @@ Una vez terminada la instalación, los módulos NodeJS y npm deben estar instala
 
 
 
-##### inicia servidor con el comando
+##### Inicia servidor con el comando
 
 Dentro del Proyecto ejecuta en la terminal  los siguientes comandos para descargar los modulos o dependecias del proyecto.
 
