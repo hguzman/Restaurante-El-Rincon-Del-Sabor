@@ -74,14 +74,15 @@ router.get("/Addclient", isLoggedIn, async (req, res) => {
   res.render("links/AddClient");
 });
 router.post("/Addclient", async (req, res) => {
-  const { nombre, apellido, cedula, telefono, direccion, correo } = req.body;
+  const { nombre, apellido, cedula, telefono, direccion, correo, Estado } = req.body;
   const newclient = {
     nombre,
     apellido,
     cedula,
     telefono,
     direccion,
-    correo
+    correo,
+    Estado
   };
   await pool.query("insert into cliente set ?", [newclient]);
   res.redirect("/ListClient");
@@ -111,14 +112,15 @@ router.get("/EditClient/:id", isLoggedIn, async (req, res) => {
 
 router.post("/EditClient/:id", isLoggedIn, async (req, res) => {
   const { id } = req.params;
-  const { nombre, apellido, cedula, telefono, direccion, correo } = req.body;
+  const { nombre, apellido, cedula, telefono, direccion, correo, Estado } = req.body;
   const newPlato = {
     nombre,
     apellido,
     cedula,
     telefono,
     direccion,
-    correo
+    correo,
+    Estado
   };
   await pool.query("UPDATE cliente set ? WHERE Id = ?", [newPlato, id]);
   console.log(newPlato);

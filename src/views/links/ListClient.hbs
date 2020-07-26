@@ -11,6 +11,7 @@
                         <th scope="col">Telefono</th>
                         <th scope="col">Dirección</th>
                         <th scope="col">Correo</th>
+                        <th scope="col">Estado</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
 
@@ -26,9 +27,10 @@
                         <td>{{this.telefono}}</td>
                         <td>{{this.direccion}}</td>
                         <td>{{this.correo}}</td>
+                        <td>{{this.Estado}}</td>
                         <td><a class="btn btn-success" href="/EditClient/{{id}}">Editar</a></td>
                         <td><a class="btn btn-danger" href="/ListClient/delete/{{id}}">Borrar</a></td>
-                    </tr>
+                       
                     {{/each}}
                 </tbody>
             </table>
