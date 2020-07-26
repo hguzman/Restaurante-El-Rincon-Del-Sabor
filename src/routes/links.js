@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const pool = require("../database");
 const { isLoggedIn } = require("../lib/auth");
-
 router.get("/new", isLoggedIn, (req, res) => {
   res.render("links/new");
 });
@@ -125,6 +124,24 @@ router.post("/EditClient/:id", isLoggedIn, async (req, res) => {
   console.log(newPlato);
   req.flash("success", "  Datos del cliente actualizados.");
   res.redirect("/Listclient");
+});
+
+router.get("/home", isLoggedIn, async (req, res) => {
+  const lista = await pool.query("SELECT * FROM menu");
+  res.render("home", { lista });
+});
+
+router.post("/", isLoggedIn, (req, res) => {
+  const datos = req.body;
+  console.log(datos);
+  redirect("/home");
+});
+
+router.post("/home", async (req, res) => {
+  const { nombre } = req.body;
+  const consulta = await pool.query("SELECT * FROM menu WHERE plato = ?",[nombre]);
+  console.log(consulta);
+  redirect("/home");
 });
 
 module.exports = router;

@@ -23,7 +23,7 @@ passport.use(
           user.password
         );
         if (validPassword) {
-          done(null, user, req.flash("success", " Bienvenido " + username));
+          done(null, user);
         } else {
           done(null, false, req.flash("danger", " Contraseña incorrecta"));
         }
