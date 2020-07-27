@@ -33,6 +33,7 @@ CREATE TABLE `menu` (
   `precio` varchar(40) DEFAULT NULL,
   `descripcion` text DEFAULT NULL,
   `fecha_registro` date NOT NULL DEFAULT current_timestamp()
+  `Estado` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

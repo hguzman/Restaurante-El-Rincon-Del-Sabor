@@ -8,11 +8,12 @@ router.get("/new", isLoggedIn, (req, res) => {
 });
 
 router.post("/new", isLoggedIn, async (req, res) => {
-  const { plato, precio, descripcion } = req.body;
+  const { plato, precio, descripcion, Estado } = req.body;
   const newPlato = {
     plato,
     precio,
-    descripcion
+    descripcion,
+    Estado
   };
   await pool.query("INSERT INTO menu set ?", [newPlato]);
   req.flash("success", " Plato creado con exito.");
@@ -39,11 +40,12 @@ router.get("/edit/:id", isLoggedIn, async (req, res) => {
 
 router.post("/edit/:id", isLoggedIn, async (req, res) => {
   const { id } = req.params;
-  const { plato, precio, descripcion } = req.body;
+  const { plato, precio, descripcion, Estado } = req.body;
   const newPlato = {
     plato,
     precio,
-    descripcion
+    descripcion,
+    Estado
   };
   await pool.query("UPDATE menu set ? WHERE Id = ?", [newPlato, id]);
   req.flash("success", "  Plato Acualizado.");
