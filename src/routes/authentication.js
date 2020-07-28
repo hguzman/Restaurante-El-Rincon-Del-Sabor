@@ -29,10 +29,6 @@ router.post(
   })
 );
 
-router.get("/home", isLoggedIn, (req, res) => {
-  res.render("home");
-});
-
 router.get("/profile", isLoggedIn, (req, res) => {
   res.render("profile");
 });

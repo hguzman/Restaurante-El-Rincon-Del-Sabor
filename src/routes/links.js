@@ -77,7 +77,15 @@ router.get("/Addclient", isLoggedIn, async (req, res) => {
   res.render("links/AddClient");
 });
 router.post("/Addclient", async (req, res) => {
-  const { nombre, apellido, cedula, telefono, direccion, correo, Estado } = req.body;
+  const {
+    nombre,
+    apellido,
+    cedula,
+    telefono,
+    direccion,
+    correo,
+    Estado
+  } = req.body;
   const newclient = {
     nombre,
     apellido,
@@ -115,7 +123,15 @@ router.get("/EditClient/:id", isLoggedIn, async (req, res) => {
 
 router.post("/EditClient/:id", isLoggedIn, async (req, res) => {
   const { id } = req.params;
-  const { nombre, apellido, cedula, telefono, direccion, correo, Estado } = req.body;
+  const {
+    nombre,
+    apellido,
+    cedula,
+    telefono,
+    direccion,
+    correo,
+    Estado
+  } = req.body;
   const newPlato = {
     nombre,
     apellido,
@@ -129,6 +145,16 @@ router.post("/EditClient/:id", isLoggedIn, async (req, res) => {
   console.log(newPlato);
   req.flash("success", "  Datos del cliente actualizados.");
   res.redirect("/Listclient");
+});
+router.get("/home", isLoggedIn, async (req, res) => {
+  const lista = await pool.query("SELECT * FROM menu");
+  res.render("home", { lista });
+});
+
+router.post("/", isLoggedIn, (req, res) => {
+  const datos = req.body;
+  console.log(datos);
+  redirect("/home");
 });
 
 module.exports = router;

@@ -1,99 +1,108 @@
-@supports (display: grid){
-  body{
+@supports (display: grid) {
+  body {
     display: grid;
   }
 }
-:root{
+:root {
   /*----variables----*/
-
 }
 
-.btn{
-
-    margin-top: 24px;
+.btn {
+  margin-top: 24px;
 }
 /* .card{
     margin: auto;
     width: 80% !important;
 } */
-.position{
-    margin-top: 50px !important;
+.position {
+  margin-top: 50px !important;
 }
-body{
-    background: rgba(237, 250, 247);
+body {
+  background: rgba(237, 250, 247);
 }
-.agr{
-    margin-top: 18px;
+.agr {
+  margin-top: 18px;
 }
-.ajustar-btn{
-    width: 90%;
-    margin: auto;
+.ajustar-btn {
+  width: 90%;
+  margin: auto;
 }
-.btn-radios{
-    width: 95%;
-    margin: auto;
+.btn-radios {
+  width: 95%;
+  margin: auto;
 }
 /* .ajustar{
     margin-left: 10px;
 } */
-.mover{
-    float: left;
+.mover {
+  float: left;
 }
-.redes{
+.redes {
   margin-top: 20px;
   height: 50px;
   overflow: hidden;
 }
-.icon{
+.icon {
   font-size: 25px;
   position: relative;
   top: -13px;
 }
-.icons{
+.icons {
   margin: auto;
   width: 50%;
 }
-.logo{
+.logo {
   margin-left: 46% !important;
   margin-top: 55px;
 }
-.login{
+.login {
   margin-top: -65px !important;
 }
-.top{
+.top {
   margin-top: 80px;
 }
-.left{
-    margin-left: 30% !important;
+.left {
+  margin-left: 30% !important;
 }
 /* ------------formulario de guardar view add ------------*/
 
 /*------------------------- tabla -------------------------*/
-.table{
+.table {
   margin-top: 80px;
 }
 /*--------------------- message ---------------------*/
-.position{
+.position {
   margin-top: 2px;
 }
 
 /*------------------footer------------------*/
-.footer{
+.footer {
   margin-top: 55px;
 }
 /*------------------------ scroll------------------------ */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 8px;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: rgb(1, 17, 36);
   border-radius: 4px;
 }
-::-webkit-scrollbar:active{
+::-webkit-scrollbar:active {
   width: 12px;
 }
 /*-------------------------alerts-------------------------*/
-.mensajes{
+.mensajes {
   position: absolute;
-  top:10px;
+  top: 10px;
+}
+/* factura */
+.cont-fact {
+  width: 30%;
+  height: 400px;
+  position: absolute;
+  top: 140px;
+  left: 65%;
+}
+.input-cant {
+  width: 50px !important;
 }
