@@ -1,33 +1,89 @@
-<div class="container p-5">
+<div class="container p-4 mx-auto ">
   <div class="row">
-    <div class="col-md-7 border border-dark">
-      <form class="" action="/home" method="POST">
-        <div class="card shadow mx-auto">
-          <div class="card-body">
-            <label for="">Buscar</label>
-            <input type="text" name="nombre" value="" size="40">
-            <button  class="btn btn-primary"name="button">Buscar</button>
-            <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Plato</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col">Cant</th>
-                  <th scope="col">Remover</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">Mark</td>
-                  <td scope="row">Otto</td>
-                  <td scope="row">@mdo</td>
-                  <td scope="row"><a href="#" class="btn btn-danger">remover</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    <div class="col">
+      <div class="card shadow border">
+        <div class="card-body">
+          <form class="form-inline">
+            <div class="form-group mb-2">
+              <label for="" class="">Cliente </label>
+              <input type="text" class="form-control ml-2" autofocus placeholder="">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="" class="">Telefono</label>
+              <input type="text" class="form-control ml-2" placeholder="">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="" class="">Correo</label>
+              <input type="email" class="form-control ml-2" placeholder="example@examp.com">
+            </div>
+            <div class="form-group mb-2 mt-4">
+              <label for="" class="">Atendido</label>
+              <input type="text" class="form-control ml-2" autofocus placeholder="">
+            </div>
+            <div class="form-group mx-sm-3 mb-2 mt-4">
+              <label for="" class="">Fecha</label>
+              <input type="text" class="form-control ml-2" placeholder="">
+            </div>
+            <div class="form-group mx-sm-3 mb-2 mt-4">
+              <label for="" class="">Pago</label>
+              <input type="email" class="form-control ml-2" placeholder="">
+            </div>
+            <div class="ml-auto p-2">
+              <button type="button" class="btn btn-primary" name="button"><i class="fas fa-plus"></i> Nuevo producto</button>
+              <button type="button" class="btn btn-primary" name="button"><i class="fas fa-plus"></i> Nuevo Cliente</button>
+              <button type="button" class="btn btn-primary" name="button"><i class="fas fa-cash-register"></i>  Imprimir</button>
+            </div>
+            <div class="container mb-4">
+              <table class="table table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Plus</th>
+                    <th scope="col">Cant</th>
+                    <th scope="col">Plato</th>
+                    <th scope="col">Precio unitario</th>
+                    <th scope="col">Precio Total</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1013</th>
+                    <td>1</td>
+                    <td>corriente</td>
+                    <td>6.000</td>
+                    <td>12.000</td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1014</th>
+                    <td>2</td>
+                    <td>totumaso</td>
+                    <td>20.000</td>
+                    <td>40.000</td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1015</th>
+                    <td>1</td>
+                    <td>pollo</td>
+                    <td>10.000</td>
+                    <td>20.000</td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td> <strong>Total:</strong> </td>
+                    <td>72.000</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </div>

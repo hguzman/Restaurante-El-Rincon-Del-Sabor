@@ -13,9 +13,7 @@ passport.use(
     },
     async (req, username, password, done) => {
       console.log(req.body);
-      const rows = await pool.query("SELECT * FROM user WHERE username = ?", [
-        username
-      ]);
+      const rows = await ("SELECT * FROM user WHERE username = ?", [username]);
       if (rows.length > 0) {
         const user = rows[0];
         const validPassword = await helpers.matchPassword(
