@@ -18,6 +18,19 @@
                 placeholder="Descripcion del plato" required="" pattern="[A-Za-z ]+"
                 name="descripcion">{{plato.descripcion}}</textarea>
             </div>
+                        <label for="">Estado</label>
+                        <div class="btn-radios p-2">
+                            <div class="custom-control custom-radio custom-control-inline mover">
+                            <input type="radio" id="customRadioInline1"
+                            class="custom-control-input" name="Estado" value="Disponible" checked required="">
+                            <label class="custom-control-label" for="customRadioInline1">Disponible</label>
+                        </div>
+                            <div class="custom-control custom-radio custom-control-inline mover" >
+                            <input type="radio" id="customRadioInline2"
+                            class="custom-control-input" name="Estado" value="Agotado">
+                            <label class="custom-control-label" for="customRadioInline2">Agotado</label>
+                        </div>
+
             <button class="btn btn-success btn-lg btn-block">Actualizar</button>
           </form>
         </div>
