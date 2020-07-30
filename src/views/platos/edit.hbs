@@ -1,0 +1,33 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <form action="/plato/edit/{{plato._id}}?_method=PUT" method="POST">
+        <div class="card shadow">
+          <div class="card-body">
+            <h4 align="center">Actualizar plato</h4>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputEmail4">Nombre</label>
+                <input type="hidden" name="_method" value="PUT">
+                <input type="text" name="nombre" value="{{plato.nombre}}" class="form-control" id="inputEmail4">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputEmail4">Precio</label>
+                <input type="text" name="precio" value="{{plato.precio}}" class="form-control" id="inputEmail4">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="exampleFormControlTextarea1">Descripcion</label>
+                <textarea class="form-control" name="descripcion" id="exampleFormControlTextarea1" rows="3">{{plato.descripcion}}</textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg btn-block">Actualizar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

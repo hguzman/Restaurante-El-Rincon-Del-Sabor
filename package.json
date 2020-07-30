@@ -4,28 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "node src/bin/www",
+    "dev": "nodemon src/bin/www"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
     "bcryptjs": "^2.4.3",
-    "bootstrap": "^4.5.0",
     "connect-flash": "^0.1.1",
-    "express": "^4.17.1",
-    "express-handlebars": "^4.0.4",
-    "express-myconnection": "^1.0.4",
-    "express-mysql-session": "^2.1.4",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-handlebars": "^5.1.0",
     "express-session": "^1.17.1",
-    "express-validator": "^6.5.0",
-    "morgan": "^1.10.0",
-    "mysql": "^2.18.1",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.26",
+    "morgan": "~1.9.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "stripe": "^8.79.0",
-    "timeago.js": "^4.0.2"
+    "sweetalert2": "^9.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

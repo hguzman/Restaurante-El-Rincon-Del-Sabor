@@ -1,0 +1,31 @@
+<div class="container p-5">
+  <div class="row">
+    <div class="col-md-10 mx-auto">
+      <table class="table mt-4">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Plus</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        </tbody>
+          {{#each platos}}
+          <tr>
+            <td scope="row"></td>
+            <td>{{nombre}}</td>
+            <td>{{precio}}</td>
+            <td>{{descripcion}}</td>
+            <td><a href="/plato/edit/{{_id}}" class="btn btn-success">Editar</a></td>
+            <td><a href="#" class="btn btn-danger">Borrar</a></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      <a href="/plato/new" class="btn btn-primary">Nuevo plato</a>
+    </div>
+  </div>
+</div>
