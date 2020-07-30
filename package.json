@@ -4,27 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "node src/bin/www",
+    "dev": "nodemon src/bin/www"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "bootstrap": "^4.5.0",
-    "connect-flash": "^0.1.1",
-    "express": "^4.17.1",
-    "express-handlebars": "^4.0.4",
-    "express-myconnection": "^1.0.4",
-    "express-mysql-session": "^2.1.4",
-    "express-session": "^1.17.1",
-    "express-validator": "^6.5.0",
-    "morgan": "^1.10.0",
-    "mysql": "^2.18.1",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "stripe": "^8.79.0",
     "timeago.js": "^4.0.2"
   },
   "devDependencies": {

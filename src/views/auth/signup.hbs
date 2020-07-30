@@ -1,62 +1,84 @@
-<div class="container">
+<div class="container p-4">
   <div class="row">
-    <div class="col-md-4 col-sm-9 mx-auto">
-      <div class="card text-center position">
-        <div class="card shadow bg-white rounded card-body">
-          <form action="/signup" method="POST">
+    <div class="col-md-4 mx-auto">
+      <form class="needs-validation" novalidate action="/signup" method="post">
+        <div class="card shadow">
+          <div class="card-body">
             <div class="row">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Primer nombre" name="name" required pattern="[A-Za-z]+" autofocus>
+                <input type="text" class="form-control" pattern="[a-zA-Z]+" placeholder="First name" required tabindex="1">
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Primer apellido" name="fullname" required pattern="[A-Za-z]+">
-              </div>
-            </div>
-            <div class="agr">
-              <div class="form-group">
-                  <input type="text" class="form-control" id="formGroupExampleInput"
-                   placeholder="Nombre de usuario" required name="username">
-              </div>
-              <div class="form-group">
-                  <input type="email" class="form-control" id="formGroupExampleInput"
-                   placeholder="Correo electronico" name="email" required>
-              </div>
-              <div class="form-group">
-                  <input type="password" class="form-control" id="formGroupExampleInput2"
-                  placeholder="Contraseña" name="password" required minlength="8">
-                  <small id="emailHelp" class="form-text text-muted">Su contraseña debe tener como minimo 8 caracteres.</small>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Celular" required=""
-                   pattern="[0-9]+" minlength="10" maxlength="10" name="mobile">
-                </div>
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Cedula" required="" pattern="[0-9]+" maxlength="10" name="cedula">
+                <input type="text" class="form-control" pattern="[a-zA-Z]+" placeholder="Last name" required>
+                <div class="valid-feedback">
+                  Looks good!
                 </div>
               </div>
-              <div class="btn-radios p-2">
-                  <div class="custom-control custom-radio custom-control-inline mover">
-                      <input type="radio" id="customRadioInline1"
-                      class="custom-control-input" name="sexo" value="Hombre" checked required="">
-                      <label class="custom-control-label" for="customRadioInline1">Hombre</label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline mover" >
-                      <input type="radio" id="customRadioInline2"
-                      class="custom-control-input" name="sexo" value="Mujer">
-                      <label class="custom-control-label" for="customRadioInline2">Mujer</label>
-                  </div>
-              </div>
-              <div class="custom-control custom-checkbox ajustar">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1" required name="tyc" value="Acepto">
-                  <label class="custom-control-label" for="customCheck1" >Acepta los terminos y condiciones.</label>
-              </div>
-              <div class="ajustar-btn">
-                <button class="btn btn-success btn-lg btn-block" type="submit">Iniciar</button>
             </div>
-          </form>
+            <div class="form-row mt-3">
+              <div class="col-md-12 mb-3">
+                <input type="email" class="form-control" id="validationCustom01" placeholder="Email" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12 mb-3">
+                <input type="password" class="form-control" id="validationCustom01" minlength="8" placeholder="Password" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12 mb-3">
+                <input type="password" class="form-control" id="validationCustom01" minlength="8" placeholder="Verify password" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Identification" maxlength="10" pattern="[0-9]+" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Phone" maxlength="10" pattern="[0-9]+" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline mt-3">
+              <input type="radio" id="customRadioInline1" name="sexo" value="Hombre" checked class="custom-control-input">
+              <label class="custom-control-label" for="customRadioInline1">Hombre</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline2" name="sexo" value="Mujer" class="custom-control-input">
+              <label class="custom-control-label" for="customRadioInline2">Mujer</label>
+            </div>
+            <div class="form-group mt-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="mt-2 btn btn-success btn-lg btn-block" id="toastr">Registrate</button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
