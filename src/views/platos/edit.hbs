@@ -21,12 +21,25 @@
             <div class="form-row">
               <div class="form-group col-md-12">
                 <label for="exampleFormControlTextarea1">Descripcion</label>
-                <textarea class="form-control" name="descripcion" id="exampleFormControlTextarea1" rows="3">{{plato.descripcion}}</textarea>
+                <textarea class="form-control" name="descripcion" id="exampleFormControlTextarea1"
+                  rows="3">{{plato.descripcion}}</textarea>
               </div>
+              <label for="">Estado</label>
+              <div class="btn-radios p-3">
+                <div class="custom-control custom-radio custom-control-inline mover">
+                  <input type="radio" id="customRadioInline1" class="custom-control-input" name="estado" value="Disponible"
+                    checked required="">
+                  <label class="custom-control-label" for="customRadioInline1">Disponible</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline mover">
+                  <input type="radio" id="customRadioInline2" class="custom-control-input" name="estado"
+                    value="Agotado">
+                  <label class="custom-control-label" for="customRadioInline2">Agotado</label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success btn-lg btn-block">Actualizar</button>
             </div>
-            <button type="submit" class="btn btn-success btn-lg btn-block">Actualizar</button>
           </div>
-        </div>
       </form>
     </div>
   </div>

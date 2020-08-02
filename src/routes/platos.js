@@ -7,7 +7,7 @@ router.get("/plato/new", (req, res, next) => {
 });
 
 router.post("/plato/new", async (req, res) => {
-  const { nombre, precio, descripcion } = req.body;
+  const { nombre, precio, descripcion, estado } = req.body;
   const errors = [];
   if (!nombre) {
     errors.push({ text: "por favor llenar el campo del nombre" });
@@ -23,10 +23,10 @@ router.post("/plato/new", async (req, res) => {
       errors,
       nombre,
       precio,
-      descripcion
+      descripcion,
     });
   } else {
-    const newPlato = new Plato({ nombre, precio, descripcion });
+    const newPlato = new Plato({ nombre, precio, descripcion, estado });
     console.log(newPlato);
     await newPlato.save();
     res.redirect("/plato/show");
@@ -45,11 +45,12 @@ router.get("/plato/edit/:id", async (req, res, next) => {
 });
 
 router.put("/plato/edit/:id", async (req, res, next) => {
-  const { nombre, precio, descripcion } = req.body;
+  const { nombre, precio, descripcion, estado } = req.body;
   await Plato.findByIdAndUpdate(req.params.id, {
     nombre,
     precio,
-    descripcion
+    descripcion,
+    estado
   });
   res.redirect("/plato/show");
 });
