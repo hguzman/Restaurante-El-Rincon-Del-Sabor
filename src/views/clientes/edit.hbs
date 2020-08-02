@@ -1,0 +1,58 @@
+<div class="container border p-4">
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+            <form action="/cliente/edit/{{cliente._id}}?_method=PUT" method="POST">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h4 align="center">Editar Cliente</h4>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label>Nombre</label>
+                                <input type="hidden" name="_method" value="PUT">
+                                <input type="text" name="nombre" value="{{cliente.nombre}}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label>Apellido</label>
+                                <input type="text" name="apellido" value="{{cliente.apellido}}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label>Cedula</label>
+                                <input type="text" name="cedula" value="{{cliente.cedula}}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label>Dirección</label>
+                                <input type="text" name="direccion" value="{{cliente.direccion}}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label>Correo</label>
+                                <input type="text" name="correo" value="{{cliente.correo}}" class="form-control">
+                            </div>
+                        </div>
+                        <label for="">Estado</label>
+                        <div class="btn-radios p-3">
+                            <div class="custom-control custom-radio custom-control-inline mover">
+                                <input type="radio" id="customRadioInline1" class="custom-control-input" name="estado"
+                                    value="Activo" checked required="">
+                                <label class="custom-control-label" for="customRadioInline1">Activo</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline mover">
+                                <input type="radio" id="customRadioInline2" class="custom-control-input" name="estado"
+                                    value="Inactivo">
+                                <label class="custom-control-label" for="customRadioInline2">Inactivo</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg btn-block p-2">Actualizar Datos </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
