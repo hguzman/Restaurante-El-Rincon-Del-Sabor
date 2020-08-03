@@ -22,7 +22,10 @@
             <td>{{descripcion}}</td>
             <td>{{estado}}</td>
             <td><a href="/plato/edit/{{_id}}" class="btn btn-success">Editar</a></td>
-            <td><a href="#" class="btn btn-danger">Borrar</a></td>
+            <td><form action="/plato/delete/{{_id}}?_method=DELETE" method="post">
+              <input type="hidden" name="_method" value="PUT">
+              <button type="submit" class="btn btn-danger">Borrar</button>
+            </form></td>
           </tr>
           {{/each}}
         </tbody>

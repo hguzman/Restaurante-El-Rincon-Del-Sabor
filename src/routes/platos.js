@@ -23,12 +23,13 @@ router.post("/plato/new", async (req, res) => {
       errors,
       nombre,
       precio,
-      descripcion,
+      descripcion
     });
   } else {
     const newPlato = new Plato({ nombre, precio, descripcion, estado });
     console.log(newPlato);
     await newPlato.save();
+    req.flash("success", "Plato creado exitosamente.");
     res.redirect("/plato/show");
   }
 });
@@ -52,6 +53,13 @@ router.put("/plato/edit/:id", async (req, res, next) => {
     descripcion,
     estado
   });
+  req.flash("success", "Plato actualizado exitosamente.");
+  res.redirect("/plato/show");
+});
+
+router.delete("/plato/delete/:id", async (req, res, next) => {
+  await Plato.findByIdAndDelete(req.params.id);
+  req.flash("success", "Plato eliminado exitosamente.");
   res.redirect("/plato/show");
 });
 

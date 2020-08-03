@@ -1,0 +1,22 @@
+<div class="container alerts">
+  <div class="row ">
+    <div class="col-md-4 ml-auto">
+      {{#if success}}
+      <div class="alert alert-success alert-dismissible fade show ml-auto" role="alert">
+        <strong>{{success}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {{/if}}
+      {{#if danger}}
+      <div class="alert alert-danger alert-dismissible fade show ml-auto" role="alert">
+        <strong>{{danger}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</div>

@@ -10,6 +10,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const methodOverride = require("method-override");
 const session = require("express-session");
+const flash = require("connect-flash");
 require("./database");
 const app = express();
 
@@ -40,9 +41,16 @@ app.use(
     saveUninitialized: true
   })
 );
+app.use(flash());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+//variables globales
+app.use((req, res, next) => {
+  res.locals.success = req.flash("success");
+  res.locals.danger = req.flash("danger");
+  next();
+});
 app.use(require("./routes/platos"));
 app.use(require("./routes/clientes"));
 app.use(require("./routes/users"));

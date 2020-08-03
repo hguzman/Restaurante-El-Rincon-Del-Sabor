@@ -13,3 +13,7 @@
 ::-webkit-scrollbar:active {
   width: 12px;
 }
+.alerts {
+  position: absolute;
+  right: 10px;
+}
