@@ -11,7 +11,9 @@ const logger = require("morgan");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const flash = require("connect-flash");
+const passport = require("passport");
 require("./database");
+require("./config/passport");
 const app = express();
 
 // view engine setup
@@ -41,6 +43,8 @@ app.use(
     saveUninitialized: true
   })
 );
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(flash());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
@@ -49,6 +53,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
   res.locals.danger = req.flash("danger");
+  res.locals.error = req.flash("error");
+  res.locals.user = req.user || null;
   next();
 });
 app.use(require("./routes/platos"));

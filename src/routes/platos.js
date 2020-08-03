@@ -1,12 +1,13 @@
 var express = require("express");
 var router = express.Router();
 const Plato = require("../models/Plato");
+const {isLoggedIn, isNotLoggedIn} = require('../helpers/auth');
 
-router.get("/plato/new", (req, res, next) => {
+router.get("/plato/new", isLoggedIn,(req, res, next) => {
   res.render("platos/new");
 });
 
-router.post("/plato/new", async (req, res) => {
+router.post("/plato/new",isLoggedIn, async (req, res) => {
   const { nombre, precio, descripcion, estado } = req.body;
   const errors = [];
   if (!nombre) {
@@ -34,18 +35,18 @@ router.post("/plato/new", async (req, res) => {
   }
 });
 
-router.get("/plato/show", async (req, res, next) => {
+router.get("/plato/show",isLoggedIn, async (req, res, next) => {
   const platos = await Plato.find();
   console.log(platos);
   res.render("platos/show", { platos });
 });
 
-router.get("/plato/edit/:id", async (req, res, next) => {
+router.get("/plato/edit/:id",isLoggedIn, async (req, res, next) => {
   const plato = await Plato.findById(req.params.id);
   res.render("platos/edit", { plato });
 });
 
-router.put("/plato/edit/:id", async (req, res, next) => {
+router.put("/plato/edit/:id", isLoggedIn, async (req, res, next) => {
   const { nombre, precio, descripcion, estado } = req.body;
   await Plato.findByIdAndUpdate(req.params.id, {
     nombre,
@@ -57,7 +58,7 @@ router.put("/plato/edit/:id", async (req, res, next) => {
   res.redirect("/plato/show");
 });
 
-router.delete("/plato/delete/:id", async (req, res, next) => {
+router.delete("/plato/delete/:id", isLoggedIn, async (req, res, next) => {
   await Plato.findByIdAndDelete(req.params.id);
   req.flash("success", "Plato eliminado exitosamente.");
   res.redirect("/plato/show");

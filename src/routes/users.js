@@ -1,12 +1,14 @@
-var express = require("express");
-var router = express.Router();
-const User = require("../models/Signup");
+const express = require("express");
+const router = express.Router();
+const User = require("../models/User");
+const passport = require('passport');
+const {isLoggedIn, isNotLoggedIn} = require('../helpers/auth');
 
 /* GET users listing. */
-router.get("/signup", (req, res, next) => {
+router.get("/signup", isNotLoggedIn,(req, res, next) => {
   res.render("auth/signup");
 });
-router.post("/signup", async(req, res, next) => {
+router.post("/signup", isNotLoggedIn, async(req, res, next) => {
   const {nombre,apellido,correo,contraseña,validar,celular,cedula,sexo,tyc} = req.body;
   if (contraseña != validar) {
     res.render("auth/signup", {nombre,apellido,correo,celular,cedula});
@@ -24,8 +26,25 @@ router.post("/signup", async(req, res, next) => {
       }
     }
 });
-router.get("/", (req, res, next) => {
+
+router.get("/", isNotLoggedIn,(req, res, next) => {
   res.render("auth/signin");
 });
+
+router.post("/",isNotLoggedIn, passport.authenticate("local",{
+  successRedirect: "/home",
+  failureRedirect: "/",
+  failureFlash: true
+}));
+
+router.get("/logout", isLoggedIn,(req, res, next) => {
+  req.logout();
+  res.redirect("/");
+})
+router.get("/home", isLoggedIn,(req, res, next) => {
+  res.render("index");
+})
+
+
 
 module.exports = router;
