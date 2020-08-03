@@ -1,12 +1,13 @@
 var express = require("express");
 var router = express.Router();
 const Cliente = require ("../models/Cliente");
+const {isLoggedIn, isNotLoggedIn} = require('../helpers/auth');
 
-router.get ("/cliente/new", (req, res, next)  => {
+router.get ("/cliente/new", isLoggedIn, (req, res, next)  => {
     res.render ("clientes/new");
 });
 
-router.post("/cliente/new", async (req, res) => {
+router.post("/cliente/new", isLoggedIn, async (req, res) => {
     const { nombre, apellido, cedula, direccion, correo, estado } = req.body;
     const errors = [];
     if (!nombre) {
@@ -41,18 +42,18 @@ router.post("/cliente/new", async (req, res) => {
     }
   });
 
-  router.get ("/cliente/show" , async (req, res, next) => {
+  router.get ("/cliente/show", isLoggedIn, async (req, res, next) => {
     const clientes = await Cliente.find();
     console.log (clientes);
     res.render ("clientes/show" , { clientes });
     });
 
-    router.get ("/cliente/edit/:id" , async (req, res, next) => {
+    router.get ("/cliente/edit/:id", isLoggedIn, async (req, res, next) => {
         const cliente = await Cliente.findById (req.params.id);
         res.render ("clientes/edit" , { cliente });
     });
 
-    router.put("/cliente/edit/:id", async (req, res, next) => {
+    router.put("/cliente/edit/:id", isLoggedIn, async (req, res, next) => {
       const { nombre, apellido, cedula, direccion, correo, estado } = req.body;
       await Cliente.findByIdAndUpdate(req.params.id, {
         nombre,
@@ -64,8 +65,8 @@ router.post("/cliente/new", async (req, res) => {
       });
       res.redirect("/cliente/show");
     });
-    
-    
- 
+
+
+
 
 module.exports = router;

@@ -1,6 +1,7 @@
 {{#if user}}
   <div class="w-100">
     <nav class=" shadow navbar navbar-expand-lg navbar-light bg-dark">
+      <h4 class="text-white">El Rincon Del sabor</h4>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -8,13 +9,13 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              <img src="/img/Lil Baby.jpg" class="img-fluid rounded-circle mr-2 avatar">
-              {{user.name}} {{user.fullname}}
+              <img src="/images/avatar.png" class="img-fluid rounded-circle mr-2 avatar">
+              {{user.nombre}} {{user.apellido}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="/home"><i class="fas fa-house-user"></i> Inicio</a>
-              <a class="dropdown-item" href="/list"><i class="fas fa-table"></i> Menu</a>
-              <a class="dropdown-item" href="/Listclient"><i class="fas fa-table"></i> Clientes</a>
+              <a class="dropdown-item" href="/plato/show"><i class="fas fa-table"></i> Menu</a>
+              <a class="dropdown-item" href="/cliente/show"><i class="fas fa-table"></i> Clientes</a>
               <a class="dropdown-item" href="/profile"><i class="fas fa-user"></i> Mi perfil</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item text-danger" href="/logout"><i class="fas fa-sign-in-alt"></i> Cerrar sesion</a>

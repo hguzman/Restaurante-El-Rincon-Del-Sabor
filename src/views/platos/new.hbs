@@ -16,22 +16,22 @@
             <div class="form-row">
               <div class="form-group col-md-12">
                 <label for="inputEmail4">Nombre</label>
-                <input type="text" name="nombre" class="form-control" id="inputEmail4">
+                <input type="text" name="nombre" value="{{nombre}}"class="form-control" id="inputEmail4" autofocus>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-12">
                 <label for="inputEmail4">Precio</label>
-                <input type="text" name="precio" class="form-control" id="inputEmail4">
+                <input type="text" name="precio" value="{{precio}}" class="form-control" id="inputEmail4">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-12">
                 <label for="exampleFormControlTextarea1">Descripcion</label>
-                <textarea class="form-control" name="descripcion" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" name="descripcion" id="exampleFormControlTextarea1" rows="3">{{descripcion}}</textarea>
               </div>
               <label for="">Estado</label>
-              <div class="btn-radios p-3">
+              <div class="btn-radios p-3" >
                 <div class="custom-control custom-radio custom-control-inline mover">
                   <input type="radio" id="customRadioInline1" class="custom-control-input" name="estado"
                     value="Disponible" checked required="">
@@ -46,6 +46,7 @@
               <button type="submit" class="btn btn-success btn-lg btn-block">Crear</button>
             </div>
           </div>
+        </div>
       </form>
     </div>
   </div>
