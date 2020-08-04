@@ -61,6 +61,7 @@ app.use(require("./routes/platos"));
 app.use(require("./routes/clientes"));
 app.use(require("./routes/users"));
 app.use(require("./routes/perfil"));
+app.use(require("./routes/ventas"));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

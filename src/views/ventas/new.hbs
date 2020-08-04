@@ -1,0 +1,25 @@
+<div class="container border p-4">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="card shadow">
+        <div class="card-body">
+          <form class="" action="/factura/new" method="POST">
+              <div class="form-row">
+            <div class="form-group col-md-9">
+              <input type="search" class="form-control" name="nombre" id="inputEmail4">
+            </div>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{#each cliente}}
+<label for="">{{nombre}}</label> <br>
+<label for="">{{apellido}}</label> <br>
+<label for="">{{cedula}}</label> <br>
+<label for="">{{direccion}}</label> <br>
+<label for="">{{correo}}</label> <br>
+<label for="">{{estado}}</label>
+{{/each}}
