@@ -1,0 +1,45 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  height: 1000px;
+}
+.L-izquierdo{
+  background-color: #DBDBDB;
+  height: 100%;
+  width: 30%;
+  float: left;
+}
+.L-derecho{
+  height: 100%;
+  width: 70%;
+  float: right;
+}
+.img-per{
+  height: 250px;
+  width: 250px;
+  border-radius: 50% 50%;
+  margin-left: 12%;
+  margin-top: 60px;
+}
+
+h1{
+  font-size: 70px;
+  margin-left:20%;
+
+}
+h3{
+  font-size: 30px;
+  margin-left: 20px;
+}
+.sobremi{
+  margin-top: 70px;
+  height: 15%;
+  width: 60%;
+  margin-left: 10%;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
