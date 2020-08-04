@@ -1,0 +1,150 @@
+<div class="container p-3">
+  <div class="container">
+    <form method="post">
+     <div class="card shadow">
+       <div class="row">
+         <div class="col-md-4">
+           <div class="profile-img">
+              <img src="" width="140" height="140"/>
+            <div class="file btn-primary ">
+                Change Photo
+                <input type="file" name="file"/>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-6">
+            <div class="profile-head">
+              <h5>{{user.nombre}} {{user.apellido}}</h5>
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Datos Personales</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Datos Laborales</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <td><a class="btn btn-success" {{user.id}}>Editar</a></td>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+
+          </div>
+          <div class="col-md-8">
+            <div class="tab-content profile-tab" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Usuario Id</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>{{user.id}}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Identificacion</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>{{user.cedula}}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Nombre</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>{{user.nombre}}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Apellido</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>{{user.apellido}}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>correo</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>{{user.correo}}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Telefono</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>{{user.celular}}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Sexo</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>{{user.sexo}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Experience</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>Expert</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Hourly Rate</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>10$/hr</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Total Projects</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>230</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>English Level</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>Expert</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Availability</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p>6 months</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>Your Bio</label><br/>
+                    <p>Your detail description</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
