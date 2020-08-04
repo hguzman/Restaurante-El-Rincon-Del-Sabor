@@ -15,10 +15,11 @@
     </div>
   </div>
 </div>
-
-<label for="">{{nombre}}</label>
-<label for="">{{apellido}}</label>
-<label for="">{{cedula}}</label>
-<label for="">{{direccion}}</label>
-<label for="">{{correo}}</label>
+{{#each cliente}}
+<label for="">{{nombre}}</label> <br>
+<label for="">{{apellido}}</label> <br>
+<label for="">{{cedula}}</label> <br>
+<label for="">{{direccion}}</label> <br>
+<label for="">{{correo}}</label> <br>
 <label for="">{{estado}}</label>
+{{/each}}
