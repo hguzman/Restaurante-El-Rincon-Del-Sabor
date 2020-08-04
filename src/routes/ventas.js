@@ -12,6 +12,6 @@ router.post("/factura/new",  async (req, res, next) => {
   const {nombre} = req.body;
   const cliente = await Cliente.find({nombre: {$eq: nombre}});
   console.log(cliente);
-  res.redirect("/factura/new");
+  res.send(`Cliente: ${cliente}`);
 });
 module.exports = router;
