@@ -4,6 +4,13 @@ body{
   background-attachment: fixed;
 }
 
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(1, 17, 36);
+}
+
 .top{
   margin-top: 100px;
 }
@@ -14,4 +21,9 @@ body{
 }
 button a{
   color: white;
+  margin-left: 9px;
+}
+button a:hover{
+  color: white !important;
+
 }
