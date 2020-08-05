@@ -37,7 +37,7 @@ Proyecto OpenSource
 
 ### Documentación
 
-La documentación del proyecto está almacenada en la [Landig pages](https://hguzman.github.io/Restaurante-El-Rincon-Del-Sabor) de este repocitorio donde se podrá encontrar todo lo referente al proyecto como las gráficas del la base de datos hasta los tipos de documentos como:
+La documentación del proyecto está almacenada en la [Landig pages](https://hguzman.github.io/Restaurante-El-Rincon-Del-Sabor) de este repocitorio donde se podrá encontrar todo lo referente al proyecto, y documentos como lo son:
 
 - TDR.
 - terminos de referencia.
@@ -62,7 +62,7 @@ instalación normal Descargar aplicación e instalarla normal como cualquier otr
 
 ###### Para ubuntu y Mac
 
-Para instalar NodeJS desde NodeSource, simplemente habrá que ejecutar alguno de los siguientes comandos para agregar la versión específica que nos interese. Para hacerlo tendremos que disponer de curl instalado. Si no cuentas con esta herramienta todavía, puedes instalarla con el comando:
+Para instalar NodeJS desde NodeSource, simplemente habrá que ejecutar alguno de los siguientes comandos para agregar la versión específica que nos interese. Para hacerlo tendremos que disponer de curl instalado. Sino cuentas con esta herramienta todavía, puedes instalarla con el comando:
 
 `sudo apt install curl`
 
@@ -92,7 +92,7 @@ Dentro del Proyecto ejecuta en la terminal los siguientes comandos para descarga
 
 `npm run dev`
 
-<br>http://localhost:4000
+<br>http://localhost:3000
 
 <p class="text" align="center">:+1: ¡ ya estas Listo para comenzar a colaborar ! :+1:</p>
 
