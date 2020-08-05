@@ -11,7 +11,7 @@ const UserSchema = new Schema({
   cedula: { type: Number, required: true },
   sexo: { type: String, required: true },
   tyc: { type: String, required: true },
-  date: { type: Date, default: Date.now }
+  date: { type: Date, default: Date.now },
 });
 
 UserSchema.methods.encryptPassword = async contraseña => {
