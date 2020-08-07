@@ -8,6 +8,8 @@ const {
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const multer = require("multer");
+const {v4 : uuidv4} = require ("uuid");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const flash = require("connect-flash");
@@ -31,7 +33,25 @@ app.engine(
   })
 );
 app.set("view engine", ".hbs");
-
+const storage = multer.diskStorage({
+  destination: path.join(__dirname, "public/img_perfil"),
+  filename:(req, file, cb, filename) => {
+    cb(null, uuidv4() + path.extname(file.originalname));
+  }
+});
+app.use(multer({
+  storage,
+  limits:{fileSize:1000000},
+  fileFilter:(req, file, cb) => {
+    const filetypes = /jpeg|jpg|png/;
+    const mimetype = filetypes.test(file.mimetype);
+    const extname =filetypes.test(path.extname(file.originalname));
+    if (mimetype &&  extname) {
+      return cb(null, true);
+    }
+    cb("ERROR")
+  }
+}).single('image'));
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
