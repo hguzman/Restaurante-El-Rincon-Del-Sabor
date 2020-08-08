@@ -7,7 +7,7 @@
 
 
 body{
-  background: url(../img/f.jpg);
+  background: url(../img/Background.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -35,5 +35,3 @@ button a{
   margin-left: 105px;
   margin-top: 20px;
 }
-
-
