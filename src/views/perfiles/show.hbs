@@ -1,17 +1,22 @@
 <div class="container p-3">
   <div class="container">
-    <form method="post">
-     <div class="card shadow">
-       <div class="row">
-         <div class="col-md-4">
-           <div class="profile-img">
-              <img src="../images/avatar.png" width="140" height="140"/>
-            <div class="file btn-primary ">
-                Change Photo
-                <input type="file" name="file"/>
+    <div class="card shadow">
+          <form action="/perfil/show/{{user.id}}?_method=PUT" method="POST" enctype="multipart/form-data" >
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-img ">
+            <img src="/img_perfil/{{user.foto}}" width="150" height="150"/>
+          <div class="input-group">
+            <div class="custom-file">
+              <input type="file"  name="image" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+              <label class="custom-file-label" for="inputGroupFile04">Elija el archivo</label>
+            </div>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">Subir Foto</button>
             </div>
           </div>
         </div>
+      </div>
           <div class="col-md-6">
             <div class="profile-head">
               <h5>{{user.nombre}} {{user.apellido}}</h5>
@@ -144,7 +149,7 @@
             </div>
           </div>
         </div>
-      </div>
     </form>
+  </div>
   </div>
 </div>
