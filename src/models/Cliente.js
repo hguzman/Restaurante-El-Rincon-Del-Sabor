@@ -4,6 +4,7 @@ const { Schema } = mongoose;
 const ClienteSchema = new Schema({
   nombre: { type: String, required: true },
   apellido: {type: String, require: true},
+  telefono: {type: Number, require: true},
   cedula: {type: Number, require: true},
   direccion: {type: String, require: true},
   correo: {type: String, require: true},
