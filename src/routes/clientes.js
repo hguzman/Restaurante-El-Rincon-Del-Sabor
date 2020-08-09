@@ -8,13 +8,16 @@ router.get ("/cliente/new", isLoggedIn, (req, res, next)  => {
 });
 
 router.post("/cliente/new", isLoggedIn, async (req, res) => {
-    const { nombre, apellido, cedula, direccion, correo, estado } = req.body;
+    const { nombre, apellido, telefono, cedula, direccion, correo, estado } = req.body;
     const errors = [];
     if (!nombre) {
       errors.push({ text: "Por favor llenar el campo del nombre" });
     }
     if (!apellido) {
       errors.push({ text: "Por favor llenar el campo del apellido" });
+    }
+    if (!telefono) {
+      errors.push({ text: "Por favor llenar el campo del telefono" });
     }
     if (!cedula) {
       errors.push({ text: "Por favor llenar el campo de la cédula" });
@@ -29,15 +32,17 @@ router.post("/cliente/new", isLoggedIn, async (req, res) => {
       res.render("clientes/new", {
         errors,
         nombre,
+        telefono,
         apellido,
         cedula,
         direccion,
         correo
       });
     } else {
-      const newCliente = new Cliente({ nombre, apellido, cedula, direccion, correo, estado });
+      const newCliente = new Cliente({ nombre, apellido, telefono, cedula, direccion, correo, estado });
       console.log(newCliente);
       await newCliente.save();
+      req.flash("success", "Cliente creado exitosamente.");
       res.redirect("/cliente/show");
     }
   });
@@ -54,15 +59,22 @@ router.post("/cliente/new", isLoggedIn, async (req, res) => {
     });
 
     router.put("/cliente/edit/:id", isLoggedIn, async (req, res, next) => {
-      const { nombre, apellido, cedula, direccion, correo, estado } = req.body;
+      const { nombre, apellido, telefono, cedula, direccion, correo, estado } = req.body;
       await Cliente.findByIdAndUpdate(req.params.id, {
         nombre,
         apellido,
+        telefono,
         cedula,
         direccion,
         correo,
         estado
       });
+      req.flash("success", "Cliente actualizado exitosamente.");
+      res.redirect("/cliente/show");
+    });
+    router.delete("/cliente/delete/:id", isLoggedIn, async (req, res, next) => {
+      await Cliente.findByIdAndDelete(req.params.id);
+      req.flash("success", "Cliente eliminado exitosamente.");
       res.redirect("/cliente/show");
     });
 
