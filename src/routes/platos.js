@@ -28,7 +28,6 @@ router.post("/plato/new",isLoggedIn, async (req, res) => {
     });
   } else {
     const newPlato = new Plato({ nombre, precio, descripcion, estado });
-    console.log(newPlato);
     await newPlato.save();
     req.flash("success", "Plato creado exitosamente.");
     res.redirect("/plato/show");
@@ -37,7 +36,6 @@ router.post("/plato/new",isLoggedIn, async (req, res) => {
 
 router.get("/plato/show",isLoggedIn, async (req, res, next) => {
   const platos = await Plato.find();
-  console.log(platos);
   res.render("platos/show", { platos });
 });
 
