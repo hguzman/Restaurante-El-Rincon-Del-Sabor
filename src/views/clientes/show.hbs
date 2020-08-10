@@ -6,6 +6,7 @@
           <tr>
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
+            <th scope="col">Teléfono</th>
             <th scope="col">Cédula</th>
             <th scope="col">Dirección</th>
             <th scope="col">Correo</th>
@@ -15,18 +16,24 @@
           </tr>
         </thead>
         </tbody>
-          {{#each clientes}}
-          <tr>
-            <td>{{nombre}}</td>
-            <td>{{apellido}}</td>
-            <td>{{cedula}}</td>
-            <td>{{direccion}}</td>
-            <td>{{correo}}</td>
-            <td>{{estado}}</td>
-            <td><a href="/cliente/edit/{{_id}}" class="btn btn-success">Editar</a></td>
-            <td><a href="#" class="btn btn-danger">Borrar</a></td>
-          </tr>
-          {{/each}}
+        {{#each clientes}}
+        <tr>
+          <td>{{nombre}}</td>
+          <td>{{apellido}}</td>
+          <td>{{telefono}}</td>
+          <td>{{cedula}}</td>
+          <td>{{direccion}}</td>
+          <td>{{correo}}</td>
+          <td>{{estado}}</td>
+          <td><a href="/cliente/edit/{{_id}}" class="btn btn-success">Editar</a></td>
+          <td>
+            <form action="/cliente/delete/{{_id}}?_method=DELETE" method="post">
+              <input type="hidden" name="_method" value="PUT">
+              <button type="submit" class="btn btn-danger">Borrar</button>
+            </form>
+          </td>
+        </tr>
+        {{/each}}
         </tbody>
       </table>
       <a href="/cliente/new" class="btn btn-primary">Nuevo cliente</a>
