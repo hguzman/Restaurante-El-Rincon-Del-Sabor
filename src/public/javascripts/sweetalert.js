@@ -14,6 +14,6 @@ document.getElementById("toastr").addEventListener("click", function() {
 
   Toast.fire({
     icon: "success",
-    title: "Signed in successfully"
+    title: "Busqueda exitosa"
   });
 });
