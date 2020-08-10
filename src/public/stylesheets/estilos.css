@@ -17,3 +17,14 @@
   position: absolute;
   right: 10px;
 }
+.btn-buscar{
+  position:absolute;
+  bottom: 1px;
+  margin-left: 186px;
+}
+.factura{
+  width: 57%;
+  position: absolute;
+  top:15%;
+  right: 20px;
+}
