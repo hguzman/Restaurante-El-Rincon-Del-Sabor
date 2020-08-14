@@ -9,6 +9,7 @@ router.get ("/cliente/new", isLoggedIn, (req, res, next)  => {
 
 router.post("/cliente/new", isLoggedIn, async (req, res) => {
     const { nombre, apellido, telefono, cedula, direccion, correo, estado } = req.body;
+    console.log(req.body);
     const errors = [];
     if (!nombre) {
       errors.push({ text: "Por favor llenar el campo del nombre" });
@@ -40,7 +41,6 @@ router.post("/cliente/new", isLoggedIn, async (req, res) => {
       });
     } else {
       const newCliente = new Cliente({ nombre, apellido, telefono, cedula, direccion, correo, estado });
-      console.log(newCliente);
       await newCliente.save();
       req.flash("success", "Cliente creado exitosamente.");
       res.redirect("/cliente/show");
@@ -49,7 +49,6 @@ router.post("/cliente/new", isLoggedIn, async (req, res) => {
 
   router.get ("/cliente/show", isLoggedIn, async (req, res, next) => {
     const clientes = await Cliente.find();
-    console.log (clientes);
     res.render ("clientes/show" , { clientes });
     });
 
