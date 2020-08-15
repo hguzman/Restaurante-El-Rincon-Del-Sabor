@@ -71,4 +71,8 @@ gem 'pundit', '~> 2.1'
 # jQuery
 gem 'jquery-rails', '~> 4.4'
 
+# Roles a users
 gem 'rolify', '~> 5.3'
+
+#iconos
+gem 'font_awesome5_rails', '~> 1.2'
