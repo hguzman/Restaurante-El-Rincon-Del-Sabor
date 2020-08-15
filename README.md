@@ -7,7 +7,7 @@
 </p>
 
 <h3 align="center">Garvsoft</h3>
-<p align="center">version: v1.7.4-beta<p>
+<p align="center">version: v1.7.8-beta<p>
 
 <p align="center">
   <a href="#">
@@ -23,10 +23,9 @@
     <img src="https://cdn.worldvectorlogo.com/logos/npm-2.svg" alt="logo" width="30" height="35" title="npmjs">
   </a>
   <a href="https://nodejs.org/es/">
-    <img src="https://cdn0.iconfinder.com/data/icons/designer-skills/128/node-js-512.png" alt="logo" width="33" height="35" title="NodeJS">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/600px-Ruby_logo.svg.png" alt="logo" width="33" height="35" title="Ruby">
   </a>
-  <a href="https://handlebarsjs.com/">
-    <img src="https://cdn.iconscout.com/icon/free/png-256/handlebars-2-1175024.png" alt="logo" width="33" height="35" title="Handlebars">
+  <a href="https://blog.desdelinux.net/wp-content/uploads/2019/08/ruby-on-rails-6.jpg" alt="logo" width="33" height="35" title="rails">
   </a>
   <a href="https://getbootstrap.com/">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" alt="logo" width="33" height="35" title="bootstrap">
