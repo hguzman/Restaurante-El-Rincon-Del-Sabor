@@ -70,3 +70,5 @@ gem 'pundit', '~> 2.1'
 
 # jQuery
 gem 'jquery-rails', '~> 4.4'
+
+gem 'rolify', '~> 5.3'
