@@ -10,15 +10,13 @@
     <%= stylesheet_link_tag 'sb-admin-2.min' %>
   </head>
   <body id="page-top">
-    <!-- <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p> -->
     <% if user_signed_in? %>
     <div id="wrapper">
       <%= render "partials/siderbar" %>
       <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
           <%= render "partials/topbar" %>
-          <div class="container border">
+          <div class="container">
             <%= yield %>
           </div>
         </div>
@@ -26,6 +24,8 @@
     </div>
     <% else %>
     <%= render "partials/navbar" %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
         <%= yield %>
     <%= render "partials/footer" %>
     <% end %>
