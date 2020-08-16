@@ -11,7 +11,6 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-
   end
 
   def create
@@ -19,23 +18,23 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @categoria.save
-        format.json {head :no_content}
-        format.js {render :new}
+        format.json { head :no_content }
+        format.js
       else
-        format.json { render json: @categoria.errors.full_messages, status: :unprocessable_entity}
-        format.js {render :new}
+        format.json { render json: @categoria.errors.full_messages, status: :unprocessable_entity }
+        format.js { render :new }
       end
     end
   end
 
   def update
     respond_to do |format|
-      if @categoria.update(category_paramas)
-        format.json {head :no_content}
-        format.js {render :new}
+      if @categoria.update(category_params)
+        format.json { head :no_content }
+        format.js
       else
-        format.json { render json: @categoria.errors.full_messages, status: :unprocessable_entity}
-        format.js {render :new}
+        format.json { render json: @categoria.errors.full_messages, status: :unprocessable_entity }
+        format.js { render :edit }
       end
     end
   end
@@ -43,16 +42,18 @@ class CategoriesController < ApplicationController
   def destroy
     @categoria.destroy
     respond_to do |format|
-      format.json { head no: @no_content }
+      format.json { head :no_content }
+      format.js
     end
   end
 
   private
-  def set_category
-    @categoria = Category.find(params[:id])
-  end
+    def set_category
+      @categoria = Category.find(params[:id])
+    end
 
-  def category_paramas
-    params.require(:category).permit(:nombre, :description)
-  end
+    def category_params
+      params.require(:category).permit(:nombre, :descripcion)
+    end
+
 end
