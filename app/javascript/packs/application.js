@@ -15,4 +15,10 @@ require("channels");
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 // = requiere jquery
-//= require sweetalert2
+// = require pooper
+// = require rails-ujs
+// = require sb-admin-2.min
+// = require activestorage
+// = require turbolinks
+// = require sweetalert2
+// = require_tree .
