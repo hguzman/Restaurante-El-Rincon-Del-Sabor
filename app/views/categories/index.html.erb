@@ -1,15 +1,16 @@
 <div class="container">
   <h1 class="">Categorias de productos</h1>
   <div>
-    <%= link_to new_category_path, {temote:true, class: "btn btn-info mb-2 mt-2", id:"añadir-categoria-btn"} do %>
+    <%= link_to new_category_path, {remote: true, class: "btn btn-info shadow", id: "anadir-categoria-btn"} do %>
     <%= fa_icon "plus-circle" %>
        nueva categoria
     <% end %>
   </div>
+  <br>
   <div class="card shadow mb-4">
     <div class="card-body">
       <div class="table-responsive">
-        <table id="tablaCategories" class="table table-bordered">
+        <table id="tablaCategories" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>Nombre</th>
@@ -17,17 +18,17 @@
               <th></th>
               <th></th>
             </tr>
+           </thead>
             <tbody>
               <% @categorias.each do |cat| %>
                 <tr id="categoria_<%= cat.id %>">
                   <td><%= cat.nombre %></td>
                   <td><%= cat.description %></td>
                   <td align="center"><%= link_to "editar", edit_category_path(cat), html_options = {class: "btn btn-info btn-xs", remote:true} %></td>
-                  <td align="center"><%= link_to "Borrar", cat, remote: true, method: :delete, data: {confirm: "¿Borrar categoria: #{cat.nombre}?"}, class: "btn btn-danger btn-xs" %></td>
+                  <td align="center"><%= link_to "Borrar", cat, remote: true, method: :delete, data: { confirm: "¿Borrar categoria: #{cat.nombre}?"}, class: "btn btn-danger btn-xs" %></td>
                 </tr>
              <% end %>
             </tbody>
-          </thead>
         </table>
       </div>
     </div>
