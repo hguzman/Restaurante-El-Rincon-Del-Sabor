@@ -1,0 +1,15 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card shadow">
+        <div class="card-body">
+          <h4 align="center">Editar categoria</h4>
+          <%= render 'form', category: @category %>
+          <br>
+          <%= link_to 'Show', @category %> |
+          <%= link_to 'Back', categories_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

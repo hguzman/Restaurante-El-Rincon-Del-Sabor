@@ -1,10 +1,9 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 mx-auto">
+<div class="container-fluid cont-session">
+  <div class="row border p-5">
+    <div class="col-md-3 mr-auto border">
       <div class="card shadow">
         <div class="card-body">
           <h2 align="center">Log in</h2>
-
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-inputs">
               <%= f.input :email,
