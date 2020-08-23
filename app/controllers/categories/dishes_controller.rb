@@ -36,7 +36,7 @@ class Categories::DishesController < ApplicationController
 
   def destroy
     @dish.destroy
-    redirect_to category_dish_path(@category)
+    redirect_to category_dishes_path(@category)
   end
 
   private

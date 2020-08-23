@@ -37,7 +37,7 @@
                     <%= link_to  edit_category_dish_path(@category, dish), class: "btn btn-info btn-sm" do %>
                       Editar
                     <% end %></td>
-                  <td><%= link_to category_dish_path(@category, dish), class: "btn btn-danger btn-sm" , method: :delete, data: {confirm: "desea borrar el plato #{dish.nombre}"} do %>
+                  <td align="center"><%= link_to category_dish_path(@category, dish), class: "btn btn-danger btn-sm", method: :delete, data: {confirm: "Desea borrar el plato #{dish.nombre}"} do %>
                       Borrar
                     <% end %></td>
                  </tr>
