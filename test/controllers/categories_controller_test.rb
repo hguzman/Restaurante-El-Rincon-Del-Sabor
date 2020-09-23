@@ -1,34 +1,48 @@
 require 'test_helper'
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
+  setup do
+    @category = categories(:one)
+  end
+
   test "should get index" do
-    get categories_index_url
+    get categories_url
     assert_response :success
   end
 
   test "should get new" do
-    get categories_new_url
+    get new_category_url
+    assert_response :success
+  end
+
+  test "should create category" do
+    assert_difference('Category.count') do
+      post categories_url, params: { category: { descripcion: @category.descripcion, nombre: @category.nombre } }
+    end
+
+    assert_redirected_to category_url(Category.last)
+  end
+
+  test "should show category" do
+    get category_url(@category)
     assert_response :success
   end
 
   test "should get edit" do
-    get categories_edit_url
+    get edit_category_url(@category)
     assert_response :success
   end
 
-  test "should get create" do
-    get categories_create_url
-    assert_response :success
+  test "should update category" do
+    patch category_url(@category), params: { category: { descripcion: @category.descripcion, nombre: @category.nombre } }
+    assert_redirected_to category_url(@category)
   end
 
-  test "should get update" do
-    get categories_update_url
-    assert_response :success
-  end
+  test "should destroy category" do
+    assert_difference('Category.count', -1) do
+      delete category_url(@category)
+    end
 
-  test "should get destroy" do
-    get categories_destroy_url
-    assert_response :success
+    assert_redirected_to categories_url
   end
-
 end

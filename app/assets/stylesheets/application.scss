@@ -12,8 +12,51 @@
  *
  *= require_tree .
  *= require_self
- *= require sweetalert2
+ *= require toastr
  */
 @import "bootstrap";
 @import "font_awesome5_webfont";
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i");
+a{
+  text-decoration: none !important;
+}
+.contenedor{
+  height: 582px;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  .contenedor::-webkit-scrollbar{
+    width: 10px;
+  }
+}
+::-webkit-scrollbar{
+  width: 0.5px;
+  background: transparent;
+}
+.contenedor::-webkit-scrollbar-thumb{
+  background: var(--dark);
+  border-radius: 5px;
+}
+.btn-session{
+  padding: 10px;
+  background: rgb(58, 109, 186);
+  color: white !important;
+  border-radius: 5px;
+
+  .btn-session:hover{
+    color:white;
+  }
+}
+.btn-registrate{
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  color: blue !important;
+}
+.footer{
+  position:absolute;
+  bottom: -6px;
+}
+#toast-container{
+  top: 80px;
+}

@@ -1,0 +1,20 @@
+<%= simple_form_for(@clients) do |e| %>
+  <div class="form-inputs">
+    <%= e.input :nombre%>
+    <%= e.input :correo%>
+    <%= e.input :direccion%>
+    <div class="row">
+      <div class="col">
+        <%= e.input :cedula%>
+      </div>
+      <div class="col">
+        <%= e.input :telefono%>
+      </div>
+    </div>
+    <span>¿Desea activar este cliente?</span>
+    <%= e.input :estado%>
+  </div>
+  <div class="form-actions">
+    <%= e.button :submit, class: "btn btn-primary btn-block" %>
+  </div>
+<%end%>
