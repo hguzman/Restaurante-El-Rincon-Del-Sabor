@@ -1,0 +1,24 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @clients.nombre %>
+</p>
+
+<p>
+  <strong>Correo</strong>
+  <%= @clients.correo%>
+</p>
+<p>
+  <strong>Direccion</strong>
+  <%= @clients.direccion%>
+</p>
+<p>
+  <strong>Cédula</strong>
+  <%= @clients.cedula%>
+</p>
+<p>
+  <strong>Telefono</strong>
+  <%= @clients.telefono%>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@clients) %> |
+<%= link_to 'Back', clients_path %>

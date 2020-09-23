@@ -1,0 +1,53 @@
+<table id="tablaCategories" class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <body>
+    <% @categories.each do |category| %>
+    <tr>
+      <td><%= category.nombre %></td>
+      <td><%= category.descripcion %></td>
+      <%if current_user.has_role? :admin%>
+
+      <td align="center"><%= link_to 'Editar', edit_category_path(category), class:"btn btn-info" %></td>
+      <td align="center"><%= link_to 'Borrar', category, method: :delete, data: { confirm: "Desea borrar la categoria de #{category.nombre}?"}, class:"btn btn-danger" %></td>
+      <td align="center"><%= link_to 'platos', category_dishes_path(category), class:"btn btn-success" %></td>
+      <%else%>
+        <td align="center"><%= link_to 'platos', category_dishes_path(category), class:"btn btn-success" %></td>
+      <%end%>
+    </tr>
+    <% end %>
+  </body>
+</table>
+
+<table id="tablaCategories" class="table table-bordered table-hover">
+<thead>
+<tr>
+  <th>Nombre</th>
+  <th>Existencia</th>
+  <th>Precio</th>
+  <th>Descripcion</th>
+  <th>Categoria</th>
+  <th>Descripcion</th>
+  <th colspan="3"></th>
+</tr>
+</thead>
+
+<body>
+  <% @dishes.each do |dish| %>
+      <tr>
+       <td><%= dish.nombre %></td>
+       <td><%= dish.existencia %></td>
+       <td><%= dish.precio %></td>
+       <td><%= dish.descripcion %></td>
+       <td><%= dish.category.nombre %></td>
+       <td><%= dish.category.descripcion %></td>
+
+      </tr>
+    <% end %>
+</body>
+</table>
