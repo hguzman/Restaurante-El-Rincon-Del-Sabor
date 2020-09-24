@@ -19,8 +19,9 @@
         <div id="content">
           <%= render "partials/topbar" %>
           <div class="container-fluid contenedor">
-            <%= toastr_flash %>
             <%= yield %>
+            <%= toastr_flash %>
+            
             <a class="scroll-to-top rounded" href="#page-top">
               <i class="fas fa-angle-up"></i>
             </a>
@@ -30,8 +31,9 @@
     </div>
     <% else %>
     <%= render "partials/navbar"%>
-      <%= toastr_flash %>
       <%= yield %>
+      <%= toastr_flash %>
+      
       <%= render "partials/footer"%>
     <% end %>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
