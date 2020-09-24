@@ -2,11 +2,21 @@ class SalesController < ApplicationController
   before_action :set_sale, only: [:edit, :destroy]
 
   def index
+    respond_html_and_csv
     @sales = Sale.paginate(page: params[:page], per_page:4)
   end
 
   def new
     @sale = Sale.new
+  end
+
+  def respond_html_and_csv
+    respond_to do |format|
+      format.html
+      format.xlsx do
+        response.headers['Content-Disposition'] = 'attachment; filename="Venta.xlsx"'
+      end
+    end
   end
 
   def create

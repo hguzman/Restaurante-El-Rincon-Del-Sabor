@@ -83,4 +83,9 @@ gem 'will_paginate-bootstrap4'
 # Flash toastr
 gem 'toastr-rails'
 
+#Manejo de solicitudes en segundo plano
 gem 'delayed_job_active_record'
+
+
+#archivo excel
+gem 'caxlsx_rails', '~> 0.6.2'
