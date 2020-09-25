@@ -3,11 +3,11 @@ class SalesController < ApplicationController
 
   def index
     respond_html_and_csv
-    @sales = Sale.paginate(page: params[:page], per_page:4)
+    @sales = current_user.sales.paginate(page: params[:page], per_page:4)
   end
 
   def new
-    @sale = Sale.new
+    @sale = current_user.sales.new
   end
 
   def respond_html_and_csv
@@ -20,7 +20,7 @@ class SalesController < ApplicationController
   end
 
   def create
-    @sale = Sale.new(sale_params)
+    @sale = current_user.sales.new(sale_params)
 
     respond_to do |format|
       if @sale.save

@@ -11,4 +11,5 @@ class Client < ApplicationRecord
      # "#{self.cedula} - #{self.nombre}"
    end
 
+   belongs_to :user
 end

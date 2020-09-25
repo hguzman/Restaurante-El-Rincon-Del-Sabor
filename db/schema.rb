@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_24_204058) do
+ActiveRecord::Schema.define(version: 2020_09_25_212558) do
 
   create_table "categories", force: :cascade do |t|
     t.string "nombre"
     t.string "descripcion"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -28,6 +30,8 @@ ActiveRecord::Schema.define(version: 2020_09_24_204058) do
     t.boolean "estado"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_clients_on_user_id"
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
@@ -119,6 +123,8 @@ ActiveRecord::Schema.define(version: 2020_09_24_204058) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
+  add_foreign_key "categories", "users"
+  add_foreign_key "clients", "users"
   add_foreign_key "dishes", "categories"
   add_foreign_key "profiles", "users"
   add_foreign_key "sale_details", "dishes"

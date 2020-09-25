@@ -13,6 +13,7 @@ class User < ApplicationRecord
          end
          has_many :sales
 
-         
+         has_many :clients
+         has_many :categories
 
 end
