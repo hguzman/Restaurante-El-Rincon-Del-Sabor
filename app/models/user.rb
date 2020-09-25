@@ -8,7 +8,11 @@ class User < ApplicationRecord
 
          has_one :profile
 
-         def user_mailer
-           UserMailer.delay(run_at: 2.minutes.from_now).bienvenida_mailer(@user)
-         end
+          def send_devise_notification(notification, *args)
+           devise_mailer.send(notification, self, *args).deliver_later
+          end
+
+          def user_mailer
+            UserMailer.delay.bienvenida_mailer(@user)
+          end
 end
