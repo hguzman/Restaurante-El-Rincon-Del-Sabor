@@ -1,0 +1,20 @@
+<%= form_with model: @profile do |f| %>
+   <div class="input-group">
+
+     <br />
+     <%= f.file_field :foto %>
+     <%if @profile.errors[:foto].any? %>
+        <p class="bg-danger"><%= @profile.errors[:foto].to_s[/\w([^"]*)/] %></p>
+     <% end %>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+
+  <%= render 'form', profile: @profile %>
+
+  <%= link_to 'Show', @profile %>
+
+  </div>
+ </div>
+<% end %>

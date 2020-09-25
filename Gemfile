@@ -5,8 +5,8 @@ ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
@@ -50,29 +53,39 @@ group :test do
   gem 'webdrivers'
 end
 
+  group :production do
+      gem 'pg'
+    end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Simple_form
+# Simplificacion de los formularios
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
-# Bootstrap
+# Desing para el software
 gem 'bootstrap', '~> 4.5', '>= 4.5.2'
 
-# Devise
+# Autentificacion para los usuarios
 gem 'devise', '~> 4.7', '>= 4.7.2'
-
-# Sweetalerts2 => alertas personalizadas
-gem 'sweetalert2', '~> 7.25', '>= 7.25.6'
 
 # Autorizaciones
 gem 'pundit', '~> 2.1'
 
-# jQuery
-gem 'jquery-rails', '~> 4.4'
-
-# Roles a users
+# Roles
 gem 'rolify', '~> 5.3'
 
-#iconos
+# Iconos
 gem 'font_awesome5_rails', '~> 1.2'
+
+# Paginacion
+gem 'will_paginate-bootstrap4'
+
+# Flash toastr
+gem 'toastr-rails'
+
+#Manejo de solicitudes en segundo plano
+gem 'delayed_job_active_record'
+
+
+#archivo excel
+gem 'caxlsx_rails', '~> 0.6.2'

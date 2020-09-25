@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @profile.nombre %>
+</p>
+
+<p>
+  <strong>Identificacion:</strong>
+  <%= @profile.cedula %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @profile.telefono %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
