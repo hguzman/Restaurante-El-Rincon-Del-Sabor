@@ -48,6 +48,7 @@ Rails.application.configure do
     user_name:            'apikey',
     password:             ENV['SENDGRID_API_KEY']
   }
+  config.log_level = :warn
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
