@@ -4,5 +4,5 @@ class Category < ApplicationRecord
     def self.buscador(termino)
       Category.where("nombre LIKE ?", "%#{termino}%")
     end
-
+    belongs_to :user
 end
