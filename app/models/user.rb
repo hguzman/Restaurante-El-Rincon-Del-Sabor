@@ -11,4 +11,8 @@ class User < ApplicationRecord
          def user_mailer
            UserMailer.delay(run_at: 2.minutes.from_now).bienvenida_mailer(@user)
          end
+         has_many :sales
+
+         
+
 end

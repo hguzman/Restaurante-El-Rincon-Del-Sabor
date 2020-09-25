@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_23_043617) do
+ActiveRecord::Schema.define(version: 2020_09_24_204058) do
 
   create_table "categories", force: :cascade do |t|
     t.string "nombre"
@@ -94,7 +94,9 @@ ActiveRecord::Schema.define(version: 2020_09_23_043617) do
     t.integer "client_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
     t.index ["client_id"], name: "index_sales_on_client_id"
+    t.index ["user_id"], name: "index_sales_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -122,4 +124,5 @@ ActiveRecord::Schema.define(version: 2020_09_23_043617) do
   add_foreign_key "sale_details", "dishes"
   add_foreign_key "sale_details", "sales"
   add_foreign_key "sales", "clients"
+  add_foreign_key "sales", "users"
 end
