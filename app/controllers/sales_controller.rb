@@ -11,11 +11,9 @@ class SalesController < ApplicationController
 
   def create
     @sale = Sale.new(sale_params)
-
     respond_to do |format|
       if @sale.save
         format.html { redirect_to sales_url, notice: '  se ha creado'}
-
         format.json { render :show, status: :created, location: @sale }
       else
         format.html { render :new }
