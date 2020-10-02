@@ -1,1 +1,7 @@
 
+Nombre del cliente <br><%= @sale.client.nombre %>
+<div class="ml-auto w-50">Total $<%= @sale.total %></div>
+<% @details.each do |d|%>
+    <%= d.cantidad %>
+    <%= d.dish.nombre %>
+<%end%>

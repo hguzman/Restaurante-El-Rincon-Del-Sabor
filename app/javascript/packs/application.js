@@ -22,6 +22,7 @@ require("channels");
 //= require turbolinks
 //= require_tree .
 //= require toastr
+//= require select2
 import "../stylesheets/application";
 global.toastr = require("toastr");
 

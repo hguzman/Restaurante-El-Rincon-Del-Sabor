@@ -1,25 +1,29 @@
-<%= simple_form_for(@sale) do |f| %>
+<%= simple_form_for [@sale, @sale_detail] do |f| %>
 <div class="row">
   <div class="col-md-6">
-    <h1 class="mb-2 text-gray">venta</h1>
+    <h2 class="mb-2 text-gray">venta n° <%= @sale.id %></h2>
   </div>
   <div class="col-md-6" style="text-align:right;">
     <h3 class="mr-3" id="total_venta_lbl">Total $  <%= @sale.total %></h3>
   </div>
-  <div class="col-md-5">
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#buscador_plato">Buscar plato</button>
-    <button type="button" class="btn btn-info"data-toggle="modal" data-target="#buscador_cliente">Buscar cliente</button>
+  <div class="col-md-5 mb-3">
+    <h5 class="mt-4 h5">cliente</h5>
+    <h6><%= @sale.client.nombre %></h6>
   </div>
   <div class="col-md-7" style="text-align:right;">
     <%= f.button :submit, 'Generar venta', class: "btn btn-primary" %>
     <a class="btn btn-danger" href="/sales">Cancelar venta</a>
     <%# <%= redirect_to 'Cancelar Venta', sale_path ,  %>
   </div>
-  <div class="col-md-3" id="cliente_venta">
-   <h5 class="mt-4">Datos del cliente</h5>
-
-   <%= f.association :client, prompt: "selecionar cliente", label: "cliente", required: false %>
-
+</div>
+<div class="col-md-5">
+  <div class="row">
+    <div class="col"><%= f.association :dish,
+                      prompt: "selecionar plato",
+                      label: "plato",
+                      required: false %>
+    </div>
+    <div class="col-md-3"><%= f.input :cantidad, min:1 %></div>
   </div>
 </div>
 <br>
@@ -42,13 +46,9 @@
             <td></td>
             <td></td>
             <td></td>
-          </tr>
         </tbody>
       </table>
     </div
   </div>
 </div>
-<% @model = @sale %>
-<%= render 'search/dishes', model: @model, tipo: "sale" %>
-<%# render 'search/clients' %>
-<% end %>
+<%end%>

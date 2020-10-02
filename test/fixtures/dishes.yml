@@ -2,14 +2,14 @@
 
 one:
   nombre: MyString
-  existencia: 1
   precio: 1
+  existencia: 1
   descripcion: MyString
   category: one
 
 two:
   nombre: MyString
-  existencia: 1
   precio: 1
+  existencia: 1
   descripcion: MyString
   category: two
