@@ -6,9 +6,8 @@ Rails.application.routes.draw do
   resources :profiles
   resources :clients
   resources :sales
-  resources :categories do
-    resources :dishes, module: :categories
-  end
+  resources :dishes
+  resources :categories
 
   resources :sales do
     resources :sale_details, module: :sales

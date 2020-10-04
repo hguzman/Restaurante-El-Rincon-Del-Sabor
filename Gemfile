@@ -83,4 +83,8 @@ gem 'will_paginate-bootstrap4'
 # Flash toastr
 gem 'toastr-rails'
 
+# worker en segundo plano
 gem 'delayed_job_active_record'
+
+# Jquery Turbolinks
+gem 'jquery-turbolinks'

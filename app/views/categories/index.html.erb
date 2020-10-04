@@ -30,7 +30,7 @@
               <td><%= category.descripcion %></td>
               <td align="center"><%= link_to 'Editar', edit_category_path(category), class:"btn btn-info" %></td>
               <td align="center"><%= link_to 'Borrar', category, method: :delete, data: { confirm: "Desea borrar la categoria de #{category.nombre}?" }, class:"btn btn-danger" %></td>
-              <td align="center"><%= link_to 'platos', category_dishes_path(category), class:"btn btn-success" %></td>
+           
             </tr>
             <% end %>
           </tbody>

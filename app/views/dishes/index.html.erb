@@ -1,8 +1,8 @@
 <div class="container-fluid p-2">
   <div class="row">
+    <h1>Lista de platos</h1>
     <div class="col-md-12 mx-auto">
-    <h1> Categoria de <%= @category.nombre %></h1>
-      <%= link_to new_category_dish_path(@category,@dish), class: "btn btn-info mb-3" do %>
+      <%= link_to new_dish_path, class: "btn btn-info mb-3" do %>
           <%= fa_icon "plus-circle" %>
           Nuevo plato
       <% end %>
@@ -40,10 +40,10 @@
                   <td><%= dish.category.nombre %></td>
                   <td><%= dish.category.descripcion %></td>
                   <td align="center">
-                    <%= link_to  edit_category_dish_path(@category, dish), class: "btn btn-info" do %>
+                    <%= link_to  edit_dish_path(dish), class: "btn btn-info" do %>
                       Editar
                     <% end %></td>
-                  <td align="center"><%= link_to category_dish_path(@category, dish), class: "btn btn-danger", method: :delete, data: { confirm: "Desea borrar el plato de #{dish.nombre}?"} do %>
+                  <td align="center"><%= link_to dish_path(dish), class: "btn btn-danger", method: :delete, data: { confirm: "Desea borrar el plato de #{dish.nombre}?"} do %>
                       Borrar
                     <% end %></td>
                  </tr>

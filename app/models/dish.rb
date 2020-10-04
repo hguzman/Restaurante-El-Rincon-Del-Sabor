@@ -1,7 +1,12 @@
 class Dish < ApplicationRecord
   belongs_to :category
-  has_many :sale_details
+  has_many :sale
+
   def self.buscador(termino)
-    Dish.where("nombre LIKE ?", "%#{termino}%")
+    Category.where("nombre LIKE ?", "%#{termino}%")
+  end
+
+  def to_s
+    self.nombre
   end
 end

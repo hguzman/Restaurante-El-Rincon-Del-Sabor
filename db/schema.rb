@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_23_043617) do
+ActiveRecord::Schema.define(version: 2020_10_01_230634) do
 
   create_table "categories", force: :cascade do |t|
     t.string "nombre"
@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(version: 2020_09_23_043617) do
 
   create_table "dishes", force: :cascade do |t|
     t.string "nombre"
-    t.integer "existencia"
     t.integer "precio"
+    t.integer "existencia"
     t.string "descripcion"
     t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -80,11 +80,11 @@ ActiveRecord::Schema.define(version: 2020_09_23_043617) do
   end
 
   create_table "sale_details", force: :cascade do |t|
-    t.integer "cantidad"
+    t.integer "cantidad", default: 1
     t.integer "sale_id", null: false
+    t.integer "dish_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "dish_id"
     t.index ["dish_id"], name: "index_sale_details_on_dish_id"
     t.index ["sale_id"], name: "index_sale_details_on_sale_id"
   end

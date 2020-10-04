@@ -103,6 +103,9 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
+    jquery-turbolinks (2.1.0)
+      railties (>= 3.1.0)
+      turbolinks
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -246,6 +249,7 @@ DEPENDENCIES
   devise (~> 4.7, >= 4.7.2)
   font_awesome5_rails (~> 1.2)
   jbuilder (~> 2.7)
+  jquery-turbolinks
   listen (~> 3.2)
   pg
   puma (~> 4.1)

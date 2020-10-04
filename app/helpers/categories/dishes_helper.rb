@@ -1,2 +1,0 @@
-module Categories::DishesHelper
-end
