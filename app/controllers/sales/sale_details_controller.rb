@@ -4,7 +4,7 @@ class Sales::SaleDetailsController < ApplicationController
   before_action :set_sale_detail, only: [:edit, :update, :destroy]
 
   def index
-    @details = @sale.sale_details.all
+    @details = @sale.sale_details.paginate(page: params[:page], per_page:3)
   end
 
   def new
@@ -12,15 +12,27 @@ class Sales::SaleDetailsController < ApplicationController
   end
 
   def edit
-    # code
   end
+
 
   def create
     @sale_detail = @sale.sale_details.new(sale_detail_params)
-    if @sale_detail.save
-      redirect_to sale_sale_details_url(@sale, @sale_detail)
-    else
-      render :new
+    respond_to do |format|
+      if @sale_detail.save
+        format.html { redirect_to sale_sale_details_url(@sale, @sale_detail)}
+        format.json { head :no_content }
+        format.js {}
+      else
+        render :new
+      end
+    end
+  end
+
+  def destroy
+    @sale_detail.destroy
+    respond_to do |format|
+      format.json { head :no_content }
+      format.js
     end
   end
 

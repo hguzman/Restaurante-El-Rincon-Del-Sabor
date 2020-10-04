@@ -1,0 +1,12 @@
+$('#modalDishes').modal('toggle');
+$('#tabla_sale').append('<tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><%= link_to edit_sale_sale_detail_path(@sale, @sale_detail), html_options = {class: "btn btn-info btn-xs", remote: true} do %>
+                <i class="fas fa-edit"></i>
+              <%end%>
+            </td>
+            <td align="center"><a class="btn btn-danger text-light"><i class="fas fa-trash-alt"></i></a></td>
+          </tr>');

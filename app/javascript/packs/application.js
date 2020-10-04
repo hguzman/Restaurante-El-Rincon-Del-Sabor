@@ -14,15 +14,16 @@ require("channels");
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+//= require jquery.turbolinks
+//= require rails-ujs
 //= require jquery3
 //= require popper
 //= require bootstrap
-//= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
 //= require toastr
-//= require select2
+
 import "../stylesheets/application";
 global.toastr = require("toastr");
 

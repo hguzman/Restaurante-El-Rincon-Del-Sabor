@@ -1,0 +1,8 @@
+// Add the dialog title
+$('#modal-dish-title').html("Añadir plato");
+
+// Render the new form
+$('.modal-body-dishes').html('<%= j render("form") %>');
+
+// Show the dynamic dialog
+$('#modalDishes').modal("show");

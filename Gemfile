@@ -86,5 +86,5 @@ gem 'toastr-rails'
 # worker en segundo plano
 gem 'delayed_job_active_record'
 
-# Select2
-gem "select2-rails"
+# Jquery Turbolinks
+gem 'jquery-turbolinks'
