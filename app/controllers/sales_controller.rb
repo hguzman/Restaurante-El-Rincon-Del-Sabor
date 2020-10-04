@@ -13,7 +13,7 @@ class SalesController < ApplicationController
     @sale = Sale.new(sale_params)
     respond_to do |format|
       if @sale.save
-        format.html { redirect_to new_sale_sale_detail_path(@sale)}
+        format.html { redirect_to sale_sale_details_path(@sale)}
         format.json { render :show, status: :created, location: @sale }
       else
         format.html { render :new }
