@@ -4,44 +4,34 @@
     <title>Garvsoft</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <meta property="og:title" content="Garvsoft deja las facturas a mano atras">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'sb-admin-2.min', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
   </head>
   <body id="page-top">
     <% if user_signed_in? %>
-    <div id="wrapper">
-      <%= render "partials/siderbar" %>
-      <div id="content-wrapper" class="d-flex flex-column">
-        <div id="content">
-          <%= render "partials/topbar" %>
-          <div class="container-fluid contenedor">
-            <%= yield %>
-            <%= toastr_flash %>
-            
-            <a class="scroll-to-top rounded" href="#page-top">
-              <i class="fas fa-angle-up"></i>
-            </a>
+      <div id="wrapper">
+        <%= render "partials/siderbar" %>
+        <div id="content-wrapper" class="d-flex flex-column">
+          <div id="content">
+            <%= render "partials/topbar" %>
+              <div class="container-fluid contenedor">
+                <%= toastr_flash %>
+                <%= yield %>
+                <a class="scroll-to-top rounded" href="#page-top">
+                  <i class="fas fa-angle-up"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <% else %>
-    <%= render "partials/navbar"%>
-      <%= yield %>
-      <%= toastr_flash %>
-      
+      <% else %>
+      <%= render "partials/navbar"%>
+        <%= toastr_flash %>
+        <%= yield %>
       <%= render "partials/footer"%>
     <% end %>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script type="text/javascript">
-
-    </script>
   </body>
 </html>

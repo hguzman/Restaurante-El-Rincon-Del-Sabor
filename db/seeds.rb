@@ -5,14 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-clients = Client.create([{nombre:"wilman orellano", correo:"wilmanjunior2001@gmail.com",direccion:"cra13#27-38",cedula:"1006782323", telefono:"1234567890",estado:true},
-  {nombre:"wilman orellano", correo:"wilmanjunior2001@gmail.com",direccion:"cra13#27-38",cedula:"1006782323", telefono:"1234567890",estado:true},
-  {nombre:"wilman orellano", correo:"wilmanjunior2001@gmail.com",direccion:"cra13#27-38",cedula:"1006782323", telefono:"1234567890",estado:true},
-  {nombre:"wilman orellano", correo:"wilmanjunior2001@gmail.com",direccion:"cra13#27-38",cedula:"1006782323", telefono:"1234567890",estado:true},
-  {nombre:"wilman orellano", correo:"wilmanjunior2001@gmail.com",direccion:"cra13#27-38",cedula:"1006782323", telefono:"1234567890",estado:true},
-  {nombre:"wilman orellano", correo:"wilmanjunior2001@gmail.com",direccion:"cra13#27-38",cedula:"1006782323", telefono:"1234567890",estado:true},
-  {nombre:"wilman orellano", correo:"wilmanjunior2001@gmail.com",direccion:"cra13#27-38",cedula:"1006782323", telefono:"1234567890",estado:true},
-  {nombre:"wilman orellano", correo:"wilmanjunior2001@gmail.com",direccion:"cra13#27-38",cedula:"1006782323", telefono:"1234567890",estado:true},
-  {nombre:"wilman orellano", correo:"wilmanjunior2001@gmail.com",direccion:"cra13#27-38",cedula:"1006782323", telefono:"1234567890",estado:true},
-  {nombre:"wilman orellano", correo:"wilmanjunior2001@gmail.com",direccion:"cra13#27-38",cedula:"1006782323", telefono:"1234567890",estado:true}])

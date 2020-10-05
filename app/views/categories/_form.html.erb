@@ -1,11 +1,7 @@
-
-<%= simple_form_for(@category) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :nombre %>
-    <%= f.input :descripcion %>
-  </div>
-
+<%= simple_form_for  @categoria, remote: true do |f| %>
+  <%= f.input :nombre %>
+  <%= f.input :descripcion %>
   <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-primary btn-block" %>
+    <%= f.button :submit, @categoria.new_record? ? "Crear Categoría" : "Actualizar Categoría", :class => "btn btn-success" %>
   </div>
 <% end %>
