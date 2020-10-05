@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cantidad: 1
+  sale: one
+  dish: one
+
+two:
+  cantidad: 1
+  sale: two
+  dish: two
