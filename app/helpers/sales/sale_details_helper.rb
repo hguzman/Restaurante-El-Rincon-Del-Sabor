@@ -1,2 +1,0 @@
-module Sales::SaleDetailsHelper
-end

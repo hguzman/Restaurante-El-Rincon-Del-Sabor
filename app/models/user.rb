@@ -1,19 +1,14 @@
 class User < ApplicationRecord
-  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  after_create :user_mailer
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         has_one :profile
-
-         def user_mailer
-           UserMailer.delay(run_at: 2.minutes.from_now).bienvenida_mailer(@user)
+         def avatar
+           email_address = self.email.downcase
+           # create the md5 hash
+           hash = Digest::MD5.hexdigest(email_address)
+           # compile URL which can be used in <img src="RIGHT_HERE"...
+           image_src = "https://www.gravatar.com/avatar/#{hash}"
          end
-         has_many :sales
-
-         has_many :clients
-         has_many :categories
-
 end

@@ -1,8 +1,0 @@
-wb = xlsx_package.workbook
-wb.add_worksheet(name: "sale") do |sheet|
-sheet.add_row ['Id', 'Nombre Cliente',  'Total', 'Fecha']
-@sales.each do |sale|
-    sheet.add_row [ sale.id, sale.client.nombre, sale.total, sale.updated_at]
-    
-  end
-end

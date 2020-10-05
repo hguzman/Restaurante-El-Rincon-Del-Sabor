@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '41ade4acaec7b302a3ff9471abd528687f193041bb209d147e0240f80398f3b7031faa15b9c162096cf203340b41c42dfeee9d02118141d1c9b84a5626c1f4e4'
+  # config.secret_key = '6c6fa0f65177e5f3d79952bf4dd6430eb92f4ac023ded3e93c74e1cb075b3ec7a7704549403771af4d0d88dd1d981fd0351c302c1ec3e02b43172df344cb0965'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -24,7 +24,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'wilmanjunior2001@gmail.com'
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'bcdc08e8919f90c92b548d2eb88c6f1e54d80b25b90cd5d0dc108d71c8c3d37a3890092b55c60dd51c3a9945ce3a810abcd8e7100b95e510472b7e5cb3ce713c'
+  # config.pepper = 'fe4791b524de9e6d2834b0b34d92b8b03b27cf9e23932b2881f3f664519591a72c0b5b54e43c5ddedcabd7bc4d8d4a4c427d9edff330bef98c8e12b2ae958e68'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -266,7 +266,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :get
+  config.sign_out_via = :delete
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
