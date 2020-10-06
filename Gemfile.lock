@@ -5,6 +5,8 @@ GEM
       actionpack (= 5.2.4.4)
       nio4r (~> 2.0)
       websocket-driver (>= 0.6.1)
+    actionmailbox (0.1.0)
+      rails (>= 5.2.0)
     actionmailer (5.2.4.4)
       actionpack (= 5.2.4.4)
       actionview (= 5.2.4.4)
@@ -243,6 +245,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionmailbox
+  actionpack
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.5, >= 4.5.2)
   byebug

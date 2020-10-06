@@ -77,6 +77,7 @@ gem 'pundit', '~> 2.1'
 gem 'rolify', '~> 5.3'
 
 # Iconos
+
 gem 'font_awesome5_rails'
 
 # Paginacion
