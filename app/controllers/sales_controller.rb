@@ -3,6 +3,10 @@ class SalesController < ApplicationController
 
   def index
     @sales = Sale.paginate(page: params[:page], per_page:4)
+    respond_to do |format|
+      format.html
+      format.pdf {render template: 'sales/reporte', pdf: 'reporte'}
+    end
   end
 
   def new
