@@ -5,6 +5,10 @@
       <%= fa_icon "plus-circle" %>
       Nueva venta
     <%end%>
+    <%= link_to sales_path(@sale) + '.pdf', {class: "btn btn-info shadow"}  do %>
+      <%= fa_icon "file-pdf" %>
+      Reporte
+    <%end%>
   </div>
   <div class="row">
     <div class="col">
