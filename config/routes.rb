@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
+  get 'home/index'
+  root to: "home#index"
+
+  resources :clients 
   resources :categories do
     resources :dishes, module: :categories
   end
-  get 'home/index'
-  root to: "home#index"
+
+  resources :sales do
+    resources :sale_details, module: :sales
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

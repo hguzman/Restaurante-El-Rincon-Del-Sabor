@@ -1,0 +1,8 @@
+// Add the dialog title
+$('#modal-sale-title').html("seleccionar cliente y usuario ");
+
+// Render the new form
+$('.modal-body-sales').html('<%= j render("form") %>');
+
+// Show the dynamic dialog
+$('#modalSales').modal("show");

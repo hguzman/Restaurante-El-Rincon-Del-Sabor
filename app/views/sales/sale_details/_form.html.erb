@@ -1,0 +1,13 @@
+<%= simple_form_for [@sale, @sale_detail], remote: true, html: {id:"details-form"} do |f| %>
+  <div class="col">
+    <div class="row">
+      <div class="col"><%= f.association :dish,
+                        prompt: "selecionar plato",
+                        label: "plato",
+                        required: false %>
+      </div>
+      <div class="col-md-3"><%= f.input :cantidad, min:1 %></div>
+    </div>
+  </div>
+  <%= f.button :submit, 'Agregar', class: "btn btn-primary" %>
+<%end%>
