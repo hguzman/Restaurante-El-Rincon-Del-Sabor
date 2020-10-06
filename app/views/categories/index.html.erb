@@ -1,39 +1,44 @@
-<h1 class="h3 mb-2 text-gray-800">Categorias</h1>
-
-<div>
-  <%= link_to new_category_path, {remote: true, class: "btn btn-info", id: "anadir-categoria-btn"}  do %>
-    <span class="fas fa-plus-circle" ></span>
-    Nueva categoria
-  <% end %>
-</div>
-<br />
-
-<div class="card shadow mb-4">
-  <div class="card-body">
-    <div class="table-responsive">
-       <table id="tablaCategorias" class="table table-bordered table-hover" width="95%" role="datatable">
-         <thead>
-           <tr>
-             <th>Nombre Categoría</th>
-             <th>Descripcion</th>
-             <th colspan="3"></th>
-           </tr>
-         </thead>
-         <tbody>
-         <% @categorias.each do |cat| %>
-            <tr id="categoria_<%= cat.id %>" >
-                <td><%= cat.nombre %></td>
-                <td><%= cat.descripcion %></td>
-                <td align="center"><%= link_to "editar", edit_category_path(cat), html_options = {class: "btn btn-info btn-xs", remote: true} %></td>
-                <td align="center"><%= link_to 'Borrar', cat, remote: true, method: :delete, data: { confirm: "¿Borrar categoria: #{cat.nombre}?"}, class: "btn btn-danger btn-xs" %></td>
+<div class="container-fluid p-2">
+  <h1>Categorias</h1>
+  <div>
+    <%= link_to new_category_path, {class: "btn btn-info shadow"} do %>
+    <%= fa_icon "plus-circle" %>
+    nueva categoria
+    <% end %>
+  </div>
+  <br>
+  <div class="card shadow">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table id="tablaCategories" class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <% if @categories.empty? %>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <% else %>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <th colspan="3"></th>
+              <% end %>
             </tr>
-         <% end %>
-         </tbody>
-       </table>
+          </thead>
+          <tbody>
+            <% @categories.each do |category| %>
+            <tr>
+              <td><%= category.nombre %></td>
+              <td><%= category.descripcion %></td>
+              <td align="center"><%= link_to 'Editar', edit_category_path(category), class:"btn btn-info" %></td>
+              <td align="center"><%= link_to 'Borrar', category, method: :delete, data: { confirm: "Desea borrar la categoria de #{category.nombre}?" }, class:"btn btn-danger" %></td>
+              <td align="center"><%= link_to 'platos', category_dishes_path(category), class:"btn btn-success" %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
 <div class="d-flex justify-content-center mt-2">
-  <%= will_paginate @categorias, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  <%= will_paginate @categories, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>
-<%= render 'modal_categorias' %>
