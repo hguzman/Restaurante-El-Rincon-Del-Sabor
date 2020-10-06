@@ -1,59 +1,65 @@
 class CategoriesController < ApplicationController
-
-  before_action :set_category, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   def index
-    @categorias = Category.paginate(page: params[:page], per_page: 4)
+    # authorize Category
+    @categories = Category.paginate(page: params[:page], per_page:4)
+  end
+
+  def show
+    # authorize @category
   end
 
   def new
-    @categoria = Category.new
+    @category = Category.new
+    # authorize @category
   end
 
   def edit
+    # authorize @category
   end
 
   def create
-    @categoria = Category.new(category_params)
+    @category = Category.new(category_params)
 
     respond_to do |format|
-      if @categoria.save
-        format.json { head :no_content }
-        format.js
+      if @category.save
+        format.html { redirect_to categories_url, notice: '  se ha actualizado'}
+        format.json { render :show, status: :created, location: @category }
       else
-        format.json { render json: @categoria.errors.full_messages, status: :unprocessable_entity }
-        format.js { render :new }
+        format.html { render :new }
+        format.json { render json: @category.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def update
-    respond_to do |format|
-      if @categoria.update(category_params)
-        format.json { head :no_content }
-        format.js
-      else
-        format.json { render json: @categoria.errors.full_messages, status: :unprocessable_entity }
-        format.js { render :edit }
-      end
-    end
-  end
+     respond_to do |format|
+       if @category.update(category_params)
+         format.html { redirect_to categories_url, notice: 'se ha actualizado' }
+         format.json { render :show, status: :ok, location: @category }
+       else
+         format.html { render :edit }
+         format.json { render json: @category.errors, status: :unprocessable_entity }
+       end
+     end
+   end
 
-  def destroy
-    @categoria.destroy
-    respond_to do |format|
-      format.json { head :no_content }
-      format.js
-    end
-  end
+   def destroy
+     @category.destroy
+     respond_to do |format|
+       format.html { redirect_to categories_url, notice: 'se ha eliminado.' }
+       format.json { head :no_content }
+     end
+   end
+   private
 
-  private
-    def set_category
-      @categoria = Category.find(params[:id])
-    end
+     def set_category
+       @category = Category.find(params[:id])
+     end
 
-    def category_params
-      params.require(:category).permit(:nombre, :descripcion)
-    end
-
-end
+     def category_params
+       params.require(:category).permit(:nombre, :descripcion)
+     end
+ end
