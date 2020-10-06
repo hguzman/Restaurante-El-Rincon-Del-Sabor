@@ -1,0 +1,32 @@
+<div class="container-fluid p-2">
+  <h1>Usuarios</h1>
+  <div>
+    <%= link_to new_user_path, {class: "btn btn-info shadow"} do%>
+    <%= fa_icon "plus-circle" %>
+    Nuevo usuario
+    <%end%>
+  </div>
+  <br>
+  <div class="card shadow">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table id="TablaClients" class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Dirección</th>
+              <th>Cédula</th>
+              <th>Telefono</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-center mt-2">
+
+</div>
