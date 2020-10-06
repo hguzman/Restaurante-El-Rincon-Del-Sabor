@@ -1,0 +1,8 @@
+<%= simple_form_for [@category, @dish] do |f| %>
+ <%= f.input :nombre %>
+ <%= f.input :existencia %>
+ <%= f.input :precio %>
+ <%= f.input :descripcion %>
+
+ <%= f.button :submit, class:"btn btn-primary btn-block" %>
+<% end %>
