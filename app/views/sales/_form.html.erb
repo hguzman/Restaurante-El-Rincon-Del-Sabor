@@ -1,0 +1,9 @@
+<%= simple_form_for(@sale,remote: true) do |f| %>
+  <div class="col" id="cliente_venta">
+     <!-- <h5 class="mt-4">Datos del cliente</h5> -->
+     <%# f.input :total %>
+     <%= f.association :client, prompt: "selecionar cliente", label: "Cliente", required: false %>
+     <%= f.association :user, prompt: "selecionar usuario", label: "Usuario", required: false %>
+  </div>
+  <%= f.button :submit, 'añadir a venta', class: "btn btn-primary ml-3" %>
+<% end %>

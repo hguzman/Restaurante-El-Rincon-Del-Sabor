@@ -90,3 +90,6 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 
 # delayed jobs
 gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.4'
+
+# Jquery turbolinks
+gem 'jquery-turbolinks', '~> 2.1'

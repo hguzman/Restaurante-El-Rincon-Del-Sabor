@@ -5,7 +5,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-
+          has_many :sales, dependent: :destroy
          def send_devise_notification(notification, *args)
            devise_mailer.send(notification, self, *args).deliver_later
          end
@@ -21,5 +21,9 @@ class User < ApplicationRecord
            hash = Digest::MD5.hexdigest(email_address)
            # compile URL which can be used in <img src="RIGHT_HERE"...
            image_src = "https://www.gravatar.com/avatar/#{hash}"
+         end
+
+         def to_s
+           self.email
          end
 end
