@@ -87,3 +87,6 @@ gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
 
 # Auth users
 gem 'devise', '~> 4.7', '>= 4.7.3'
+
+# delayed jobs
+gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.4'
