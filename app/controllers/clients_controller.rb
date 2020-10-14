@@ -4,11 +4,11 @@ class ClientsController < ApplicationController
 
   def index
      authorize Client
-    @clients = Client.paginate(page: params[:page], per_page:4)
+    @clients = current_user.clients.paginate(page: params[:page], per_page:4)
   end
 
   def new
-    @clients = Client.new
+    @clients = current_user.clients.new
     authorize @clients
   end
 
@@ -20,7 +20,7 @@ class ClientsController < ApplicationController
   # end
 
   def create
-    @clients = Client.new(client_params)
+    @clients = current_user.clients.new(client_params)
 
     respond_to do |format|
       if @clients.save

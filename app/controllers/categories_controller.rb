@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
 
   def index
    authorize Category
-    @categories = Category.paginate(page: params[:page], per_page:4)
+    @categories = current_user.categories.paginate(page: params[:page], per_page:4)
   end
 
   def show
@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @category = Category.new
+    @category = current_user.categories.new
     authorize @category
   end
 
@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(category_params)
+    @category = current_user.categories.new(category_params)
 
     respond_to do |format|
       if @category.save

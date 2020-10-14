@@ -5,7 +5,8 @@ class Client < ApplicationRecord
   validates :direccion, presence: true
   validates :cedula, length: { in: 10..10 },numericality: true
   validates :telefono, length: { in: 10..10 },numericality: true
-  
+
+  belongs_to :user
   def to_s
     self.nombre
   end

@@ -24,6 +24,9 @@ class User < ApplicationRecord
            image_src = "https://www.gravatar.com/avatar/#{hash}"
          end
 
+         has_many :categories
+         has_many :clients
+
          def to_s
            self.email
          end

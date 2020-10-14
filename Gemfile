@@ -82,7 +82,8 @@ gem 'font_awesome5_rails'
 
 # pdf
 gem 'wicked_pdf', '~> 2.1'
-# gem 'wkhtmltopdf-binary', '~> 0.12.6.4'
+
+gem 'wkhtmltopdf-binary', '~> 0.12.6.4'
 
 # Paginacion
 gem 'will_paginate-bootstrap4'
