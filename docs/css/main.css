@@ -1,0 +1,37 @@
+.tarjet{
+  margin-top: 70px;
+  /* height: 700px;
+  background: rgb(0,212,255);
+  background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(202,56,204,1) 76%); */
+}
+
+
+body{
+  background: url(../img/Background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.top{
+  margin-top: 180px;
+}
+
+.img-fondo{
+  margin-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .ml-auto {
+    margin-right: 100% !important;
+  }
+}
+button a{
+  color: white;
+}
+.i1{
+  margin-left: 105px;
+  margin-top: 20px;
+}
+.i2{
+  margin-left: 105px;
+  margin-top: 20px;
+}
