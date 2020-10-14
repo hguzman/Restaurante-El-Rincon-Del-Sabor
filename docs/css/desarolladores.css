@@ -1,0 +1,29 @@
+body{
+  background: url(../img/Background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(1, 17, 36);
+}
+
+.top{
+  margin-top: 100px;
+}
+
+.position-img{
+  margin-top: 40px;
+  margin-left: 5px;
+}
+button a{
+  color: white;
+  margin-left: 9px;
+}
+button a:hover{
+  color: white !important;
+
+}
