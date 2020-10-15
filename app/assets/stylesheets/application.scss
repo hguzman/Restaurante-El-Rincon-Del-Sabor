@@ -69,12 +69,12 @@ a {
   border: 10px solid;
   border-color: transparent transparent white transparent;
 }
-.collapse-inner::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: -4%;
-  transform: translateX(-60%);
-  border: 15px solid;
-  border-color: transparent white transparent transparent;
-}
+// .collapse-inner::before {
+//   content: "";
+//   position: absolute;
+//   top: 10px;
+//   left: -4%;
+//   transform: translateX(-60%);
+//   border: 15px solid;
+//   border-color: transparent white transparent transparent;
+// }
