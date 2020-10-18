@@ -93,3 +93,6 @@ gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.4'
 
 # Jquery turbolinks
 gem 'jquery-turbolinks', '~> 2.1'
+
+
+gem 'carrierwave', '~> 2.1'

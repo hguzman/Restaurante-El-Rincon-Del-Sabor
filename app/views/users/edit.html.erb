@@ -1,13 +1,9 @@
-<%= simple_form_for(@user) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :nombres %>
-    <%= f.input :apellidos %>
-    <%= f.input :direccion %>
-    <%= f.input :telefono %>
-    <%= f.input :sexo %>
+<div class="row">
+  <div class="col-md-5 ml-auto">
+    <div class="">
+      <div class="card-body">
+        <%= render 'form'%>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, 'Actualizar', class: "btn btn-primary btn-block" %>
-  </div>
-<% end %>
+</div>

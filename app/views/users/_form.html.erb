@@ -1,0 +1,25 @@
+<%= simple_form_for(@user) do |f| %>
+  <div class="form-inputs">
+    <div class="row">
+      <div class="col">
+        <%= f.input :nombres %>
+      </div>
+      <div class="col">
+        <%= f.input :apellidos %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <%= f.input :direccion %>
+      </div>
+      <div class="col">
+        <%= f.input :telefono %>
+      </div>
+    </div>
+    <%= f.input :sexo %>
+    <%= f.input :avatar, as: :file %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, 'Actualizar', class: "btn btn-primary btn-block" %>
+  </div>
+<% end %>
