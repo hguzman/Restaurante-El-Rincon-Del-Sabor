@@ -33,7 +33,7 @@ class Sales::SaleDetailsController < ApplicationController
     @sale_detail.destroy
     respond_to do |format|
       format.json { head :no_content }
-      format.js
+      format.js {redirect_to sale_sale_details_path(@sale)}
     end
   end
 
