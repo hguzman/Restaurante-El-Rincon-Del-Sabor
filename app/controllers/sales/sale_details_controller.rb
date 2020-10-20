@@ -20,7 +20,7 @@ class Sales::SaleDetailsController < ApplicationController
     @sale_detail = @sale.sale_details.new(sale_detail_params)
     respond_to do |format|
       if @sale_detail.save
-        format.html { redirect_to sale_sale_details_url(@sale, @sale_detail)}
+        format.html { redirect_to sale_sale_details_path(@sale, @sale_detail)}
         format.json { head :no_content }
         format.js
       else
@@ -29,12 +29,17 @@ class Sales::SaleDetailsController < ApplicationController
     end
   end
 
+  def update
+    if @sale_detail.update(sale_detail_params)
+      redirect_to  sale_sale_details_path(@sale, @sale_detail)
+    else
+      render :index
+    end
+  end
+
   def destroy
     @sale_detail.destroy
-    respond_to do |format|
-      format.json { head :no_content }
-      format.js
-    end
+      redirect_to sale_sale_details_path
   end
 
   private

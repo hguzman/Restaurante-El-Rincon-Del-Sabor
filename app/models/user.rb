@@ -3,8 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   after_create :user_mailer
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-         mount_uploader :avatar, AvatarUploader
+         :recoverable, :rememberable, :validatable,
+         :confirmable, :timeoutable
+         # required_methods = [:confirmation_token, :confirmed_at, :confirmation_sent_at]
+         mount_uploader :avatar, AvatarUploader, optional: true
 
           has_many :sales, dependent: :destroy
          def send_devise_notification(notification, *args)
@@ -14,7 +16,6 @@ class User < ApplicationRecord
          def user_mailer
            UserMailer.delay.bienvenida_mailer(@user)
          end
-
 
          # def avatar
          #   email_address = self.email.downcase

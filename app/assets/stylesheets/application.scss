@@ -26,16 +26,18 @@ a {
   overflow-y: scroll;
 
   .contenedor::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
+    background: red;
   }
 }
 ::-webkit-scrollbar {
-  width: 0.5px;
+  width: 10px;
   background: transparent;
 }
 .contenedor::-webkit-scrollbar-thumb {
   background: var(--dark);
   border-radius: 5px;
+  margin-left: 20px;
 }
 .btn-session {
   padding: 10px;

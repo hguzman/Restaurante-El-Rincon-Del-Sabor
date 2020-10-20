@@ -96,3 +96,8 @@ gem 'jquery-turbolinks', '~> 2.1'
 
 
 gem 'carrierwave', '~> 2.1'
+
+# Chart
+gem "chartkick"
+
+gem 'groupdate'
