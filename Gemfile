@@ -82,7 +82,7 @@ gem 'font_awesome5_rails'
 
 # pdf
 gem 'wicked_pdf', '~> 2.1'
-# gem 'wkhtmltopdf-binary', '~> 0.12.6.4'
+gem 'wkhtmltopdf-binary', '~> 0.12.6.4'
 
 # Paginacion
 gem 'will_paginate-bootstrap4'
@@ -98,3 +98,11 @@ gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.4'
 
 # Jquery turbolinks
 gem 'jquery-turbolinks', '~> 2.1'
+
+
+gem 'carrierwave', '~> 2.1'
+
+# Chart
+gem "chartkick"
+
+gem 'groupdate'
