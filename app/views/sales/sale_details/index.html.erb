@@ -52,7 +52,7 @@
                 <i class="fas fa-edit"></i>
               <%end%>
             </td>
-            <td align="center"><%= link_to  sale_sale_detail_path(@sale, d), remote: true, method: :delete, data: { confirm: "Desearemover el plato"}, class: "btn btn-danger" do %>
+            <td align="center"><%= link_to  sale_sale_detail_path(@sale, d), method: :delete, data: { confirm: "Desearemover el plato"}, class: "btn btn-danger" do %>
                  <i class="fas fa-trash-alt"></i>
               <% end %>
             </td>

@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get 'home/index'
   root to: "home#index"
 
-  resources :clients 
+  resources :users
+  resources :clients
   resources :categories do
     resources :dishes, module: :categories
   end
