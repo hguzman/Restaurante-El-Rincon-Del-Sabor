@@ -4,11 +4,13 @@ class Sales::SaleDetailsController < ApplicationController
   before_action :set_sale_detail, only: [:edit, :update, :destroy]
 
   def index
+    authorize Sale
     @details = @sale.sale_details.paginate(page: params[:page], per_page:3)
   end
 
   def new
     @sale_detail = @sale.sale_details.new
+    authorize @sale
   end
 
   def edit

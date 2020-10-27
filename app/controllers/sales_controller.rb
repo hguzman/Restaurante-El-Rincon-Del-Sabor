@@ -2,6 +2,7 @@ class SalesController < ApplicationController
   before_action :set_sale, only: [:edit, :destroy]
 
   def index
+    authorize Sale
     @sales = Sale.paginate(page: params[:page], per_page:4)
     respond_to do |format|
       format.html
@@ -11,6 +12,7 @@ class SalesController < ApplicationController
 
   def new
     @sale = Sale.new
+    authorize @sale
   end
 
   def create

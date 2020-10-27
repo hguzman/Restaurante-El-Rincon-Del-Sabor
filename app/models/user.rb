@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   after_create :user_mailer
@@ -26,4 +27,6 @@ class User < ApplicationRecord
          def to_s
            self.email
          end
+
+         belongs_to :user
 end
