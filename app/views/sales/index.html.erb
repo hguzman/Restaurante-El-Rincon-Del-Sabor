@@ -34,7 +34,7 @@
                 <tbody>
                   <% @sales.each do |sale| %>
                   <tr>
-                    <td align="center"><%=sale.id%></td>
+                    <td align="center"><%= sale.id %></td>
                     <td><%= sale.client.nombre %></td>
                     <td>$ <%= sale.total %></td>
                     <td><%= sale.created_at.strftime('%A, %d de %B')%></td>

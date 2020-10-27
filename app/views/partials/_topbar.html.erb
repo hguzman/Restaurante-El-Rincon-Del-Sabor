@@ -143,16 +143,16 @@
     <!-- Nav Item - User Information -->
     <li class="nav-item dropdown no-arrow">
       <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%= current_user.email %></span>
-        <!-- <img class="img-profile rounded-circle" src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars.png"> -->
-        <%= image_tag(current_user.avatar, class:"img-profile rounded-circle") %>
+        <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%= current_user.nombres %> <%= current_user.apellidos %></span>
+        <%# image_tag(current_user.avatar, class:"img-profile rounded-circle") %>
+        <%= image_tag current_user.avatar.thumb.url,class: "img-profile rounded-circle" %>
       </a>
       <!-- Dropdown - User Information -->
       <div class="menu dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown" id="dropdown-menu">
-        <a class="dropdown-item" href="profiles/1">
+        <%= link_to users_path, class:"dropdown-item" do %>
           <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-          Profile
-        </a>
+        Empleados
+        <% end %>
         <a class="dropdown-item" href="#">
           <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
           Settings
@@ -164,7 +164,7 @@
         <div class="dropdown-divider"></div>
         <%= link_to destroy_user_session_path, method: :delete, class:"dropdown-item" do %>
         <%= fa_icon "sign-out-alt" %>
-        Logout
+        Cerrar sesion
         <% end %>
       </div>
     </li>

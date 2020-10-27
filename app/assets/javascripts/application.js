@@ -20,6 +20,8 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require toastr
+//= require chartkick
+//= require Chart.bundle
 
 document.addEventListener("turbolinks:load", function() {
   (function($) {

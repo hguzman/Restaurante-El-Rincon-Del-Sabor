@@ -18,8 +18,8 @@ Devise.setup do |config|
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
-  # config.parent_controller = 'DeviseController'
 
+  # config.parent_controller = 'DeviseController'
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -47,7 +47,7 @@ Devise.setup do |config|
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
   # config.authentication_keys = [:email]
-
+  config.timeout_in = 30.minutes 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
   # find_for_authentication method and considered in your model lookup. For instance,
@@ -144,7 +144,8 @@ Devise.setup do |config|
   # Default is 0.days, meaning the user cannot access the website without
   # confirming their account.
   # config.allow_unconfirmed_access_for = 2.days
-
+  config.allow_unconfirmed_access_for = 1.days #esperar 1 dia antes de bloquear
+  config.reconfirmable = true # confirmar el cambio de email
   # A period that the user is allowed to confirm their account before their
   # token becomes invalid. For example, if set to 3.days, the user can confirm
   # their account within 3 days after the mail was sent, but on the fourth day
