@@ -3,13 +3,13 @@ class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
   def index
-    # authorize Client
+     authorize Client
     @clients = Client.paginate(page: params[:page], per_page:4)
   end
 
   def new
     @clients = Client.new
-    # authorize @clients
+     authorize @clients
   end
 
   def edit
@@ -46,6 +46,7 @@ class ClientsController < ApplicationController
 
   def destroy
     @clients.destroy
+    authorize @clients
     respond_to do |format|
       format.html {redirect_to clients_url, notice: 'Cliente eliminado con éxito'}
       format.json { head :no_content}

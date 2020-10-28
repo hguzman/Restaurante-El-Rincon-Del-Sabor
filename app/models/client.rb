@@ -5,8 +5,10 @@ class Client < ApplicationRecord
   validates :direccion, presence: true
   validates :cedula, length: { in: 10..10 },numericality: true
   validates :telefono, length: { in: 10..10 },numericality: true
-  
+
   def to_s
     self.nombre
   end
+
+  has_many :clients
 end
