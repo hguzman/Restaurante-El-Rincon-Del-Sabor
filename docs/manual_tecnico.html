@@ -10,7 +10,43 @@
     <script src="https://kit.fontawesome.com/24a7cebcbe.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" >
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" width="45" height="45" class="d-inline-block align-top" loading="lazy">
+        Garvsoft
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="container">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="diagramas.html"> Diagramas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="documentacion.html"> Documentacion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="desarolladores.html"> Desarrolladores</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Manuales
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="manual_tecnico.html">Manual Técnico</a>
+                <a class="dropdown-item" href="manualUser.html">Manual de Usuario</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fuid ">
       <h1 class="text-center">MANUAL TÉCNICO</h1>
       <h2 class="text-center mt-5"> DESARROLLO E IMPLEMENTACIÓN DEL APLICATIVO GESTIÓN ADMINISTRATIVA PARA EL REGISTRO DE VENTAS (GarvSoft)</h2>
       <h2 class="text-center"><h2 class="text-center mt-5">ESTEBAN GÓMEZ FERNÁNDEZ</h2>
@@ -50,7 +86,7 @@
         <li>Lector de pdf Acrobat Reader o similar</li>
      </ul>
      <h2 class="text-center mt-5">INGRESO AL SISTEMA</h2>
-     <img src="img/ingreso_sistema.png" alt="">
+      <img src="img/ingreso_sistema.png" alt="">
      <p>En este formulario  muestra la vista login (url:garvsoft.herokuapp.com/users/sign_in), en cual contiene una tarjeta, dentro se encuentran los diferentes inputs los cuales contendrán la información que ingresará el usuario para posteriormente acceder al aplicativo. En la fig2 se hace la inserción de los datos, se reflejaría de la siguiente forma a mostrar.</p>
      <img src="img/olvidaste_contraseña.png" alt="">
      <p>Como se observa  en la fig2, hay un label en cual nos informa que si ‘olvidamos la contraseña’ procediendo a dar clic, nos redirecciona a una nueva vista que estará en la ruta (http://garvsoft.herokuapp.com/users/password/new), en esta dispondremos un correo electrónico donde nos llegará un email (img de muestra)</p>
@@ -127,7 +163,6 @@
      <p>MER: Modelo entidad-relación, una herramienta para el modelado de datos de un sistema de información</p>
      <p>DER: es una herramienta de modelado de sistemas, que se concentra en los datos almacenados en el sistema y las relaciones entre éstos. Un diagrama de entidad-relación o DER es un modelo de red que describe la distribución de los datos almacenados en un sistema de forma abstracta.</p>
      <p>postgresql: es un servidor de base de datos objeto relacional libre, ya que incluye características de la orientación a objetos, como puede ser la herencia, tipos de datos, funciones, restricciones, disparadores, reglas e integridad transaccional, liberado bajo la licencia BSD. ... Actualmente estos son llamados objetos.</p>
-     
     </div>
 
   </body>
