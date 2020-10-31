@@ -3,7 +3,7 @@
     <h3 class="mb-2 text-gray">Factura n° <%= @sale.id %></h3>
   </div>
   <div class="col-md-6" style="text-align:right;">
-    <h3 class="mr-3" id="total_venta_lbl">Total $  <%= @sale.total %></h3>
+
   </div>
   <div class="col-md-5 mb-3">
     <div class="row">
@@ -47,7 +47,7 @@
             <td><%= d.dish.descripcion %></td>
             <td align="center"><%= d.cantidad %></td>
             <td align="center">$ <%= d.dish.precio %></td>
-            <td align="center">$ <%= d.dish.precio * d.cantidad %></td>
+            <td align="center">$ <%= @total = d.dish.precio * d.cantidad %></td>
             <td align="center"><%= link_to edit_sale_sale_detail_path(@sale, d), html_options = {class: "btn btn-info btn-xs", remote: true} do %>
                 <i class="fas fa-edit"></i>
               <%end%>
@@ -64,6 +64,7 @@
   </div>
 </div>
 <div class="d-flex justify-content-center mt-2">
-  <%= will_paginate @details, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  <%# will_paginate @details, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>
+<h3 class="ml-auto mr-3" id="total_venta_lbl">Total $  <%= @total %></h3>
 <%= render "modal_add_dishes"%>
