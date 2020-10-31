@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_19_195828) do
+ActiveRecord::Schema.define(version: 2020_10_22_115929) do
 
   create_table "categories", force: :cascade do |t|
     t.string "nombre"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2020_10_19_195828) do
     t.boolean "estado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_clients_on_user_id"
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
@@ -56,6 +58,17 @@ ActiveRecord::Schema.define(version: 2020_10_19_195828) do
     t.index ["category_id"], name: "index_dishes_on_category_id"
   end
 
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.string "resource_type"
+    t.integer "resource_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
+    t.index ["name"], name: "index_roles_on_name"
+    t.index ["resource_type", "resource_id"], name: "index_roles_on_resource_type_and_resource_id"
+  end
+
   create_table "sale_details", force: :cascade do |t|
     t.integer "cantidad"
     t.integer "sale_id"
@@ -67,7 +80,7 @@ ActiveRecord::Schema.define(version: 2020_10_19_195828) do
   end
 
   create_table "sales", force: :cascade do |t|
-    t.integer "total", default: 0
+    t.integer "total"
     t.integer "client_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
@@ -98,6 +111,14 @@ ActiveRecord::Schema.define(version: 2020_10_19_195828) do
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "users_roles", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+    t.index ["role_id"], name: "index_users_roles_on_role_id"
+    t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
+    t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
 end

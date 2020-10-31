@@ -4,11 +4,13 @@ class Categories::DishesController < ApplicationController
   before_action :set_dish, only: [:edit, :update, :destroy]
 
   def index
+    authorize Category
     @dishes = @category.dishes.all
   end
 
   def new
     @dish = @category.dishes.new
+    authorize @category
   end
 
   def edit
