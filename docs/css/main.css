@@ -7,13 +7,13 @@
 
 
 body{
-  background: url(../img/Background.jpg);
+  background: url(../img/background.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
 
 .top{
-  margin-top: 180px;
+  margin-top: 103px;
 }
 
 .img-fondo{
@@ -26,7 +26,12 @@ body{
 }
 button a{
   color: white;
+  margin-left: 9px;
 }
+button a:hover{
+  color: white !important;
+}
+
 .i1{
   margin-left: 105px;
   margin-top: 20px;
