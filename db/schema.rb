@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 2020_10_22_115929) do
   end
 
   create_table "sales", force: :cascade do |t|
-    t.integer "total"
+    t.integer "total", default: 0
     t.integer "client_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
