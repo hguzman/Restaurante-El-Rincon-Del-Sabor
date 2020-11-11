@@ -12,6 +12,7 @@
  *
  // *= require_tree .
  // *= require_self
+ *= require select2-bootstrap
  */
 @import "bootstrap";
 @import "font_awesome5_webfont";
@@ -26,16 +27,18 @@ a {
   overflow-y: scroll;
 
   .contenedor::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
+    background: red;
   }
 }
 ::-webkit-scrollbar {
-  width: 0.5px;
+  width: 10px;
   background: transparent;
 }
 .contenedor::-webkit-scrollbar-thumb {
   background: var(--dark);
   border-radius: 5px;
+  margin-left: 20px;
 }
 .btn-session {
   padding: 10px;
@@ -53,10 +56,10 @@ a {
   border-radius: 5px;
   color: blue !important;
 }
-.footer {
-  position: absolute;
-  bottom: -6px;
-}
+// .footer {
+//   position: absolute;
+//   bottom:-28px;
+// }
 #toast-container {
   top: 80px;
 }
@@ -69,12 +72,12 @@ a {
   border: 10px solid;
   border-color: transparent transparent white transparent;
 }
-.collapse-inner::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: -4%;
-  transform: translateX(-60%);
-  border: 15px solid;
-  border-color: transparent white transparent transparent;
-}
+// .collapse-inner::before {
+//   content: "";
+//   position: absolute;
+//   top: 10px;
+//   left: -4%;
+//   transform: translateX(-60%);
+//   border: 15px solid;
+//   border-color: transparent white transparent transparent;
+// }

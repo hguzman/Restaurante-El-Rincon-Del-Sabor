@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-6 mx-auto mt-2">
+        <div class="card shadow-lg">
+            <div class="card-body">
+                <div class="box">
+                    <h2 class=" text-center">Registrar usuario</h2>
+                    <%= simple_form_for(@user) do |f| %>
+                    <h4>Datos Personales</h4>
+                    <div class="row">
+                        <div class="col"><%= f.input :nombres %></div>
+                        <div class="col"><%= f.input :apellidos %></div>
+                    </div>
+                    <h4>Información de contacto</h4>
+                    <div class="row">
+                        <div class="col"><%= f.input :telefono %></div>
+                        <div class="col"><%= f.input :direccion %></div>
+                        <div class="col"><%= f.input :cedula %></div>
+                    </div>
+                    <%= f.input :email %>
+                    <div class="row">
+                        <div class="col"><%= f.input :password %></div>
+                        <div class="col"><%= f.input :password_confirmation %></div>
+                    </div>
+                    <%= f.input :avatar, as: :file%>
+                    <!-- <h4>Añadir rol</h4> -->
+                    <%= f.button :submit, class: "btn btn-primary" %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

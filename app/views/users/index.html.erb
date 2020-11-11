@@ -1,0 +1,41 @@
+<h1>Registro de Empleados</h1>
+<div class="mb-3">
+  <%= link_to new_user_path, {class: "btn btn-info shadow"}  do %>
+    <%= fa_icon "plus-circle" %>
+    Nuevo Empleado
+  <%end%>
+</div>
+<div class="row">
+  <div class="col-md-12 mx-auto">
+    <div class="card shadow">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered">
+            <thead>
+              <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>celular</th>
+                <th>direccion</th>
+                <th>cedula</th>
+                <th>sexo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @users.each do |f| %>
+              <tr>
+                <td><%= f.nombres %></td>
+                <td><%= f.apellidos %></td>
+                <td><%= f.telefono %></td>
+                <td><%= f.direccion %></td>
+                <td><%= f.cedula %></td>
+                <td><%= f.sexo %></td>
+              </tr>
+              <%end%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

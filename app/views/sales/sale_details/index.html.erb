@@ -3,7 +3,8 @@
     <h3 class="mb-2 text-gray">Factura n° <%= @sale.id %></h3>
   </div>
   <div class="col-md-6" style="text-align:right;">
-    <h3 class="mr-3" id="total_venta_lbl">Total $  <%= @sale.total %></h3>
+    <h3 class="ml-auto" id="total_venta_lbl">Total $  <%= @valor %></h3>
+
   </div>
   <div class="col-md-5 mb-3">
     <div class="row">
@@ -47,12 +48,12 @@
             <td><%= d.dish.descripcion %></td>
             <td align="center"><%= d.cantidad %></td>
             <td align="center">$ <%= d.dish.precio %></td>
-            <td align="center">$ <%= d.dish.precio * d.cantidad %></td>
+            <td align="center">$ <%= d.preciot %></td>
             <td align="center"><%= link_to edit_sale_sale_detail_path(@sale, d), html_options = {class: "btn btn-info btn-xs", remote: true} do %>
                 <i class="fas fa-edit"></i>
               <%end%>
             </td>
-            <td align="center"><%= link_to  sale_sale_detail_path(@sale, d), remote: true, method: :delete, data: { confirm: "Desearemover el plato"}, class: "btn btn-danger" do %>
+            <td align="center"><%= link_to  sale_sale_detail_path(@sale, d), method: :delete, data: { confirm: "Desearemover el plato"}, class: "btn btn-danger" do %>
                  <i class="fas fa-trash-alt"></i>
               <% end %>
             </td>
@@ -60,10 +61,7 @@
          <%end%>
         </tbody>
       </table>
-    </div
+    </div>
   </div>
-</div>
-<div class="d-flex justify-content-center mt-2">
-  <%= will_paginate @details, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>
 <%= render "modal_add_dishes"%>
