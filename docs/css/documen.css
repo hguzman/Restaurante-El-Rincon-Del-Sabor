@@ -4,7 +4,7 @@
 }
 
 body{
-  background: url(../img/Background.jpg);
+  background: url(../img/background.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -23,14 +23,8 @@ body{
 }
 ::-webkit-scrollbar-thumb{
   background: rgb(1, 17, 36);
-  border-radius: 4px;
 }
 
-.scroll::-webkit-scrollbar{
-  width: 8px;
-}
-
-.scroll::-webkit-scrollbar-thumb{
-  background: rgb(1, 17, 36);
-  border-radius: 4px;
+h1{
+  color: white;
 }
