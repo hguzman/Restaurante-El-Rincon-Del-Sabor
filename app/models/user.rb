@@ -5,7 +5,6 @@ class User < ApplicationRecord
   after_create :user_mailer
   devise :database_authenticatable,
          :recoverable, :rememberable, :validatable,
-         # :confirmable,
          :timeoutable
          # required_methods = [:confirmation_token, :confirmed_at, :confirmation_sent_at]
          mount_uploader :avatar, AvatarUploader, optional: true
@@ -15,13 +14,13 @@ class User < ApplicationRecord
            devise_mailer.send(notification, self, *args).deliver_later
          end
 
-         def user_mailer
-           UserMailer.delay.bienvenida_mailer(@user)
-         end
+
+           def user_mailer
+             UserMailer.delay.bienvenida_mailer(@user)
+           end
 
          def to_s
            self.email
          end
 
-         has_many :clients
 end
