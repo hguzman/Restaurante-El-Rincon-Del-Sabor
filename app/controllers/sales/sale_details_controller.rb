@@ -5,11 +5,12 @@ class Sales::SaleDetailsController < ApplicationController
 
   def index
     authorize Sale
-    @details = @sale.sale_details.paginate(page: params[:page], per_page:3)
+    @details = @sale.sale_details.all
+    @valor = @details.sum(:preciot) || 0
   end
 
   def new
-    @sale_detail = @sale.sale_details.new
+    @sale_detail = @sale.sale_details.new(cantidad: 1)
     authorize @sale
   end
 

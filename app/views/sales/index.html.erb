@@ -36,7 +36,7 @@
                   <tr>
                     <td align="center"><%= sale.id %></td>
                     <td><%= sale.client.nombre %></td>
-                    <!-- <td>$ <%# total %></td> -->
+                    <!-- <td>$ <%= sale %></td> -->
                     <td><%= sale.created_at.strftime('%A, %d de %B')%></td>
                     <td align="center"><%= link_to 'Borrar', sale, method: :delete, data: {confirm: "Desea Borrar la venta"}, class: "btn btn-danger" %></td>
                     <td align="center"><%= link_to 'detalle', sale_sale_details_path(sale), class:"btn btn-success" %></td>

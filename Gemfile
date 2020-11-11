@@ -106,3 +106,5 @@ gem 'carrierwave', '~> 2.1'
 gem "chartkick"
 
 gem 'groupdate'
+
+gem 'select2-rails', '~> 4.0', '>= 4.0.13'
