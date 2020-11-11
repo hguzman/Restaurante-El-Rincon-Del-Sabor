@@ -12,6 +12,7 @@
  *
  // *= require_tree .
  // *= require_self
+ *= require select2-bootstrap
  */
 @import "bootstrap";
 @import "font_awesome5_webfont";
@@ -55,10 +56,10 @@ a {
   border-radius: 5px;
   color: blue !important;
 }
-.footer {
-  position: absolute;
-  bottom:-28px;
-}
+// .footer {
+//   position: absolute;
+//   bottom:-28px;
+// }
 #toast-container {
   top: 80px;
 }

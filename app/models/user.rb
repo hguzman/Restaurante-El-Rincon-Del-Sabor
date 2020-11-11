@@ -3,9 +3,9 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   after_create :user_mailer
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable,
          :recoverable, :rememberable, :validatable,
-         :confirmable, :timeoutable
+         :timeoutable
          # required_methods = [:confirmation_token, :confirmed_at, :confirmation_sent_at]
          mount_uploader :avatar, AvatarUploader, optional: true
 
@@ -14,9 +14,10 @@ class User < ApplicationRecord
            devise_mailer.send(notification, self, *args).deliver_later
          end
 
-         def user_mailer
-           UserMailer.delay.bienvenida_mailer(@user)
-         end
+
+           def user_mailer
+             UserMailer.delay.bienvenida_mailer(@user)
+           end
 
          # def avatar
          #   email_address = self.email.downcase
@@ -30,5 +31,4 @@ class User < ApplicationRecord
            self.email
          end
 
-         belongs_to :user
 end

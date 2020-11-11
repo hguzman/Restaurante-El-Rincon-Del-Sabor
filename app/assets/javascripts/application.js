@@ -22,6 +22,7 @@
 //= require toastr
 //= require chartkick
 //= require Chart.bundle
+//= require select2-full
 
 document.addEventListener("turbolinks:load", function() {
   (function($) {
