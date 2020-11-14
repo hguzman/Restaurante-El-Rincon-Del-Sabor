@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_22_115929) do
+ActiveRecord::Schema.define(version: 2020_11_10_202231) do
 
   create_table "categories", force: :cascade do |t|
     t.string "nombre"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 2020_10_22_115929) do
     t.integer "dish_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "preciot"
     t.index ["dish_id"], name: "index_sale_details_on_dish_id"
     t.index ["sale_id"], name: "index_sale_details_on_sale_id"
   end

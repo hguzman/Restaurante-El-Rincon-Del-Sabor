@@ -4,9 +4,10 @@
       <div class="col"><%= f.association :dish,
                         prompt: "selecionar plato",
                         label: "plato",
-                        required: false %>
+                        required: false,
+                        input_html: { id:"select-plato" } %>
       </div>
-      <div class="col-md-3"><%= f.input :cantidad, min:1 %></div>
+      <div class="col-md-3"><%= f.input :cantidad %></div>
     </div>
   </div>
   <%= f.button :submit, 'Agregar', class: "btn btn-primary" %>
