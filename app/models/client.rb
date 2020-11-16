@@ -9,5 +9,5 @@ class Client < ApplicationRecord
   def to_s
     self.nombre
   end
-  belogns_to :user, dependent: :destroy
+  belongs_to :user, dependent: :destroy
 end

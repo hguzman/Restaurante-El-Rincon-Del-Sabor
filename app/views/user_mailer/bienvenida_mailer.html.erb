@@ -1,7 +1,19 @@
-<h4>Garvsoft</h4>
-<p>
-  Hola <%= @user.email %>, Bienvenido
-</p>
-<p>
-  Nos complace saber que quieres ser parte de esta comunidad.
-</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="class card-body">
+        <img src="https://raw.githubusercontent.com/hguzman/Restaurante-El-Rincon-Del-Sabor/develop/docs/img/logo.png" width="300px" height="320px" alt="">
+        <p>
+          <strong>Bienvenido</strong> <%= @user.email %>.
+        </p>
+        <p>
+          Queremos darte la bienvenida, nos complace saber que quieres ser parte de nuestra comunidad!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
