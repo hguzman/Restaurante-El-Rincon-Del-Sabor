@@ -1,14 +1,10 @@
 class SalesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_sale, only: [:edit, :destroy]
+  before_action :set_sale, only: [:edit, :destroy, :show]
 
   def index
     authorize Sale
     @sales = Sale.paginate(page: params[:page], per_page:4)
-    respond_to do |format|
-      format.html
-      format.pdf {render template: 'sales/reporte', pdf: 'reporte'}
-    end
   end
 
   def new
@@ -30,7 +26,15 @@ class SalesController < ApplicationController
   end
 
   def destroy
-    @sale.destroy
+      ActiveRecord::Base.transaction do
+        @sale.sale_details.map do |detail|
+          plato_vendido = Dish.find(detail.dish_id)
+          plato_vendido.existencia+=detail.cantidad
+          ActiveRecord::Rollback unless plato_vendido.save
+        end
+        ActiveRecord::Rollback unless @sale.destroy
+      end
+
       respond_to do |format|
         format.html { redirect_to sales_url, notice: 'La venta ha sido cancelada.' }
         format.json { head :no_content }

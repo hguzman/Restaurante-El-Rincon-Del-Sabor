@@ -19,7 +19,8 @@
     </div>
   </div>
   <div class="col-md-7" style="text-align:right" >
-    <a class="btn btn-danger" href="/sales">Cancelar venta</a>
+    <a class="btn btn-success" href="/sales">finalizar venta</a>
+      <%= link_to 'Cancelar venta', @sale, method: :delete, data: { confirm: '¿Cancelar la venta?' }, class: "btn btn-danger" %>
   </div>
   <%= link_to new_sale_sale_detail_path, {remote: true, class: "btn btn-info ml-3", id: "anadir-platos-btn"}  do %>
     <span class="fas fa-plus-circle" ></span>
