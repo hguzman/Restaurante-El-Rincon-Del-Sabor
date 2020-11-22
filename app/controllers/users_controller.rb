@@ -1,55 +1,39 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
-  before_action :set_user, only: [:edit, :destroy, :update, :show]
+  before_action :authenticate_user!, only: [:cambiar_password, :update_password, :destroy]
+  before_action :set_user, only: [:edit, :update]
+  before_action :set_user, only: [:cambiar_password, :update_password]
+  respond_to :html
 
-    def index
-      # authorize User
-      @users = User.all
+  def cambiar_password
+  end
+
+  def update_password
+    if @user.update_with_password(user_params)
+      # Sign in the user by passing validation in case their password changed
+      bypass_sign_in(@user)
+      flash[:success] = t(".success")
+      redirect_to settings_change_password_path
+    else
+      flash[:alert] = t(".alert")
+      render "settings/change_password"
     end
+  end
 
-    def show
+  def update
+    if @user.update(user_params)
+      flash[:success] = t('.success')
+      respond_with :settings, :profile
+    else
+      flash[:alert] = t('.alert')
+      render "settings/profile"
     end
-
-    def new
-      @user= User.new
-       # authorize @user
-    end
-
-    def create
-      @user = User.new(user_params)
-      if @user.save
-        redirect_to users_path
-        flash.notice= "Usuario creado"
-
-      else
-        render :new
-      end
-
-    end
-
-    def update
-      if @user.update(user_params)
-        redirect_to users_path
-        flash.notice="Usuario editado"
-      else
-        render :edit
-      end
-    end
-
-    def destroy
-      @user.destroy
-      redirect_to users_path
-      flash.alert="Usuario eliminado"
-    end
-
-    def edit
-    end
+  end
 
     def set_user
-      @user = User.find(params[:id])
+      @user = current_user
     end
 
   def user_params
-      params.require(:user).permit(:nombres,:email,:password,:password_confirmation,:apellidos,:direccion,:telefono,:sexo, :cedula, :avatar)
+      params.require(:user).permit(:current_password,:nombres,:email,:password,:password_confirmation,:apellidos,:direccion,:telefono,:sexo, :cedula, :avatar)
   end
 end

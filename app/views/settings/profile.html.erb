@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-5">
+    <%= simple_form_for @user do |f| %>
+            <%= f.input :nombres %>
+            <%= f.input :apellidos %>
+            <%= f.input :telefono %>
+            <%= f.button :submit, "Actualizar", class:"btn btn-primary" %>
+    <%end%>
+  </div>
+</div>
