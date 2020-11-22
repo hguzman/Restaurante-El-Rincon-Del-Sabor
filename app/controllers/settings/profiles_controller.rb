@@ -1,7 +1,7 @@
 class Settings::ProfilesController < ApplicationController
   respond_to :html
   before_action :authenticate_user!
-  before_action :set_profile, only: [:show, :update, :destroy]
+  before_action :set_profile, only: [:update, :destroy]
 
   def show
     @profile = current_user.profile
@@ -17,10 +17,10 @@ class Settings::ProfilesController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @profile.destroy
-  #   redirect_to unauthenticated_root_path
-  # end
+  def destroy
+    @profile.destroy
+    redirect_to unauthenticated_root_path
+  end
 
   private
 

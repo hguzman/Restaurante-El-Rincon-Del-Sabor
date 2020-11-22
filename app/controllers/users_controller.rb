@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:cambiar_password, :update_password, :destroy]
-  before_action :set_user, only: [:edit, :update]
-  before_action :set_user, only: [:cambiar_password, :update_password]
+  before_action :set_user, only: [:update, :cambiar_password, :update_password]
   respond_to :html
 
   def cambiar_password
@@ -22,7 +21,7 @@ class UsersController < ApplicationController
   def update
     if @user.update(user_params)
       flash[:success] = t('.success')
-      respond_with :settings, :profile
+      redirect_to settings_profile_path
     else
       flash[:alert] = t('.alert')
       render "settings/profile"
