@@ -108,3 +108,5 @@ gem "chartkick"
 gem 'groupdate'
 
 gem 'select2-rails', '~> 4.0', '>= 4.0.13'
+
+gem 'dropzonejs-rails', '~> 0.8.5'

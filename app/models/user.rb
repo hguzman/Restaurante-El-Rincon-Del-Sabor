@@ -5,7 +5,7 @@ class User < ApplicationRecord
   after_create :user_mailer
   devise :database_authenticatable,
          :recoverable, :rememberable, :validatable,
-         :timeoutable
+         :timeoutable, :registerable
          # required_methods = [:confirmation_token, :confirmed_at, :confirmation_sent_at]
          mount_uploader :avatar, AvatarUploader, optional: true
 

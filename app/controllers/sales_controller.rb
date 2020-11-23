@@ -1,6 +1,6 @@
 class SalesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_sale, only: [:edit, :destroy, :show]
+  before_action :set_sale, only: [:edit, :destroy]
 
   def index
     authorize Sale
