@@ -23,6 +23,7 @@
 //= require chartkick
 //= require Chart.bundle
 //= require select2-full
+//= require dropzone
 
 document.addEventListener("turbolinks:load", function() {
   (function($) {
