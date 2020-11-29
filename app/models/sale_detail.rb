@@ -3,14 +3,15 @@ class SaleDetail < ApplicationRecord
   belongs_to :dish
 
   before_save :almacenar
-  before_save :descontar
+  after_save :descontar
 
   def almacenar
     self.preciot = self.cantidad * dish.precio
   end
 
   def descontar
-    self.cantidad - dish.existencia
+    self.dish.existencia -= self.cantidad
+    self.dish.save
   end
   
   # def al1
