@@ -7,16 +7,24 @@
 
   </div>
   <div class="col-md-5 mb-3">
-    <div class="row">
-      <div class="col">
-        <p class="mt-4 h5">cliente</p>
-        <h6><%= @sale.client.nombre %></h6>
-      </div>
-      <div class="col">
-        <p class="mt-4 h5">telefono</p>
-        <p class="h6"><%= @sale.client.telefono %></p>
-      </div>
+  <div class="row">
+    <div class="col">
+      <%if @sale.client.present?%>
+      <p class="mt-4 h5">cliente</p>
+      <h6><%= @sale.client.nombre %></h6>
+      <%else%>
+      <h6>No hay cliente seleccionado</h6>
+      <%end%>
     </div>
+    <div class="col-md-4">
+      <p class="mt-4 h5">telefono</p>
+      <%if @sale.client.present?%>
+      <p class="h6"><%= @sale.client.telefono %></p>
+      <%else%>
+      <h6>No hay número</h6>
+      <%end%>
+    </div>
+  </div>
   </div>
   <div class="col-md-7" style="text-align:right" >
     <a class="btn btn-success" href="/sales">finalizar venta</a>
