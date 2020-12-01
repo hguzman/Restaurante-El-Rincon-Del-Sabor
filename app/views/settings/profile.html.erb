@@ -1,20 +1,21 @@
-<div class="row">
-  <div class="col-md-5">
+<div class="row mt-5">
+  <div class="col-md-4">
     <%= simple_form_for @user do |f| %>
-    <div class="row">
-      <div class="col">
-        <%= f.input :nombres %>
-      </div>
-      <div class="col">
-        <%= f.input :apellidos %>
-      </div>
-    </div>  
-        <%= f.input :cedula %>
-        <%= f.input :telefono %>
-        <%= f.input :direccion %>
-        <%= f.input :sexo %>
-        <%= f.input :avatar, as: :file %>
-        <%= f.button :submit, "Actualizar", class:"btn btn-primary" %>
-    <%end%>
+    <div class="profile-image">
+      <%= image_tag current_user.avatar.thumb.url,class: "img-profile rounded-circle" %>
+      <%= f.input :avatar, as: :file %>
+    </div>
   </div>
-</div>
+  <div class="col-md-4">
+    <%= f.input :nombres %>
+    <%= f.input :apellidos %>
+    <%= f.input :cedula %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :telefono %>
+      <%= f.input :direccion %>
+      <%= f.input :sexo %>
+      <%= f.button :submit, "Actualizar", class:"btn btn-primary" %>
+      <%end%>
+    </div>
+  </div>
