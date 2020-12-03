@@ -28,7 +28,7 @@ class User < ApplicationRecord
          # end
 
          def to_s
-           self.email
+           "#{self.nombres}" + " " + "#{self.apellidos}" 
          end
 
 end

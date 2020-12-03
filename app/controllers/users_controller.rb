@@ -10,8 +10,7 @@ class UsersController < ApplicationController
     if @user.update_with_password(user_params)
       # Sign in the user by passing validation in case their password changed
       bypass_sign_in(@user)
-      flash[:success] = t(".success")
-      redirect_to settings_change_password_path
+      redirect_to settings_change_password_path, notice: "contaseña actualizada"
     else
       flash[:alert] = t(".alert")
       render "settings/change_password"
@@ -28,9 +27,15 @@ class UsersController < ApplicationController
     end
   end
 
-    def set_user
-      @user = current_user
-    end
+  def destroy
+    @user.destroy
+  end
+
+  private
+  
+  def set_user
+    @user = current_user
+  end
 
   def user_params
       params.require(:user).permit(:current_password,:nombres,:email,:password,:password_confirmation,:apellidos,:direccion,:telefono,:sexo, :cedula, :avatar)

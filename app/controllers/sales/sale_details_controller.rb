@@ -29,7 +29,7 @@ class Sales::SaleDetailsController < ApplicationController
     # dish.existencia  = existencia_antes_venta - cantidad
     respond_to do |format|
       if @sale_detail.save
-        format.html { redirect_to sale_sale_details_path(@sale, @sale_detail)}
+        format.html { redirect_to sale_sale_details_path(@sale)}
         format.json { head :no_content }
         format.js
       else
@@ -40,7 +40,7 @@ class Sales::SaleDetailsController < ApplicationController
 
   def update
     if @sale_detail.update(sale_detail_params)
-      redirect_to  sale_sale_details_path(@sale, @sale_detail)
+      redirect_to  sale_sale_details_path(@sale)
     else
       render :index
     end

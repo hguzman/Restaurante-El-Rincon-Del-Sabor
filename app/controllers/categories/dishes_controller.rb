@@ -19,7 +19,7 @@ class Categories::DishesController < ApplicationController
   def create
     @dish = @category.dishes.new(dish_params)
     if @dish.save
-      redirect_to category_dishes_path(@category, @dish),notice: "creado exitosamente"
+      redirect_to category_dishes_path(@category),notice: "creado exitosamente"
     else
       render :new
     end
@@ -27,7 +27,7 @@ class Categories::DishesController < ApplicationController
 
   def update
     if @dish.update(dish_params)
-      redirect_to  category_dishes_path(@category, @dish),notice: "actualizado exitosamente"
+      redirect_to  category_dishes_path(@category),notice: "actualizado exitosamente"
     else
       render :edit
     end
