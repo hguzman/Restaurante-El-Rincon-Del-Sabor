@@ -1,0 +1,56 @@
+tr {
+  border-bottom: solid;
+  border-width: 0.5px;
+  border-color: black;
+}
+#main {
+  margin-top: 10%;
+}
+td,
+th {
+  text-align: left;
+}
+
+h2,
+h3 {
+  margin-top: 2%;
+  font-size: 35px;
+}
+dt {
+  font-size: 17px;
+}
+table,
+tr,
+td,
+th,
+tbody,
+thead,
+tfoot {
+  page-break-inside: avoid !important;
+}
+#titlee {
+  text-align: center;
+}
+#total {
+  font-weight: bolder;
+  margin-left: 80%;
+}
+#lista1 {
+  float: left;
+}
+#lista2 {
+  float: right;
+}
+#logoo {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+#fo {
+  margin-top: 10%;
+  text-align: center;
+  font-size: 40px;
+}
+#productod {
+  font-size: 20px;
+}
