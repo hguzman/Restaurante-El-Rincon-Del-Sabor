@@ -1,7 +1,7 @@
 class SettingsController < ApplicationController
   respond_to :html
   before_action :authenticate_user!
-  before_action :set_user, only: [:profile, :change_password ]
+  before_action :set_user, only: [:profile, :change_password]
 
   def profile
   end

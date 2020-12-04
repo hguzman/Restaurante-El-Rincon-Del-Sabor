@@ -7,15 +7,15 @@ class Sales::SaleDetailsController < ApplicationController
     authorize Sale
     @details = @sale.sale_details.all
     @valor = @details.sum(:preciot) || 0
-    # respond_to do |forma|
-    #   forma.html
-    #   forma.pdf {render template: 'sales/sale_details/reporte', pdf: 'reporte'}
-    # end
+    respond_to do |forma|
+      forma.html
+      forma.pdf {render template: 'sales/sale_details/reporte', pdf: 'reporte'}
+    end
   end
 
   def new
     @sale_detail = @sale.sale_details.new(cantidad: 1)
-    authorize @sale
+    # authorize @sale
   end
 
   def edit
@@ -29,18 +29,18 @@ class Sales::SaleDetailsController < ApplicationController
     # dish.existencia  = existencia_antes_venta - cantidad
     respond_to do |format|
       if @sale_detail.save
-        format.html { redirect_to sale_sale_details_path(@sale, @sale_detail)}
+        format.html { redirect_to sale_sale_details_path(@sale)}
         format.json { head :no_content }
         format.js
       else
-        render :new
+        format.html { redirect_to sale_sale_details_path(@sale), alert: "el plato no fue añadido"}
       end
     end
   end
 
   def update
     if @sale_detail.update(sale_detail_params)
-      redirect_to  sale_sale_details_path(@sale, @sale_detail)
+      redirect_to  sale_sale_details_path(@sale)
     else
       render :index
     end
