@@ -1,3 +1,8 @@
+<<<<<<< HEAD:app/views/settings/account.html.erb
+
+    <div class="col-md-8">
+      <%= link_to "Eliminar cuenta", user_path(current_user), method: :delete, class: "btn btn-danger btn-lg", data: { confirm: "¿Desea eliminar la cuenta?"} %>
+=======
 <div class="container w-90 top">
   <div class="row row-cols-1 row-cols-md-1">
     <div class="col mb-4">
@@ -8,6 +13,7 @@
         <p>Debes tener en claro que despues de esto no hay vuelta atras, Perderas toda la informacion de la cuenta y los automotores asociados no habra manera de recuperarlo.</p>
         <%= link_to "Eliminar cuenta", user_path(current_user), method: :delete, class: "btn btn-danger btn-lg", data: { confirm: "¿Desea eliminar la cuenta?", mensaje: "Perdera toda la información de la cuenta y los automotores asociados" } %>
       </div>
+>>>>>>> 15f9e54ecb9fa03426913a274b0a4d264db5488f:app/views/settings/accaunt.html.erb
     </div>
   </div>
 </div>

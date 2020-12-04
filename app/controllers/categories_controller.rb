@@ -44,7 +44,7 @@ class CategoriesController < ApplicationController
          format.json { render json: @category.errors, status: :unprocessable_entity }
        end
      end
-   end
+  end
 
    def destroy
      @category.destroy
@@ -62,4 +62,4 @@ class CategoriesController < ApplicationController
      def category_params
        params.require(:category).permit(:nombre, :descripcion)
      end
- end
+end

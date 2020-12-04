@@ -15,7 +15,7 @@ class Sales::SaleDetailsController < ApplicationController
 
   def new
     @sale_detail = @sale.sale_details.new(cantidad: 1)
-    authorize @sale
+    # authorize @sale
   end
 
   def edit
@@ -33,14 +33,14 @@ class Sales::SaleDetailsController < ApplicationController
         format.json { head :no_content }
         format.js
       else
-        render :new
+        format.html { redirect_to sale_sale_details_path(@sale), alert: "el plato no fue añadido"}
       end
     end
   end
 
   def update
     if @sale_detail.update(sale_detail_params)
-      redirect_to  sale_sale_details_path(@sale, @sale_detail)
+      redirect_to  sale_sale_details_path(@sale)
     else
       render :index
     end
