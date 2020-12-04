@@ -1,20 +1,56 @@
-<% wicked_pdf_stylesheet_link_tag 'pdf' %>
-<meta charset="utf-8">
-    <table>
-      <thead>
-        <tr>
-          <th>Plato</th>
-          <th>Cantidad</th>
-          <th>Precio unitario</th>
-          <th>Precio total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @details.each do |d|%>
-        <td><%= d.dish.nombre %></td>
-        <td><%= d.cantidad %></td>
-        <td><%= d.dish.precio %></td>
-        <td> <%= d.preciot %></td>
-        <%end%>
-      </tbody>
-    </table>
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reporte de venta <%= @sale.id %></title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <%= wicked_pdf_stylesheet_link_tag 'reporte' %>
+  </head>
+  <body>
+    <div id="header">
+      <img id="logoo" src="https://scontent.fctg1-1.fna.fbcdn.net/v/t1.0-9/128048476_2333420933471037_4758707942816925117_n.jpg?_nc_cat=108&ccb=2&_nc_sid=730e14&_nc_eui2=AeHvzCqmA_KeSNf04kdhtnRMFc7Rv_zYGfEVztG__NgZ8eOmQQUk0qc12rV0GIg35TdpNnsGVbPe3ekZ8GuywY8J&_nc_ohc=By-r7sbrFRgAX-nSFBw&_nc_ht=scontent.fctg1-1.fna&oh=1ff0337556f75a20a5d0a5aa4f0cf23c&oe=5FEF462B" alt="">
+      <h1 id="titlee">El Rincon del sabor</h1>
+      <h2>Factura #<%= @sale.id %></h2>
+      <dl id="lista1">
+        <dt>Cliente: <%= @sale.client.nombre %> </dt>
+        <dt>C.C: <%= @sale.client.cedula %></dt>
+        <dt>Telefono: <%= @sale.client.telefono %></dt>
+      </dl>
+
+      <ul id="lista2">
+        <dt>Fecha de venta: <%= Time.now.strftime("%d-%m-%Y a las %H:%M") %></dt>
+        <dt>Correo: <%= @sale.client.correo %></dt>
+        <dt>Direccion: <%= @sale.client.direccion %></dt>
+      </ul>
+   </div><br><br><br><br>
+
+    <div id="main">
+        <h3>Productos de la venta</h3>
+      <table class="table" id="productod">
+        <thead>
+          <tr>
+            <th>Plato</th>
+            <th>Cantidad</th>
+            <th>Precio unitario</th>
+            <th>Precio total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @details.each do |d|%>
+          <tr>
+            <td><%= d.dish.nombre %></td>
+            <td><%= d.cantidad %></td>
+            <td><%= d.dish.precio %></td>
+            <td><%= d.preciot %></td>
+          </tr>
+          <%end%>
+        </tbody>
+      </table>
+      <h4 id="total">Total a pagar $<%= @valor %></h4>
+    </div>
+
+    <footer>
+      <p id="fo">GRACIAS POR SU COMPRA</p>
+    </footer>
+  </body>
+</html>

@@ -7,15 +7,15 @@ class Sales::SaleDetailsController < ApplicationController
     authorize Sale
     @details = @sale.sale_details.all
     @valor = @details.sum(:preciot) || 0
-    # respond_to do |forma|
-    #   forma.html
-    #   forma.pdf {render template: 'sales/sale_details/reporte', pdf: 'reporte'}
-    # end
+    respond_to do |forma|
+      forma.html
+      forma.pdf {render template: 'sales/sale_details/reporte', pdf: 'reporte'}
+    end
   end
 
   def new
     @sale_detail = @sale.sale_details.new(cantidad: 1)
-    authorize @sale
+    # authorize @sale
   end
 
   def edit
@@ -33,7 +33,7 @@ class Sales::SaleDetailsController < ApplicationController
         format.json { head :no_content }
         format.js
       else
-        render :new
+        format.html { redirect_to sale_sale_details_path(@sale), alert: "el plato no fue añadido"}
       end
     end
   end

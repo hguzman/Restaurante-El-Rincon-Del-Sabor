@@ -1,6 +1,8 @@
 class SaleDetail < ApplicationRecord
   belongs_to :sale
   belongs_to :dish
+  validates :cantidad, inclusion: { in: 0..20 } 
+
 
   before_save :almacenar
   after_save :descontar

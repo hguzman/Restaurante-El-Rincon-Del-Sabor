@@ -9,7 +9,7 @@ class SalesController < ApplicationController
 
   def new
     @sale = Sale.new
-    authorize @sale
+    # authorize @sale
   end
 
   def create
