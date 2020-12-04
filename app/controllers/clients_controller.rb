@@ -3,7 +3,6 @@ class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
   def index
-     authorize Client
     @clients = Client.paginate(page: params[:page], per_page:4)
   end
 

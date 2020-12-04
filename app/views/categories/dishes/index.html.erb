@@ -2,10 +2,13 @@
   <div class="row">
     <div class="col-md-12 mx-auto">
     <h1> Categoria de <%= @category.nombre %></h1>
+    <% if current_user.has_role? :admin%>
       <%= link_to new_category_dish_path(@category,@dish), class: "btn btn-info mb-3" do %>
           <%= fa_icon "plus-circle" %>
           Nuevo plato
       <% end %>
+      <%else%>
+      <%end%>
       <div class="card shadow">
         <div class="card-body">
           <div class="table-responsive">
@@ -39,13 +42,19 @@
                   <td><%= dish.descripcion %></td>
                   <td><%= dish.category.nombre %></td>
                   <td><%= dish.category.descripcion %></td>
+                  <% if current_user.has_role? :admin%>
                   <td align="center">
                     <%= link_to  edit_category_dish_path(@category, dish), class: "btn btn-info" do %>
                       Editar
                     <% end %></td>
+                    <%else%>
+                    <%end%>
+                  <% if current_user.has_role? :admin%>
                   <td align="center"><%= link_to category_dish_path(@category, dish), class: "btn btn-danger", method: :delete, data: { confirm: "Desea borrar el plato de #{dish.nombre}?"} do %>
                       Borrar
                     <% end %></td>
+                    <%else%>
+                    <%end%>
                  </tr>
                <% end %>
              </tbody>

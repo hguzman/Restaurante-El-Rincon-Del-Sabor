@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   def index
-     authorize Category
+     # authorize Category
     @categories = Category.paginate(page: params[:page], per_page:4)
   end
 
@@ -48,6 +48,7 @@ class CategoriesController < ApplicationController
 
    def destroy
      @category.destroy
+     authorize @category
      respond_to do |format|
        format.html { redirect_to categories_url, notice: 'eliminado exitosamente' }
        format.json { head :no_content }

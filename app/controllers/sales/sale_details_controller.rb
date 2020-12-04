@@ -4,7 +4,7 @@ class Sales::SaleDetailsController < ApplicationController
   before_action :set_sale_detail, only: [:edit, :update, :destroy]
 
   def index
-    authorize Sale
+    # authorize Sale
     @details = @sale.sale_details.all
     @valor = @details.sum(:preciot) || 0
     respond_to do |forma|
