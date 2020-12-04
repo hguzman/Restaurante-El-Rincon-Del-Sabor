@@ -1,10 +1,13 @@
 <div class="container-fluid p-2">
   <h1>Categorias</h1>
   <div>
+    <%if current_user.has_role? :admin%>
     <%= link_to new_category_path, {class: "btn btn-info shadow"} do %>
     <%= fa_icon "plus-circle" %>
     nueva categoria
     <% end %>
+    <%else%>
+    <%end%>
   </div>
   <br>
   <div class="card shadow">
@@ -28,8 +31,16 @@
             <tr>
               <td><%= category.nombre %></td>
               <td><%= category.descripcion %></td>
+              <% if current_user.has_role? :admin%>
               <td align="center"><%= link_to 'Editar', edit_category_path(category), class:"btn btn-info" %></td>
+              <%else%>
+
+              <%end%>
+              <% if current_user.has_role? :admin%>
               <td align="center"><%= link_to 'Borrar', category, method: :delete, data: { confirm: "Desea borrar la categoria de #{category.nombre}?" }, class:"btn btn-danger" %></td>
+              <%else%>
+
+              <%end%>
               <td align="center"><%= link_to 'platos', category_dishes_path(category), class:"btn btn-success" %></td>
             </tr>
             <% end %>

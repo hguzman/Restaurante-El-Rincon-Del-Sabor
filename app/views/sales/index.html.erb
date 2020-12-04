@@ -33,9 +33,11 @@
                   <tr>
                     <td align="center"><%= sale.id %></td>
                     <td><%= sale.client.nombre %></td>
-                    <!-- <td>$ <%= sale %></td> -->
                     <td><%= sale.created_at.strftime('%A, %d de %B')%></td>
+                    <%if current_user.has_role? :admin%>
                     <td align="center"><%= link_to 'Borrar', sale, method: :delete, data: {confirm: "Desea Borrar la venta"}, class: "btn btn-danger" %></td>
+                    <%else%>
+                    <%end%>
                     <td align="center"><%= link_to 'Reporte', sale_sale_details_path(sale) + '.pdf', class:"btn btn-success" %></td>
                     <td align="center"><%= link_to 'detalle', sale_sale_details_path(sale), class:"btn btn-success" %></td>
                   </tr>
