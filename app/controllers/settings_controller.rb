@@ -9,10 +9,8 @@ class SettingsController < ApplicationController
   def change_password
   end
 
-
   def set_user
     @user = current_user
   end
-
-
+  
 end
