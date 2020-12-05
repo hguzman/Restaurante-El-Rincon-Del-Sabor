@@ -54,20 +54,20 @@
 <div class="container top">
   <section class="portafolio">
     <div class="portafolio-container">
-      <section class="portafolio-item">
+      <section class="portafolio-item" data-toggle="modal" data-target="#modal1">
         <img src="img/diagramas/d1.jpg" alt="" class="portafolio-img">
         <section class="portafolio-text">
           <h2>Facturacion</h2>
         </section>
       </section>
-      <section class="portafolio-item">
+      <section class="portafolio-item"  data-toggle="modal" data-target="#modal2">
         <img src="img/diagramas/caso1.jpg" alt="" class="portafolio-img">
         <section class="portafolio-text">
           <h2>Caso de uso#1</h2>
           <p>Acceso al sistema.</p>
         </section>
       </section>
-      <section class="portafolio-item">
+      <section class="portafolio-item"  data-toggle="modal" data-target="#modal3">
         <img src="img/diagramas/caso3.jpg" alt="" class="portafolio-img">
         <section class="portafolio-text">
           <h2>Caso de uso#3</h2>
@@ -81,21 +81,21 @@
 <div class="container top-2">
   <section class="portafolio">
     <div class="portafolio-container">
-      <section class="portafolio-item">
+      <section class="portafolio-item" data-toggle="modal" data-target="#modal4">
         <img src="img/diagramas/caso4.jpg" alt="" class="portafolio-img">
         <section class="portafolio-text">
           <h2>Caso de uso#4</h2>
           <p>Agregas clientes.</p>
         </section>
       </section>
-      <section class="portafolio-item">
+      <section class="portafolio-item" data-toggle="modal" data-target="#modal5">
         <img src="img/diagramas/caso5.jpg" alt="" class="portafolio-img">
         <section class="portafolio-text">
           <h2>Caso de uso#5</h2>
           <p>Venta.</p>
         </section>
       </section>
-      <section class="portafolio-item">
+      <section class="portafolio-item" data-toggle="modal" data-target="#modal6">
         <img src="img/diagramas/dclases.jpg" alt="" class="portafolio-img">
         <section class="portafolio-text">
           <h2>Diagrama #1</h2>
@@ -109,21 +109,21 @@
 <div class="container top-2">
   <section class="portafolio">
     <div class="portafolio-container">
-      <section class="portafolio-item">
+      <section class="portafolio-item" data-toggle="modal" data-target="#modal7">
         <img src="img/diagramas/dentidad.jpg" alt="" class="portafolio-img">
         <section class="portafolio-text">
           <h2>Diagrama #2</h2>
           <p>Diagrama entidad.</p>
         </section>
       </section>
-      <section class="portafolio-item">
+      <section class="portafolio-item" data-toggle="modal" data-target="#modal8">
         <img src="img/diagramas/sadministrador.jpg" alt="" class="portafolio-img">
         <section class="portafolio-text">
           <h2>Diagrama #3</h2>
           <p>Secuencia administrador.</p>
         </section>
       </section>
-      <section class="portafolio-item">
+      <section class="portafolio-item" data-toggle="modal" data-target="#modal9">
         <img src="img/diagramas/scliente.jpg" alt="" class="portafolio-img">
         <section class="portafolio-text">
           <h2>Diagrama #4</h2>
@@ -132,34 +132,124 @@
       </section>
     </div>
   </section>
-</div>
-<div class="portfolio-modal modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
-  <div class="modal-dialog modal-xm" role="document">
+
+<!-- Modal -->
+<div class="modal" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-body text-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <h2 class="portfolio-modal-title text-secondary mb-0">¿GarvSoft?</h2>
-              <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-              </div>
-              <img class="img-fluid rounded mb-5" src="https://img.freepik.com/vector-gratis/ilustracion-gente-negocios_52683-34772.jpg?size=626&ext=jpg" alt="Log Cabin"/>
-              <p class="mb-5">GarvSoft(Gestión Administrativa para el Registro de Ventas), Este proyecto le permite al usuario mejorar su funcionalidad administrativa, a empleados y al administrador dandole una mejor experiencia al restaurante en si en cuanto agilizar sus procesos de venta, una mejor organización sobre sus registros de ventas ademas de agilizar el tiempo de atención al cliente.</p>
-              <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Cerrar</button>
-            </div>
-          </div>
-        </div>
+      <div class="modal-header">
+        <h5 class="modal-title">Facturacion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <img src="img/diagramas/d1modal.jpg">
     </div>
   </div>
 </div>
-  <footer class="py-4 bg-dark flex-shrink-0">
-    <div class="container text-center">
-      <a href="https://github.com/hguzman/Restaurante-El-Rincon-Del-Sabor" class="text-muted">Github</a>
+<div class="modal" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Acceso al sistema</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <img src="img/diagramas/caso1modal.jpg">
     </div>
-  </footer>
+  </div>
+</div>
+<div class="modal" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Agregar platos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <img src="img/diagramas/caso3modal.jpg">
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Agregar clientes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <img src="img/diagramas/caso4modal.jpg">
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Venta</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <img src="img/diagramas/caso5modal.jpg">
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Diagrama de clase</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <img src="img/diagramas/dclasesmodal.jpg">
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Diagrama de entidad</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <img src="img/diagramas/dentidadmodal.jpg">
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal8" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Secuencia administrador</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <img src="img/diagramas/sadministradormodal.jpg">
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal9" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Secuencia cliente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <img src="img/diagramas/sclientemodal.jpg">
+    </div>
+  </div>
+</div>
 </body>
 </html>
