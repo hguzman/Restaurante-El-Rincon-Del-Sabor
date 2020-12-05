@@ -26,15 +26,15 @@ class SalesController < ApplicationController
   end
 
   def destroy
-      ActiveRecord::Base.transaction do
-        @sale.sale_details.map do |detail|
-          plato_vendido = Dish.find(detail.dish_id)
-          plato_vendido.existencia+=detail.cantidad
-          ActiveRecord::Rollback unless plato_vendido.save
-        end
-        ActiveRecord::Rollback unless @sale.destroy
-      end
-
+      # ActiveRecord::Base.transaction do
+      #   @sale.sale_details.map do |detail|
+      #     plato_vendido = Dish.find(detail.dish_id)
+      #     plato_vendido.existencia+=detail.cantidad
+      #     ActiveRecord::Rollback unless plato_vendido.save
+      #   end
+      #   ActiveRecord::Rollback unless @sale.destroy
+      # end
+      @sale.destroy
       respond_to do |format|
         format.html { redirect_to sales_url, notice: 'La venta ha sido cancelada.' }
         format.json { head :no_content }

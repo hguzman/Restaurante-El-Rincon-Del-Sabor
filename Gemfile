@@ -77,7 +77,6 @@ gem 'pundit', '~> 2.1'
 gem 'rolify', '~> 5.3'
 
 # Iconos
-
 gem 'font_awesome5_rails'
 
 # pdf
@@ -106,7 +105,3 @@ gem 'carrierwave', '~> 2.1'
 gem "chartkick"
 
 gem 'groupdate'
-
-gem 'select2-rails', '~> 4.0', '>= 4.0.13'
-
-gem 'dropzonejs-rails', '~> 0.8.5'
