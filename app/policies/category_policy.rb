@@ -4,7 +4,6 @@ class CategoryPolicy
   def initialize (user, category)
     @user = user
     @category = category
-
   end
 
   def index?
