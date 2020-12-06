@@ -7,42 +7,40 @@ class ClientsController < ApplicationController
   end
 
   def new
-    @clients = Client.new
-     authorize @clients
+    @client = Client.new
+     authorize @client
   end
 
   def edit
   end
 
   def create
-    @clients = Client.new(client_params)
-
+    @client = Client.new(client_params)
     respond_to do |format|
-      if @clients.save
+      if @client.save
         format.html {redirect_to clients_url, notice: 'Cliente creado exitosamente'}
-        format.json {render :show, status: :created, location: @clients}
+        format.json {render :show, status: :created, location: @client}
       else
         format.html {render :new}
-        format.json {reder json: @clients.errors, status: :unprocessable_entity}
+        format.json {reder json: @client.errors, status: :unprocessable_entity}
       end
     end
   end
 
   def update
     respond_to do |format|
-      if @clients.update (client_params)
+      if @client.update (client_params)
         format.html {redirect_to clients_url, notice: 'El clientes se ha actualizado exitosamente'}
-        format.json {reder :show, status: :ok, location: @clients}
+        format.json {reder :show, status: :ok, location: @client}
       else
         format.html {render :edit}
-        format.json {render json: @clients.errors, status: :unprocessable_entity}
+        format.json {render json: @client.errors, status: :unprocessable_entity}
       end
     end
   end
 
   def destroy
-    @clients.destroy
-    authorize @clients
+    @client.destroy
     respond_to do |format|
       format.html {redirect_to clients_url, notice: 'Cliente eliminado con éxito'}
       format.json { head :no_content}
@@ -53,7 +51,7 @@ class ClientsController < ApplicationController
   private
 
   def set_client
-    @clients = Client.find(params[:id])
+    @client = Client.find(params[:id])
 
   end
 
