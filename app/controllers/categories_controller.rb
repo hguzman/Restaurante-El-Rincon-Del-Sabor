@@ -1,25 +1,25 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-
+  #get
   def index
-     # authorize Category
+    # authorize Category
     @categories = Category.paginate(page: params[:page], per_page:4)
   end
-
+  #get
   def show
     authorize @category
   end
-
+  #get
   def new
     @category = Category.new
      authorize @category
   end
-
+  #get
   def edit
     authorize @category
   end
-
+  #post
   def create
     @category = Category.new(category_params)
 
@@ -33,7 +33,7 @@ class CategoriesController < ApplicationController
       end
     end
   end
-
+  #patch
   def update
      respond_to do |format|
        if @category.update(category_params)
@@ -45,22 +45,22 @@ class CategoriesController < ApplicationController
        end
      end
   end
-
+  #delete
    def destroy
      @category.destroy
-     authorize @category
+
      respond_to do |format|
        format.html { redirect_to categories_url, notice: 'eliminado exitosamente' }
        format.json { head :no_content }
      end
    end
-   private
+  private
 
-     def set_category
-       @category = Category.find(params[:id])
-     end
+  def set_category
+   @category = Category.find(params[:id])
+  end
 
-     def category_params
-       params.require(:category).permit(:nombre, :descripcion)
-     end
+  def category_params
+   params.require(:category).permit(:nombre, :descripcion)
+  end
 end
