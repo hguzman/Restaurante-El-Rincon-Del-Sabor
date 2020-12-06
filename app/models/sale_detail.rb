@@ -1,7 +1,7 @@
 class SaleDetail < ApplicationRecord
   belongs_to :sale
   belongs_to :dish
-  validates :cantidad, inclusion: { in: 1..20 }
+  validates :cantidad, inclusion: { in: 1..10 }
 
 
   before_save :almacenar
@@ -13,14 +13,17 @@ class SaleDetail < ApplicationRecord
   end
 
   def descontar
-    self.dish.existencia -= self.cantidad
-    self.dish.save
+    if self.cantidad < self.dish.existencia
+      self.dish.existencia -= self.cantidad
+      self.dish.save
+    end
   end
 
   def rollback
     self.dish.existencia += self.cantidad
     self.dish.save
   end
+
   # def al1
   #   self.cantidad * dish.precio
   # end
