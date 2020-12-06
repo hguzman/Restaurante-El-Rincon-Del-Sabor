@@ -14,9 +14,6 @@ class ClientsController < ApplicationController
   def edit
   end
 
-  # def show
-  # end
-
   def create
     @clients = Client.new(client_params)
 
