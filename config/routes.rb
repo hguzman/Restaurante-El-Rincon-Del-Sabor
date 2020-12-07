@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'settings/profile'
   # get 'settings/change_password', as: :users
   get 'settings/change_password'
-  get 'settings/account'
+  # get 'settings/account'
   resources :users, path: '', only: [:update, :destroy] do
     get 'cambiar_password'
     patch 'update_password'

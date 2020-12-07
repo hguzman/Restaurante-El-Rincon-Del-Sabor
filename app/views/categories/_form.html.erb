@@ -6,7 +6,6 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-primary btn-block" %>
+    <%= f.submit @category.new_record? ? "Crear Categoría" : "Actualizar Categoría", :class => "btn btn-block btn-primary"%>
   </div>
 <% end %>
-

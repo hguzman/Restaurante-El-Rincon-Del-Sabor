@@ -33,7 +33,7 @@
                   <tr>
                     <td align="center"><%= sale.id %></td>
                     <td><%= sale.client.nombre %></td>
-                    <td><%= sale.created_at.strftime('%A, %d de %B')%></td>
+                    <td><%= sale.created_at.strftime('%d-%m-%Y a las %H:%M')%></td>
                     <%if current_user.has_role? :admin%>
                     <td align="center"><%= link_to 'Borrar', sale, method: :delete, data: {confirm: "Desea Borrar la venta"}, class: "btn btn-danger" %></td>
                     <%else%>

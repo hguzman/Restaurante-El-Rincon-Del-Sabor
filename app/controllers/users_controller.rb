@@ -8,21 +8,17 @@ class UsersController < ApplicationController
 
   def update_password
     if @user.update_with_password(user_params)
-      # Sign in the user by passing validation in case their password changed
       bypass_sign_in(@user)
       redirect_to settings_change_password_path, notice: "contaseña actualizada"
     else
-      flash[:alert] = t(".alert")
       render "settings/change_password"
     end
   end
 
   def update
     if @user.update(user_params)
-      flash[:success] = t('.success')
-      redirect_to settings_profile_path
+      redirect_to root_path, notice: "Perfil actualizado"
     else
-      flash[:alert] = t('.alert')
       render "settings/profile"
     end
   end
@@ -32,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   private
-  
+
   def set_user
     @user = current_user
   end
