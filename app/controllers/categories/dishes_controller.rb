@@ -6,6 +6,7 @@ class Categories::DishesController < ApplicationController
   def index
     # authorize Category
     @dishes = @category.dishes.all
+
   end
 
   def new
@@ -45,10 +46,10 @@ class Categories::DishesController < ApplicationController
   end
 
   def set_category
-    @category = Category.find(params[:category_id])
+    @category = Category.friendly.find(params[:category_id])
   end
 
   def dish_params
-    params.require(:dish).permit(:nombre, :existencia, :precio, :descripcion)
+    params.require(:dish).permit(:nombre, :existencia, :precio, :descripcion, :category_id)
   end
 end

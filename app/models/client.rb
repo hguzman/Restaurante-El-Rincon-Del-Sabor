@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: clients
+#
+#  id         :integer          not null, primary key
+#  cedula     :string
+#  correo     :string
+#  direccion  :string
+#  estado     :boolean
+#  nombre     :string
+#  telefono   :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 class Client < ApplicationRecord
   has_many :sales, dependent: :destroy
   validates :nombre, format: { with: /\A[a-z A-Z]+\z/, message: "debe incluir sólo letras" }
