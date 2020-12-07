@@ -4,5 +4,6 @@
  <%= f.input :precio %>
  <%= f.input :descripcion %>
 
- <%= f.button :submit, class:"btn btn-primary btn-block" %>
+ <%= f.submit @dish.new_record? ? "Crear Plato" : "Actualizar Plato", :class => "btn btn-block btn-primary"%>
+
 <% end %>

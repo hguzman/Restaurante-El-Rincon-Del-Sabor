@@ -19,10 +19,8 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      flash[:success] = t('.success')
-      redirect_to settings_profile_path
+      redirect_to settings_profile_path, notice: "Perfil actualizado"
     else
-      flash[:alert] = t('.alert')
       render "settings/profile"
     end
   end
@@ -32,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   private
-  
+
   def set_user
     @user = current_user
   end

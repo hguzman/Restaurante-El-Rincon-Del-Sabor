@@ -30,7 +30,7 @@ class SaleDetail < ApplicationRecord
   end
 
   def descontar
-    if self.cantidad < self.dish.existencia
+    if self.cantidad <= self.dish.existencia
       self.dish.existencia -= self.cantidad
       self.dish.save
     end

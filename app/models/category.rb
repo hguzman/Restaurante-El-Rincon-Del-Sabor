@@ -15,8 +15,8 @@
 #
 class Category < ApplicationRecord
 
-  extend FriendlyId
-  friendly_id :nombre, use: :slugged
+  # extend FriendlyId
+  # friendly_id :nombre, use: :slugged
 
   has_many :dishes, dependent: :destroy
 
