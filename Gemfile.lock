@@ -44,6 +44,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    annotate (3.1.1)
+      activerecord (>= 3.2, < 7.0)
+      rake (>= 10.4, < 14.0)
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -104,6 +107,8 @@ GEM
     ffi (1.13.1)
     font_awesome5_rails (1.2.0)
       railties (>= 4.2)
+    friendly_id (5.4.1)
+      activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     groupdate (5.2.1)
@@ -262,6 +267,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate (~> 3.1, >= 3.1.1)
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.5, >= 4.5.2)
   byebug
@@ -273,6 +279,7 @@ DEPENDENCIES
   delayed_job_active_record (~> 4.1, >= 4.1.4)
   devise (~> 4.7, >= 4.7.3)
   font_awesome5_rails
+  friendly_id (~> 5.4, >= 5.4.1)
   groupdate
   jbuilder (~> 2.5)
   jquery-rails

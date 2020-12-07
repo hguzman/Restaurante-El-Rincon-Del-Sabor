@@ -105,3 +105,8 @@ gem 'carrierwave', '~> 2.1'
 gem "chartkick"
 
 gem 'groupdate'
+
+# Documentar los modelos
+gem 'annotate', '~> 3.1', '>= 3.1.1'
+
+gem 'friendly_id', '~> 5.4', '>= 5.4.1'

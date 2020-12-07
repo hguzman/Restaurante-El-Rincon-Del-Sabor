@@ -1,4 +1,18 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# == Schema Information
+#
+# Table name: categories
+#
+#  id          :integer          not null, primary key
+#  descripcion :string
+#  nombre      :string
+#  slug        :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+# Indexes
+#
+#  index_categories_on_slug  (slug) UNIQUE
+#
 
 one:
   nombre: MyString
