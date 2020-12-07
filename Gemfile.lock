@@ -99,8 +99,6 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    dropzonejs-rails (0.8.5)
-      rails (> 3.1)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
@@ -211,7 +209,6 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    select2-rails (4.0.13)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -275,7 +272,6 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   delayed_job_active_record (~> 4.1, >= 4.1.4)
   devise (~> 4.7, >= 4.7.3)
-  dropzonejs-rails (~> 0.8.5)
   font_awesome5_rails
   groupdate
   jbuilder (~> 2.5)
@@ -287,7 +283,6 @@ DEPENDENCIES
   rails (~> 5.2.4, >= 5.2.4.2)
   rolify (~> 5.3)
   sass-rails (~> 5.0)
-  select2-rails (~> 4.0, >= 4.0.13)
   selenium-webdriver
   simple_form (~> 5.0, >= 5.0.3)
   spring
